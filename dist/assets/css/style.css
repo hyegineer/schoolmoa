@@ -931,6 +931,7 @@ textarea.inp {
 }
 .more-btn .text {
   font-weight: 700;
+  color: #333;
 }
 .more-btn img {
   width: 24px;
