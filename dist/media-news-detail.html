@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요요 인터렉티브</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/vendor/fullpage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/lodash.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header-wrap ">
+        <header class="header ">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="assets/images/logo-white.png" alt="" class="logo-white">
+                <img src="assets/images/logo-color.png" alt="" class="logo-color">
+              </a>
+            </h1>
+            <div class="nav-wrap">
+              <ul class="nav-list-grp">
+                <li class="nav-list">
+                  <a href="com-introduce.html" class="nav-link">
+                    <span>company</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="com-introduce.html" class="snb-link">
+                        <span>회사소개</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-business.html" class="snb-link">
+                        <span>사업영역</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-history.html" class="snb-link">
+                        <span>연혁</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-certificate.html" class="snb-link">
+                        <span>인증서</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-ci.html" class="snb-link">
+                        <span>CI</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-character.html" class="snb-link">
+                        <span>캐릭터</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-map.html" class="snb-link">
+                        <span>오시는길</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="technology.html" class="nav-link">
+                    <span>technology</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="technology.html" class="snb-link">
+                        <span>보유기술</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="portfolio-list.html" class="nav-link">
+                    <span>portfolio</span>
+                  </a>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>media center</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="media-news-list.html" class="snb-link">
+                        <span>news</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="media-sns.html" class="snb-link">
+                        <span>sns</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="#" class="snb-link">
+                        <span>webzine</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>careers</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="career-ideal.html" class="snb-link">
+                        <span>인재상</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="career-recruit.html" class="snb-link">
+                        <span>채용공고</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>contact</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="contact-qna.html" class="snb-link">
+                        <span>Q&A</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-qna-write.html" class="snb-link">
+                        <span>1:1문의</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-faq.html" class="snb-link">
+                        <span>faq</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="opt-wrap">
+              <ul class="opt-list-grp">
+                <li class="opt-list opt-lang-btn-wrap">
+                  <button type="button" class="opt-btn">
+                    <img src="assets/images/icon/icon-lang-white.png" alt="" class="icon-white">
+                    <img src="assets/images/icon/icon-lang-black.png" alt="" class="icon-black">
+                  </button>
+                  <div class="opt-lang-grp-area">
+                    <div class="opt-lang-grp">
+                      <button type="button" class="btn">KOR</button>
+                      <button type="button" class="btn">ENG</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="opt-list">
+                  <button type="button" class="opt-btn">
+                    <img src="assets/images/icon/icon-search-white.png" alt="" class="icon-white">
+                    <img src="assets/images/icon/icon-search-black.png" alt="" class="icon-black">
+                  </button>
+                </li>
+                <li class="opt-list">
+                  <button id="nav-open-btn" type="button" class="opt-btn">
+                    <img src="assets/images/icon/icon-hamburger-white.png" alt="" class="icon-white">
+                    <img src="assets/images/icon/icon-hamburger-black.png" alt="" class="icon-black">
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div id="nav-page" class="nav-page">
+          <div class="nav-container">
+            <div class="nav-bg">
+              <h2 class="nav-bg-ttl">
+                <span>창의적 혁신의 흐름</span>
+                <b class="bold-text">요요인터렉티브</b>
+              </h2>
+            </div>
+            <div class="nav-content">
+              <button id="nav-close-btn" type="button" class="nav-close-btn">
+                <img src="assets/images/icon/icon-close.png" alt="">
+              </button>
+              <img src="assets/images/img-symbol.png" alt="" class="img-symbol">
+              <ul class="nav-list-grp">
+                <li class="nav-list">
+                  <a href="com-introduce.html" class="nav-link">
+                    <span>company</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="com-introduce.html" class="snb-link">
+                        <span>회사소개</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-business.html" class="snb-link">
+                        <span>사업영역</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-history.html" class="snb-link">
+                        <span>연혁</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-certificate.html" class="snb-link">
+                        <span>인증서</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-ci.html" class="snb-link">
+                        <span>CI</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-character.html" class="snb-link">
+                        <span>캐릭터</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-map.html" class="snb-link">
+                        <span>오시는길</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="technology.html" class="nav-link">
+                    <span>technology</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="technology.html" class="snb-link">
+                        <span>보유기술</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="portfolio-list.html" class="nav-link">
+                    <span>portfolio</span>
+                  </a>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>media center</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="media-news-list.html" class="snb-link">
+                        <span>news</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="media-sns.html" class="snb-link">
+                        <span>sns</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="#" class="snb-link">
+                        <span>webzine</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>careers</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="career-ideal.html" class="snb-link">
+                        <span>인재상</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="career-recruit.html" class="snb-link">
+                        <span>채용공고</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>contact</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="contact-qna.html" class="snb-link">
+                        <span>Q&A</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-qna-write.html" class="snb-link">
+                        <span>1:1문의</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-faq.html" class="snb-link">
+                        <span>faq</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="opt-wrap">
+                <button type="button" class="opt-set-btn">
+                  <img src="assets/images/icon/icon-admin.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subpage media-news-detail-page">
+        <div class="subpage-container">
+          <section class="section">
+            <div class="inner">
+              <div class="mnd-ttl-wrap">
+                <div class="ttl-wrap">
+                  <h3 class="ttl">요요인터렉티브, 가상융합기술기반 재난대응 교육훈련 플랫폼 기술개발 과제 참여… 27일 착수</h3>
+                  <span class="date">2022.12.06</span>
+                </div>
+                <div class="sub-ttl-wrap">
+                  <p class="sub-ttl">
+                    인공지능(AI)·확장현실(XR) 등 첨단기술을 활용한 재난 대응 훈련시스템 구축 <br>
+                    중소조선연구원(주관) 외 13개 연구개발기관 참여··· 5년간 개발
+                  </p>
+                </div>
+              </div>
+              <div class="full-img-wrap">
+                <img src="assets/images/img-mnd-01.png" alt="">
+              </div>
+              <div class="mnd-text-wrap">
+                <p class="text">
+                  요요인터렉티브(대표 이경주)는 해경청과 행정안전부간 다부처 협업으로 추진되는 연구개발사업 '가상융합기술기반 재난대응 교육훈련 플랫폼 연구개발 사업'에 참여한다고 밝혔다. 이번 사업은
+                  해양에서의 다양한 단속 및 구조 상황을 공간적 및 물리적으로 구현하기가 어려워 인공지능(AI) ·확장현실(XR) 등 가상공간 관련 기술을 활용해 시·공간적 한계를 극복하고 해경에 필수적인
+                  초실감 훈련의 반복적 실시를 위한 목적으로 추진된 사업으로 기간은 2027년까지 총 5년이며, 총사업예산은 288억이다. 연구 주요 내용으로는 △해양 재난 대비 현장 임무형 훈련 콘텐츠 제작
+                  및 초실감형 시뮬레이터 개발 △가상 융합기술을 이용한 1인 1아바타 부여 및 인사, 교육, 훈련 및 성과 시스템의 통합 플랫폼 구축 △범부처 재난 대응 교육훈련 플랫폼 활용 추진 등이다.
+                  요요인터렉티브는 이번 개발 과제에서 경비함정 조타실, 상황실 등 물리 H/W를 활용한 현장체험 훈련장을 갖춘 '불법어선 진압훈련, 선내 탈출 유도 훈련 지원을 위한 XR기반 120종 이상의
+                  교육훈련 컨텐츠'를 제작한다. 다수의 사용자가 가상 환경에서 동시에 불법어선 진압 훈련 및 선내 진입탈출 유도 훈련을 진행할 수 있도록 실감나는 3D 모델링 제작 및 콘텐츠 구축, '불법어선
+                  추적훈련' 콘텐츠 개발 등의 역할을 수행할 계획이다. 이번 연구 개발 과제는 미래형 교육훈련 플랫폼을 이용한 훈련을 반복 시행해 현장에서 신속하고 정확한 재난 대응으로 국민의 생명을
+                  보호하고, 범부처 재난대응 기관의 공동활용 및 대국민 체험기회를 제공해 국민의 재난 대응 요령 숙지 효과가 예상된다. 요요인터렉티브 이경주 대표는 “이번 개발 과제에 참여하게 되어 기쁘게
+                  생각한다”며 “이번 개발 과제를 통해 해양경찰 현장 직원의 직무수행 전문성 강화 및 미래형 우수 인재 양성을 위한 목표를 위해 기여할 수 있도록 최선을 다하겠다”고 말했다. 한편,
+                  요요인터렉티브는 2015년 설립된 VR/AR/메타버스 전문 기업으로 VR/AR/메타버스 플랫폼 개발 기술을 보유하고 있다. 요요인터렉티브는 그동안 다양한 VR 기반 교육 훈련 콘텐츠와
+                  메타버스 플랫폼을 개발해 왔으며, 최근 울산소방본부와 '메타버스 기반 산불 정찰 및 인명 구조 수색 드론 훈련 시스템 개발' 협약을 맺은 바 있다. 전자신문인터넷 서희원 기자
+                  shw@etnews.com
+                </p>
+              </div>
+              <div class="center-btn-wrap">
+                <button type="button" class="round-btn">바로가기</button>
+                <button type="button" class="round-btn btn-navy">목록</button>
+              </div>
+              <div class="detail-view-ctrl-wrap">
+                <button type="button" class="view-ctrl-btn prev-btn">
+                  <img src="assets/images/icon/icon-prev-gray.png" alt="">
+                  <div class="text">
+                    <b>이전</b>
+                    <span>해봄 메타버스 예술관 콘텐츠 구축 용역</span>
+                  </div>
+                </button>
+                <button type="button" class="view-ctrl-btn next-btn">
+                  <div class="text">
+                    <b>다음</b>
+                    <span>해봄 메타버스 예술관 콘텐츠 구축 용역</span>
+                  </div>
+                  <img src="assets/images/icon/icon-next-gray.png" alt="">
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="footer-inner">
+          <div class="footer-cont01">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo-color.png" alt="">
+              </a>
+            </h6>
+            <ul class="fnav-list-grp">
+              <li class="fnav-list">
+                <a href="#" class="fnav-link bold-text">요요인터렉티브</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">서비스 이용약관</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link color-text">개인정보 처리방침</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">기업소개</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">지원하기</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-cont02">
+            <div class="info-copyright-wrap">
+              <div class="info-wrap">
+                <div class="company-info">
+                  <dl class="list">
+                    <dt>본사</dt>
+                    <dd>서울특별시 송파구 법원로 127 문정대명벨리온 208-210호</dd>
+                  </dl>
+                  <dl class="list">
+                    <dt>지사</dt>
+                    <dd>울산광역시 중구 종가로 406-21, 610호(복산동, 울산글로벌게임센터)</dd>
+                  </dl>
+                  <dl class="list list-space">
+                    <dt>TEL</dt>
+                    <dd>02-404-1306</dd>
+                  </dl>
+                  <dl class="list">
+                    <dt>Email</dt>
+                    <dd>info@yoyointeractive.com</dd>
+                  </dl>
+                </div>
+                <div class="sns-info">
+                  <ul class="sns-list-grp">
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">SNS</a>
+                    </li>
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">유튜브</a>
+                    </li>
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">인스타그램</a>
+                    </li>
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">블로그</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="copyright">© Yoyointeractive Corp. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

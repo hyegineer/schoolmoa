@@ -1,0 +1,107 @@
+<include src="include/head.html" header="white"></include>
+
+<div id="fullpage" class="subpage com-business-page">
+  <div class="section fp-auto-height">
+    <div class="subpage-head">
+      <div class="bg">
+        <img src="" alt="" class="bg-img">
+      </div>
+      <h3 class="subpage-ttl ttl-white">사업영역</h3>
+    </div>
+  </div>
+
+  <section class="section comb-sect-1st">
+    <div class="ttl-grp">
+      <h4 class="ttl">회사 홍보영상</h4>
+    </div>
+
+    <div class="content">
+      <div class="video-wrap"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+      <div class="bsns-list">
+        <figure class="picture">
+          <img src="assets/images/img-bsns-list01.png" alt="" class="picture-img">
+        </figure>
+  
+        <div class="description-grp">
+          <h5 class="ttl">VR/AR/XR</h5>
+          <p class="desc">가상의 세계를 구현하여 사람이 실제와 같이 경험할 수 있는 서비스를 제공합니다.</p>
+  
+          <ul class="desc-list-grp">
+            <li>체험자와 콘텐츠의 상호작용에 집중</li>
+            <li>‘요요인터렉티브’ 만의 인터렉티브 VR/AR/XR 콘텐츠 구축</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+      <div class="bsns-list bsns-even-list">
+        <figure class="picture">
+          <img src="assets/images/img-bsns-list02.png" alt="" class="picture-img">
+        </figure>
+  
+        <div class="description-grp">
+          <h5 class="ttl">메타버스</h5>
+          <p class="desc">효율적인 홍보 및 전시공간이 제공되는 새로운 방식의 메타 버스 공간으로 요요인터렉티브만의 차별성 있는 독립형 메타버스 서비스를 구축합니다.</p>
+  
+          <ul class="desc-list-grp">
+            <li>직접 커스텀 가능한 캐릭터</li>
+            <li>음성 채팅 및 다양한 모션을 활용한 상호작용</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner">
+      <div class="bsns-list">
+        <figure class="picture">
+          <img src="assets/images/img-bsns-list03.png" alt="" class="picture-img">
+        </figure>
+
+        <div class="description-grp">
+          <h5 class="ttl">실감형 콘텐츠</h5>
+          <p class="desc">요요인터렉티브는 다양한 훈련 시나리오와 현실감 있는 교육을 통해 효율적인 훈련 시스템을 구축합니다.</p>
+
+          <ul class="desc-list-grp">
+            <li>공간 및 물리적인 제한을 가상 및 증강 기술로 극복</li>
+            <li>다양한 임무/역할을 소개함으로써 이해도 증진 및 가상훈련이 가능</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fp-auto-height">
+    <include src="include/layout/footer.html"></include>
+  </section>
+</div>
+
+<include src="include/tail.html">
+  <script src="assets/js/vendor/fullpage.js"></script>
+  <script>
+    new fullpage('#fullpage', {
+      anchors: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'],
+      responsiveWidth: 1024,
+      afterLoad: function (origin, destination, direction, trigger) {
+        var origin = this;
+
+        if (origin.anchor == 'first' && direction == 'down') {
+          $('.header').removeClass('white');
+        }
+
+        if (origin.anchor == 'second' && direction == 'up') {
+          $('.header').addClass('white');
+        }
+      }
+    });
+  </script>
+</include>

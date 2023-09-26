@@ -1,0 +1,83 @@
+.career-recruit-page {
+  .subpage-head {
+    @include subpage-head-short;
+
+    margin-bottom: rem(66);
+  }
+
+  .subpage-ttl {
+    font-weight: 700;
+  }
+}
+
+.carre-sect-1st {
+  .inner {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.carre-main-img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.carre-main-ttl-grp {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: white;
+
+  .ttl-eng {
+    font-size: rem(40);
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .ttl {
+    font-size: rem(50);
+    font-weight: 300;
+  }
+}
+
+.carre-sect-2nd {
+  width: 100%;
+  padding: rem(140) 0;
+
+  .inner {
+    width: 90%;
+    max-width: 1696px;
+    margin: 0 auto;
+  }
+
+  .ttl-grp {
+    width: 100%;
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: rem(64);
+    margin-bottom: rem(45);
+
+    .ttl {
+      font-size: rem(75);
+      font-weight: 600;
+    }
+  }
+
+  .img-wrap {
+    width: 100%;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

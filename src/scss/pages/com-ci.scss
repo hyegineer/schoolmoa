@@ -1,0 +1,182 @@
+.com-ci-page {
+  .subpage-head {
+    @include subpage-head-short;
+    
+    margin-bottom: rem(90);
+  }
+
+  .section .inner {
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.comci-sect-1st {
+  margin-bottom: rem(200);
+
+  .main-ci-box {
+    height: 334px;
+    background-color: #f6f7f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(47);
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.comci-sect-2nd {
+  padding-bottom: rem(75);
+}
+
+.comci-ttl {
+  width: 100%;
+  max-width: rem(467);
+  font-size: rem(50);
+  font-weight: 700;
+}
+
+.comci-content-wrap {
+  word-break: break-all;
+
+  .comci-content {
+    margin-bottom: rem(70);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .desc-text {
+    word-break: keep-all;
+    color: #606060;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+}
+
+.comci-desc-col-grp {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: rem(50);
+
+  .desc-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: rem(20);
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .desc-col-lg {
+    padding-right: rem(94);
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .figure {
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(23);
+    width: 100%;
+    background-color: white;
+  }
+
+  .figure-lg {
+    height: 255px;
+  }
+
+  .text {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.comci-sect-3rd {
+  background-color: #F6F7F9;
+  padding: rem(120) 0;
+}
+
+.comci-sect-4th {
+  padding: rem(155) 0;
+}
+
+.comci-desc-color-grp {
+  margin-top: rem(65);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 19px;
+
+  .color-list {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: rem(40);
+
+    .text {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 2.2;
+      padding-top: rem(70);
+    }
+  }
+
+  .color-area {
+    width: 100%;
+    position: relative;
+    max-width: rem(573);
+    height: rem(156);
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+
+    figcaption {
+      position: absolute;
+      left: rem(35);
+      bottom: rem(25);
+      top: auto;
+      line-height: 2;
+      text-transform: uppercase;
+    }
+  }
+
+  .color-area.yoyo-blue {
+    background-color: #008ec6;
+  }
+
+  .color-area.yoyo-navy {
+    background-color: #161E43;
+  }
+
+  .color-area.yoyo-yellow {
+    background-color: #FFCF26;
+    color: #171E43;
+  }
+}

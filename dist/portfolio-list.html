@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요요 인터렉티브</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/vendor/fullpage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/lodash.min.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header-wrap ">
+        <header class="header ">
+          <div class="inner">
+            <h1 class="logo">
+              <a href="index.html" class="logo-link">
+                <img src="assets/images/logo-white.png" alt="" class="logo-white">
+                <img src="assets/images/logo-color.png" alt="" class="logo-color">
+              </a>
+            </h1>
+            <div class="nav-wrap">
+              <ul class="nav-list-grp">
+                <li class="nav-list">
+                  <a href="com-introduce.html" class="nav-link">
+                    <span>company</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="com-introduce.html" class="snb-link">
+                        <span>회사소개</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-business.html" class="snb-link">
+                        <span>사업영역</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-history.html" class="snb-link">
+                        <span>연혁</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-certificate.html" class="snb-link">
+                        <span>인증서</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-ci.html" class="snb-link">
+                        <span>CI</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-character.html" class="snb-link">
+                        <span>캐릭터</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-map.html" class="snb-link">
+                        <span>오시는길</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="technology.html" class="nav-link">
+                    <span>technology</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="technology.html" class="snb-link">
+                        <span>보유기술</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="portfolio-list.html" class="nav-link">
+                    <span>portfolio</span>
+                  </a>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>media center</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="media-news-list.html" class="snb-link">
+                        <span>news</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="media-sns.html" class="snb-link">
+                        <span>sns</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="#" class="snb-link">
+                        <span>webzine</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>careers</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="career-ideal.html" class="snb-link">
+                        <span>인재상</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="career-recruit.html" class="snb-link">
+                        <span>채용공고</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>contact</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="contact-qna.html" class="snb-link">
+                        <span>Q&A</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-qna-write.html" class="snb-link">
+                        <span>1:1문의</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-faq.html" class="snb-link">
+                        <span>faq</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="opt-wrap">
+              <ul class="opt-list-grp">
+                <li class="opt-list opt-lang-btn-wrap">
+                  <button type="button" class="opt-btn">
+                    <img src="assets/images/icon/icon-lang-white.png" alt="" class="icon-white">
+                    <img src="assets/images/icon/icon-lang-black.png" alt="" class="icon-black">
+                  </button>
+                  <div class="opt-lang-grp-area">
+                    <div class="opt-lang-grp">
+                      <button type="button" class="btn">KOR</button>
+                      <button type="button" class="btn">ENG</button>
+                    </div>
+                  </div>
+                </li>
+                <li class="opt-list">
+                  <button type="button" class="opt-btn">
+                    <img src="assets/images/icon/icon-search-white.png" alt="" class="icon-white">
+                    <img src="assets/images/icon/icon-search-black.png" alt="" class="icon-black">
+                  </button>
+                </li>
+                <li class="opt-list">
+                  <button id="nav-open-btn" type="button" class="opt-btn">
+                    <img src="assets/images/icon/icon-hamburger-white.png" alt="" class="icon-white">
+                    <img src="assets/images/icon/icon-hamburger-black.png" alt="" class="icon-black">
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div id="nav-page" class="nav-page">
+          <div class="nav-container">
+            <div class="nav-bg">
+              <h2 class="nav-bg-ttl">
+                <span>창의적 혁신의 흐름</span>
+                <b class="bold-text">요요인터렉티브</b>
+              </h2>
+            </div>
+            <div class="nav-content">
+              <button id="nav-close-btn" type="button" class="nav-close-btn">
+                <img src="assets/images/icon/icon-close.png" alt="">
+              </button>
+              <img src="assets/images/img-symbol.png" alt="" class="img-symbol">
+              <ul class="nav-list-grp">
+                <li class="nav-list">
+                  <a href="com-introduce.html" class="nav-link">
+                    <span>company</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="com-introduce.html" class="snb-link">
+                        <span>회사소개</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-business.html" class="snb-link">
+                        <span>사업영역</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-history.html" class="snb-link">
+                        <span>연혁</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-certificate.html" class="snb-link">
+                        <span>인증서</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-ci.html" class="snb-link">
+                        <span>CI</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-character.html" class="snb-link">
+                        <span>캐릭터</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="com-map.html" class="snb-link">
+                        <span>오시는길</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="technology.html" class="nav-link">
+                    <span>technology</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="technology.html" class="snb-link">
+                        <span>보유기술</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="portfolio-list.html" class="nav-link">
+                    <span>portfolio</span>
+                  </a>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>media center</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="media-news-list.html" class="snb-link">
+                        <span>news</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="media-sns.html" class="snb-link">
+                        <span>sns</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="#" class="snb-link">
+                        <span>webzine</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>careers</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="career-ideal.html" class="snb-link">
+                        <span>인재상</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="career-recruit.html" class="snb-link">
+                        <span>채용공고</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list">
+                  <a href="#" class="nav-link">
+                    <span>contact</span>
+                  </a>
+                  <ul class="snb-list-grp">
+                    <li class="snb-list">
+                      <a href="contact-qna.html" class="snb-link">
+                        <span>Q&A</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-qna-write.html" class="snb-link">
+                        <span>1:1문의</span>
+                      </a>
+                    </li>
+                    <li class="snb-list">
+                      <a href="contact-faq.html" class="snb-link">
+                        <span>faq</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="opt-wrap">
+                <button type="button" class="opt-set-btn">
+                  <img src="assets/images/icon/icon-admin.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subpage portfolio-list-page">
+        <div class="subpage-head">
+          <div id="pfl-tab-btn" class="rbtn-list-grp">
+            <button type="button" class="rbtn active" data-ttl="국방" data-show="pfl-defenses">국방</button>
+            <button type="button" class="rbtn" data-ttl="VR" data-show="pfl-vrs">VR</button>
+            <button type="button" class="rbtn" data-ttl="메타버스" data-show="pfl-metaverse">메타버스</button>
+            <button type="button" class="rbtn" data-ttl="미디어아트" data-show="pfl-mediaart">미디어아트</button>
+            <button type="button" class="rbtn" data-ttl="교육 훈련체계" data-show="pfl-training">교육 훈련체계</button>
+            <button type="button" class="rbtn" data-ttl="공공·민간" data-show="pfl-pp">공공·민간</button>
+          </div>
+          <h3 id="pfl-page-ttl" class="subpage-ttl">국방</h3>
+        </div>
+        <div class="subpage-container">
+
+          <!-- 국방 -->
+          <div id="pfl-defenses" class="grid-item-grp active">
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 1 line -->
+          </div>
+
+          <!-- VR -->
+          <div id="pfl-vrs" class="grid-item-grp">
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 1 line -->
+          </div>
+
+          <!-- 메타버스 -->
+          <div id="pfl-metaverse" class="grid-item-grp">
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 1 line -->
+          </div>
+
+          <!-- 미디어아트 -->
+          <div id="pfl-mediaart" class="grid-item-grp">
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 1 line -->
+          </div>
+
+          <!-- 교육훈련체계 -->
+          <div id="pfl-training" class="grid-item-grp">
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 1 line -->
+          </div>
+
+          <!-- 공공·민간 -->
+          <div id="pfl-pp" class="grid-item-grp">
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="grid-item">
+              <a href="portfolio-detail.html">
+                <div class="pfl-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/img-temp-pfl-card01.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <div class="ttl-desc-grp">
+                    <h4 class="ttl">해봄 메타버스</h4>
+                    <span class="desc">경상남도교육청 예술교육원 독립형 메타버스 플랫폼</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- 1 line -->
+          </div>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="footer-inner">
+          <div class="footer-cont01">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo-color.png" alt="">
+              </a>
+            </h6>
+            <ul class="fnav-list-grp">
+              <li class="fnav-list">
+                <a href="#" class="fnav-link bold-text">요요인터렉티브</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">서비스 이용약관</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link color-text">개인정보 처리방침</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">기업소개</a>
+              </li>
+              <li class="fnav-list">
+                <a href="#" class="fnav-link">지원하기</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-cont02">
+            <div class="info-copyright-wrap">
+              <div class="info-wrap">
+                <div class="company-info">
+                  <dl class="list">
+                    <dt>본사</dt>
+                    <dd>서울특별시 송파구 법원로 127 문정대명벨리온 208-210호</dd>
+                  </dl>
+                  <dl class="list">
+                    <dt>지사</dt>
+                    <dd>울산광역시 중구 종가로 406-21, 610호(복산동, 울산글로벌게임센터)</dd>
+                  </dl>
+                  <dl class="list list-space">
+                    <dt>TEL</dt>
+                    <dd>02-404-1306</dd>
+                  </dl>
+                  <dl class="list">
+                    <dt>Email</dt>
+                    <dd>info@yoyointeractive.com</dd>
+                  </dl>
+                </div>
+                <div class="sns-info">
+                  <ul class="sns-list-grp">
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">SNS</a>
+                    </li>
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">유튜브</a>
+                    </li>
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">인스타그램</a>
+                    </li>
+                    <li class="sns-list">
+                      <a href="#" class="sns-link">블로그</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="copyright">© Yoyointeractive Corp. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      $("#pfl-tab-btn .rbtn").on("click", function() {
+        var ttl = $(this).attr("data-ttl");
+        var content = $(this).attr("data-show");
+        // 탭버튼 클릭시 효과
+        $("#pfl-tab-btn .rbtn").removeClass("active");
+        $(this).addClass("active");
+        // 제목 바꾸기
+        $("#pfl-page-ttl").html(ttl);
+        // 맞는 컨텐츠 보여주기
+        $(".portfolio-list-page .grid-item-grp").removeClass("active");
+        $(`#${content}`).addClass("active");
+      })
+    </script>
+  </body>
+</html>

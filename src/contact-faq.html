@@ -1,0 +1,107 @@
+<include src="include/head.html" header="white"></include>
+
+<div class="subpage contact-faq-page">
+  <div class="subpage-head subpage-contact-head">
+    <h3 class="subpage-ttl">요요인터렉티브에 관한 <br>궁금증을 확인해보세요.</h3>
+  </div>
+
+  <div class="subpage-container">
+    <section class="section">
+      <div class="inner">
+        <div class="accordions">
+          <div class="accordion-item">
+            <div class="accordion-ttl" data-tab="item1">
+              <div class="faq-question">
+                <span class="faq-q">Q</span>
+                <p class="faq-text">월드맵 구축에 필요한 비용과 시간은 어느정도인가요?</p>
+              </div>
+            </div>
+
+            <div class="accordion-content" id="item1">
+              <div class="faq-answer">
+                <p class="faq-text">
+                  공간 기획에 따라 폭넓게 진행되고 있습니다. <br>
+                  예산과 기간은 최대한 맞춰드리고 있으므로, 편하게 문의 주세요!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-ttl" data-tab="item2">
+              <div class="faq-question">
+                <span class="faq-q">Q</span>
+                <p class="faq-text">메타버스 행사를 진행하고 싶은데 메타버스에 대해 잘 몰라도 진행할 수 있나요?</p>
+              </div>
+            </div>
+
+            <div class="accordion-content" id="item2">
+              <div class="faq-answer">
+                <p class="faq-text">
+                  공간 기획에 따라 폭넓게 진행되고 있습니다. <br>
+                  예산과 기간은 최대한 맞춰드리고 있으므로, 편하게 문의 주세요!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-ttl" data-tab="item3">
+              <div class="faq-question">
+                <span class="faq-q">Q</span>
+                <p class="faq-text">메타버스를 통한 홍보 비디오도 제작하시나요?</p>
+              </div>
+            </div>
+
+            <div class="accordion-content" id="item3">
+              <div class="faq-answer">
+                <p class="faq-text">
+                  요요인터렉티브는 영상 콘티 제작, 영상 촬영, 편집까지 메타버스를 통한 홍보 비디오를 제작하고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-ttl" data-tab="item4">
+              <div class="faq-question">
+                <span class="faq-q">Q</span>
+                <p class="faq-text">사후 관리는 어떻게 진행되나요?</p>
+              </div>
+            </div>
+
+            <div class="accordion-content" id="item4">
+              <div class="faq-answer">
+                <p class="faq-text">
+                  맵을 구축하신 이후에 월 유지보수 계약을 체결하시면 모든 플랫폼에 대해 장애 발생 시 즉각 대응해드리고 있습니다. <br>
+                  또한, 월마다 간단한 오브젝트의 수정이나 추가를 진행해드리고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<include src="include/tail.html">
+  <script>
+    $(".accordion-ttl").click(function (e) {
+      var accordionitem = $(this).attr("data-tab");
+      $("#" + accordionitem)
+        .slideToggle()
+        .parent()
+        .siblings()
+        .find(".accordion-content")
+        .slideUp();
+
+      $(this).toggleClass("active");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-ttl")
+        .removeClass("active");
+    });
+  </script>
+</include>

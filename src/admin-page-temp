@@ -1,0 +1,6 @@
+<include src="include/head.html"></include>
+
+<div class="subpage admin-page">
+</div>
+
+<include src="include/tail.html"></include>

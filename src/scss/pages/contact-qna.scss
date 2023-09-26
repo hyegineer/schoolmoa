@@ -1,0 +1,36 @@
+.contact-qna-page {
+  padding-bottom: rem(120);
+
+  .section {
+    padding: rem(120) 0;
+  }
+
+  .section .inner {
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+.conq-ttl-text-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: rem(100);
+
+  .conq-ttl {
+    font-weight: 700;
+    font-size: rem(50);
+  }
+
+  .text-wrap {
+    font-size: 20px;
+    font-weight: 400;
+
+    li {
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+  }
+}

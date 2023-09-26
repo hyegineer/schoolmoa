@@ -1,0 +1,167 @@
+.admin-board-list-page {
+  .subpage-head {
+    @include subpage-head-short;
+
+    margin-bottom: rem(30);
+  }
+
+  .inner {
+    width: 90%;
+    max-width: 1518px;
+    margin: 0 auto;
+
+    padding: rem(100) 0 rem(150);
+  }
+
+  .board-list-container {
+    margin-bottom: rem(150);
+  }
+}
+
+.board-opt-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  margin-bottom: rem(45);
+
+  .custom-select {
+    margin-left: 0;
+    margin-right: auto;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .search-inp-btn {
+    width: 100%;
+    max-width: 496px;
+  }
+
+  .write-btn {
+    @include button-reset;
+
+    margin-top: -14px;
+
+    img {
+      width: 53px;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.board-container {
+  .board-cnt {
+    text-align: left;
+    font-size: rem(24);
+    margin-bottom: 24px;
+
+    .blue-text {
+      color: #1499ca;
+    }
+  }
+}
+
+.board-list-container {
+  .cell.al-l {
+    text-align: left;
+  }
+
+  .cell.al-r {
+    text-align: right;
+  }
+
+  .cell .none {
+    display: none;
+  }
+
+  .bold-text {
+    font-weight: 500;
+  }
+
+  .gray-text {
+    color: #757575;
+  }
+}
+
+.board-head {
+  width: 100%;
+  background-color: #1499CA;
+  color: white;
+  font-size: rem(32);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  padding: rem(25) 0;
+
+  .cell {
+    text-align: center;
+  }
+
+  .cell:nth-child(1) {
+    width: 25%;
+  }
+
+  .cell:nth-child(2) {
+    width: 35%;
+  }
+
+  .cell:nth-child(3) {
+    width: 10%;
+  }
+
+  .cell:nth-child(4) {
+    width: 30%;
+  }
+}
+
+.board-body-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 13px 0;
+  border-bottom: 1px solid #D0D0D2;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .cell {
+    text-align: center;
+    font-size: rem(24);
+  }
+
+  .cell:nth-child(1) {
+    width: 25%;
+  }
+
+  .cell:nth-child(2) {
+    width: 35%;
+  }
+
+  .cell:nth-child(3) {
+    width: 10%;
+  }
+
+  .cell:nth-child(4) {
+    width: 30%;
+  }
+
+  .mb-show {
+    display: none;
+  }
+
+  .btn-grp .btn {
+    margin-right: 21px;
+
+    &:last-child {
+      margin-right: 0
+    }
+  }
+
+  .round-btn {
+    @include rbtn;
+  }
+}

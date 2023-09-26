@@ -1,0 +1,64 @@
+.career-ideal-page {
+  .subpage-head {
+    @include subpage-head-short;
+
+    margin-bottom: rem(100);
+  }
+}
+
+.cari-sect-1st {
+  padding: rem(80) 0;
+
+  .inner {
+    margin: 0 auto;
+    max-width: 1320px;
+    width: 90%;
+  }
+
+  .ttl-grp {
+    margin-bottom: rem(150);
+
+    .ttl {
+      font-size: rem(50);
+      font-weight: 700;
+      margin-bottom: rem(45);
+    }
+
+    .text {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
+
+.cari-sect-2nd {
+  width: 100%;
+  padding: rem(150) 0;
+  .inner {
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 90%;
+  }
+
+  .ttl-grp {
+    text-align: center;
+    margin-bottom: rem(85);
+
+    .ttl {
+      font-size: rem(50);
+      font-weight: 700;
+    }
+  }
+}
+
+.cari-pic-list {
+  width: 100%;
+  max-width: 758px;
+  border-radius: 30px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    vertical-align: bottom;
+  }
+}

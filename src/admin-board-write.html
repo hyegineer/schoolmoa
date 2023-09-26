@@ -1,0 +1,142 @@
+<include src="include/head.html"></include>
+
+<div class="subpage admin-board-write-page">
+  <div class="subpage-container">
+    <div class="inner">
+      <h4 class="adbw-ttl">게시글 작성하기</h4>
+
+      <div class="board-write-container">
+        <div class="bwrite-item-wrap">
+          <div class="bwrite-item">
+            <label for="" class="label">제목</label>
+            <div class="inp-content inp-content-lg">
+              <input type="text" class="inp type02" placeholder="제목을 입력하세요.">
+            </div>
+          </div>
+
+          <div class="bwrite-item">
+            <label for="" class="label">썸네일</label>
+            <div class="inp-content inp-content-md">
+              <div class="inp file-inp">
+                <input type="file" id="file" class="none">
+                <label for="file" class="file-btn">파일선택</label>
+                <span id="file-name" class="file-text"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bwrite-item">
+            <label for="" class="label">옵션</label>
+            <div class="inp-content inp-content-md">
+              <input type="text" class="inp type02" placeholder="내용을 입력하세요.">
+            </div>
+          </div>
+
+          <div class="bwrite-item">
+            <label for="" class="label">분류</label>
+            <div class="inp-content inp-content-select">
+              <div id="write-category-select" class="custom-select type02">
+                <div class="opt">
+                  <span>선택</span>
+                </div>
+
+                <div class="opt-list-wrap">
+                  <ul class="opt-list-grp">
+                    <li class="opt-list" data-show="portfolio">PORTFOLIO</li>
+                    <li class="opt-list" data-show="media">MEDIA CENTER</li>
+                    <li class="opt-list" data-show="webzine">WEBZINE</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="selected-option-wrap">
+                <!-- 1) PORTFOLIO -->
+                <div id="selected-portfolio" class="selected">
+                  <ul class="category-grp">
+                    <li class="category">
+                      <input id="cat01" type="checkbox" class="checkbox">
+                      <label for="cat01" class="btn">국방</label>
+                    </li>
+
+                    <li class="category">
+                      <input id="cat02" type="checkbox" class="checkbox">
+                      <label for="cat02" class="btn">VR</label>
+                    </li>
+
+                    <li class="category">
+                      <input id="cat03" type="checkbox" class="checkbox">
+                      <label for="cat03" class="btn">미디어아트</label>
+                    </li>
+
+                    <li class="category">
+                      <input id="cat04" type="checkbox" class="checkbox">
+                      <label for="cat04" class="btn">교육 훈련체계</label>
+                    </li>
+
+                    <li class="category">
+                      <input id="cat05" type="checkbox" class="checkbox">
+                      <label for="cat05" class="btn">메타버스</label>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 2) MEDIA CENTER -->
+                <div id="selected-media" class="selected">
+                  <div class="custom-select type02">
+                    <div class="opt">
+                      <span>선택</span>
+                    </div>
+
+                    <div class="opt-list-wrap">
+                      <ul class="opt-list-grp">
+                        <li class="opt-list">portfolio</li>
+                        <li class="opt-list">media center</li>
+                        <li class="opt-list">webzine</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3) CAREERS -->
+                <div id="selected-webzine" class="selected">
+                  <input type="text" class="inp type02" placeholder="내용을 입력하세요.">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bwrite-item-wrap">
+          <div class="bwrite-item">
+            <label for="" class="label">내용</label>
+            <div class="inp-content">
+              <div class="editor-area"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-btn-wrap">
+        <button type="button" class="round-btn">취소하기</button>
+        <button type="button" class="round-btn btn-navy">작성완료</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<include src="include/tail.html">
+  <script>
+    $("#file").on("change", function () {
+      // 파일 선택시 파일명
+      var fileName = $("#file").val().split('/').pop().split('\\').pop();
+      $("#file-name").text(fileName);
+    })
+
+    $("#write-category-select .opt-list").click(function () {
+      var content = $(this).attr("data-show");
+
+      $(".selected").hide();
+      $(`#selected-${content}`).show();
+    })
+  </script>
+</include>
