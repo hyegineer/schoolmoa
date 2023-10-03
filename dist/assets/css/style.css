@@ -1885,11 +1885,12 @@ textarea.inp {
 }
 .comh-panel .img-section .box {
   position: absolute;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 3.125rem;
-  align-items: center;
-  justify-content: center;
+}
+.comh-panel .img-section .card {
+  margin-top: 50px;
+}
+.comh-panel .img-section .card:first-child {
+  margin-top: 0;
 }
 .comh-panel .img-section .card-img {
   width: 100%;

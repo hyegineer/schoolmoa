@@ -343,7 +343,7 @@
               </button>
             </div>
             <div class="comh-panel-wrap">
-              <div class="comh-panel">
+              <div class="comh-panel comh-panel1">
                 <div class="comh-panel-inner">
                   <div class="year-ttl f-hd1">
                     2022
@@ -423,7 +423,7 @@
                   </div>
                 </div>
               </div>
-              <div class="comh-panel comh-even-panel">
+              <div class="comh-panel comh-panel1 comh-even-panel">
                 <div class="comh-panel-inner">
                   <div class="year-ttl f-hd1">
                     2021
@@ -505,7 +505,7 @@
               </div>
             </div>
             <div class="comh-panel-wrap">
-              <div class="comh-panel">
+              <div class="comh-panel comh-panel2">
                 <div class="comh-panel-inner">
                   <div class="year-ttl f-hd1">
                     2020
@@ -573,7 +573,7 @@
                   </div>
                 </div>
               </div>
-              <div class="comh-panel comh-even-panel">
+              <div class="comh-panel comh-panel2 comh-even-panel">
                 <div class="comh-panel-inner">
                   <div class="year-ttl f-hd1">
                     2018-2019
@@ -634,7 +634,7 @@
               </div>
             </div>
             <div class="comh-panel-wrap">
-              <div class="comh-panel">
+              <div class="comh-panel comh-panel3">
                 <div class="comh-panel-inner">
                   <div class="year-ttl f-hd1">
                     2015-2017
@@ -806,11 +806,11 @@
           ease: Power3.easeOut
         });
       })
-      $(".comh-panel").each(function(q) {
+      $(".comh-panel1").each(function(q) {
         let tl = gsap.timeline();
-        tl.to($(".comh-panel:eq(" + q + ") .img-section .box"), {
+        tl.to($(".comh-panel1:eq(" + q + ") .img-section .box"), {
           scrollTrigger: {
-            target: $(".comh-panel:eq(" + q + ")"),
+            target: $(".comh-panel1:eq(" + q + ")"),
             start() {
               if ($(window).width() >= 1024) {
                 return "0 200px";
@@ -820,31 +820,74 @@
             },
             end() {
               if ($(window).width() >= 1024) {
-                return "+=".concat($(".comh-panel:eq(" + q + ") .img-section .box").height())
+                return "+=".concat($(".comh-panel1:eq(" + q + ") .img-section .box").height())
               } else {
                 return "+=80vh"
               }
             },
-            pin: $(".comh-panel:eq(" + q + ")"),
+            pin: $(".comh-panel1:eq(" + q + ")"),
             scrub: 1,
-            // markers: true,
             onUpdate(self) {
-              $(".comh-panel:eq(" + q + ") .line span").css("height", self.progress.toFixed(3) * 100 + "%");
+              $(".comh-panel1:eq(" + q + ") .line span").css("height", self.progress.toFixed(3) * 100 + "%");
             },
-            onEnter() {
-              // if (q == 0) $(".year-tab").addClass("show");
-              // $(".heritage .year-tab .swiper-slide .btn-anchor").removeClass("active");
-              // $(".heritage .year-tab .swiper-slide:eq(0) .btn-anchor").addClass("active");
-            },
-            onEnterBack() {
-              // $(".heritage .year-tab .swiper-slide .btn-anchor").removeClass("active");
-              // $(".heritage .year-tab .swiper-slide:eq(0) .btn-anchor").addClass("active");
-            },
-            onLeaveBack() {
-              // if (q == 0) $(".year-tab").removeClass("show");
-            }
           },
-          y: -$(".comh-panel:eq(" + q + ") .img-section .box").height(),
+          y: -$(".comh-panel1:eq(" + q + ") .img-section .box").height(),
+        });
+      });
+      $(".comh-panel2").each(function(q) {
+        let tl = gsap.timeline();
+        tl.to($(".comh-panel2:eq(" + q + ") .img-section .box"), {
+          scrollTrigger: {
+            target: $(".comh-panel2:eq(" + q + ")"),
+            start() {
+              if ($(window).width() >= 1024) {
+                return "0 200px";
+              } else {
+                return "0 100px";
+              }
+            },
+            end() {
+              if ($(window).width() >= 1024) {
+                return "+=".concat($(".comh-panel2:eq(" + q + ") .img-section .box").height())
+              } else {
+                return "+=80vh"
+              }
+            },
+            pin: $(".comh-panel2:eq(" + q + ")"),
+            scrub: 1,
+            onUpdate(self) {
+              $(".comh-panel2:eq(" + q + ") .line span").css("height", self.progress.toFixed(3) * 100 + "%");
+            },
+          },
+          y: -$(".comh-panel2:eq(" + q + ") .img-section .box").height(),
+        });
+      });
+      $(".comh-panel3").each(function(q) {
+        let tl = gsap.timeline();
+        tl.to($(".comh-panel3:eq(" + q + ") .img-section .box"), {
+          scrollTrigger: {
+            target: $(".comh-panel3:eq(" + q + ")"),
+            start() {
+              if ($(window).width() >= 1024) {
+                return "0 200px";
+              } else {
+                return "0 100px";
+              }
+            },
+            end() {
+              if ($(window).width() >= 1024) {
+                return "+=".concat($(".comh-panel3:eq(" + q + ") .img-section .box").height())
+              } else {
+                return "+=80vh"
+              }
+            },
+            pin: $(".comh-panel3:eq(" + q + ")"),
+            scrub: 1,
+            onUpdate(self) {
+              $(".comh-panel3:eq(" + q + ") .line span").css("height", self.progress.toFixed(3) * 100 + "%");
+            },
+          },
+          y: -$(".comh-panel3:eq(" + q + ") .img-section .box").height(),
         });
       });
     </script>
