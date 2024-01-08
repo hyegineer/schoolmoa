@@ -46,8 +46,19 @@ const scssOptions = {
   }
 }
 
-gulp.task('styles', function () {
-  return gulp.src(src + '/scss/*.scss')
+gulp.task('styles:ui', function () {
+  return gulp.src([
+    src + '/scss/*.scss',
+    '!' + src + "/scss/pages/*.scss"
+  ])
+    .pipe(concat('ui.css'))
+    .pipe(sass(scssOptions).on('error', sass.logError))
+    .pipe(gulp.dest(dist + '/assets/css'))
+});
+
+gulp.task('styles:pages', function () {
+  return gulp.src(src + '/scss/pages/*.scss')
+    .pipe(concat('pages.css'))
     .pipe(sass(scssOptions).on('error', sass.logError))
     .pipe(gulp.dest(dist + '/assets/css'))
 });
@@ -56,12 +67,6 @@ gulp.task('styles:vendor', function () {
   return gulp.src(src + '/scss/vendor/*.scss')
     .pipe(sass(scssOptions).on('error', sass.logError))
     .pipe(gulp.dest(dist + '/assets/css/vendor'))
-});
-
-// scss 파일 바뀔 때.
-gulp.task('watch', function () {
-  gulp.watch(src + "/**/*.html", gulp.series('include'));
-  gulp.watch(src + '/**/*.scss', gulp.series('styles'));
 });
 
 /**
@@ -87,6 +92,15 @@ gulp.task('js:vendor', function () {
     .pipe(gulp.dest(dist + '/assets/js/vendor'))
 });
 
+gulp.task('watch', function () {
+  gulp.watch(src + "/**/*.html", gulp.series('include'));
+  gulp.watch(src + '/**/*.scss', gulp.series('styles:ui'));
+  gulp.watch(src + '/**/*.scss', gulp.series('styles:pages'));
+  gulp.watch(src + '/**/*.scss', gulp.series('styles:vendor'));
+  gulp.watch(src + '/**/*.js', gulp.series('js'));
+  gulp.watch(src + '/**/*.js', gulp.series('js:vendor'));
+});
+
 /**
  * ==================================+
  * @task : 이미지들
@@ -99,5 +113,5 @@ gulp.task('images', function () {
 });
 
 gulp.task('default', gulp.parallel(
-  'include', 'styles', 'styles:vendor', 'images', 'js', 'js:vendor', 'watch'
+  'include', 'styles:ui', 'styles:pages', 'styles:vendor', 'images', 'js', 'js:vendor', 'watch'
 ));

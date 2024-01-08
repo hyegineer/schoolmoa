@@ -1,239 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<include src="include/head.html"></include>
+<include src="include/layout/header.html"></include>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<!-- 페이지: 마이클래스 결제내역 -->
+<div class="myc-pay-history-page page-wrapper">
+  <div class="page-container">
+    <div>
+      <!-- 왼쪽 -->
+      <include src="include/layout/myclass-left-container.html"></include>
+      <!-- END 왼쪽 -->
 
-<body>
-  <div id="app">
-    <header class="header">
-      <div class="header-inner">
-        <div>
-          <h1>
-            <a href="#">
-              <img src="" alt="">
-            </a>
-          </h1>
-
-          <div>
-            <a href="">홈</a>
-            <a href="">쌤스킬</a>
-            <a href="">클래스</a>
-            <a href="">커뮤니티</a>
-            <a href="">마이클래스</a>
-          </div>
+      <!-- 오른쪽 -->
+      <div>
+        <!-- 제목 -->
+        <div class="title-wrap">
+          <h2 class="title-sm">결제내역</h2>
         </div>
+        <!-- END 제목 -->
 
+        <!-- 내용 -->
         <div>
-          <button type="button">
-            <span class="txt-hidden">검색하기</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">알림</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">공유하기</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">장바구니</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">찜리스트</span>
-            <img src="" alt="">
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <div class="page-wrapper">
-      <div class="page-container">
-        <div>
-          <!-- 왼쪽 -->
           <div>
-            <!-- 수강생 정보 -->
-            <div>
-              <figure>
-                <img src="" alt="">
-              </figure>
-
-              <div>
-                <p>닉네임을 설정하세요.</p>
-                <span>수강생</span>
-              </div>
-            </div>
-            <!-- END 수강생 정보 -->
-
-            <div>
-              <a href="#">홈</a>
-              <a href="#">대시보드</a>
-              <a href="#">알림</a>
-              <a href="#">클래스</a>
-              <a href="#">결제내역</a>
-              <a href="#">회원정보변경</a>
-              <a href="#">로그아웃</a>
+            <div class="bd-inp-wrap type-search">
+              <img src="" alt="검색 아이콘" class="ico ico-search">
+              <input type="text" placeholder="검색어를 입력하세요" class="inp">
             </div>
           </div>
-          <!-- END 왼쪽 -->
 
-          <!-- 오른쪽 -->
           <div>
-            <!-- 제목 -->
-            <div>
-              <h2>결제내역</h2>
-            </div>
-            <!-- END 제목 -->
-
-            <!-- 내용 -->
-            <div>
-              <div>
-                <div>
-                  <input type="text" placeholder="검색어를 입력하세요">
-                </div>
-              </div>
-
-              <div>
-                <!-- TODO: 결제내역 있을 때 -->
-                <div>
-                  <!-- 리스트 -->
-                  <div>
-                    <!-- 결제내역 카드 -->
-                    <div>
-                      <ul>
-                        <li>
-                          <div>
-                            <span>환불</span>
-                            <ul>
-                              <li>1234567890</li>
-                              <li>24.01.02</li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>중학교 정규분포 심화</h3>
-                        </li>
-                        <li>
-                          <p>1회 90분 X 총 4회</p>
-                        </li>
-                        <li>
-                          <p>수량 1</p>
-                        </li>
-                      </ul>
-
-                      <div>
-                        <p>결제금액</p>
-                        <div>
-                          <span>200,000</span>
-                          <p>150,000원</p>
-                        </div>
+            <!-- TODO: 결제내역 있을 때 -->
+            <div class="col-list-grp">
+              <!-- 리스트 -->
+              <div class="list">
+                <!-- 결제내역 카드 -->
+                <div class="list-card type-01">
+                  <ul class="card-information">
+                    <li>
+                      <div class="badge-sm-txt-wrap">
+                        <span class="badge type-red-bd">환불</span>
+                        <ul class="sm-txt-grp">
+                          <li class="sm-txt">1234567890</li>
+                          <li class="sm-txt">24.01.02</li>
+                        </ul>
                       </div>
+                    </li>
+                    <li>
+                      <h3 class="card-name">중학교 정규분포 심화</h3>
+                    </li>
+                    <li>
+                      <p class="gray-txt">1회 90분 X 총 4회</p>
+                    </li>
+                    <li>
+                      <p class="sm-gray-txt">수량 1</p>
+                    </li>
+                  </ul>
+
+                  <div class="mg-left">
+                    <p class="ttl">결제금액</p>
+                    <div class="price-wrap">
+                      <span class="strikethrough-txt">200,000</span>
+                      <p class="bold-txt">150,000원</p>
                     </div>
-                    <!-- END 결제내역 카드 -->
                   </div>
-                  <!-- END 리스트 -->
                 </div>
-
-                <!-- TODO: 결제내역 없을 때 -->
-                <div>
-                  <p>등록된 정보가 없습니다.</p>
-                </div>
-
-                <!-- 페이지네이션 -->
-                <div>
-                  <button type="button">
-                    <span class="txt-hidden">이전</span>
-                    <img src="" alt="">
-                  </button>
-
-                  <button type="button">1</button>
-                  <button type="button">2</button>
-
-                  <button type="button">
-                    <span class="txt-hidden">더보기</span>
-                    <img src="" alt="">
-                  </button>
-
-                  <button type="button">100</button>
-
-                  <button type="button">
-                    <span class="txt-hidden">다음</span>
-                    <img src="" alt="">
-                  </button>
-                </div>
-                <!-- END 페이지네이션 -->
+                <!-- END 결제내역 카드 -->
               </div>
+              <!-- END 리스트 -->
             </div>
-            <!-- END 내용 -->
+
+            <!-- TODO: 결제내역 없을 때 -->
+            <div class="nothing-wrap">
+              <p class="nothing-txt">등록된 정보가 없습니다.</p>
+            </div>
+
+            <!-- 페이지네이션 -->
+            <include src="include/layout/module/pagination.html"></include>
+            <!-- END 페이지네이션 -->
           </div>
-          <!-- END 오른쪽 -->
         </div>
+        <!-- END 내용 -->
       </div>
+      <!-- END 오른쪽 -->
     </div>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        <div>
-          <h6>
-            <a href="#">
-              <img src="" alt="">
-            </a>
-          </h6>
-
-          <ul>
-            <li><a href="#">서비스이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-          </ul>
-
-          <div>
-            <span>고객센터</span>
-            <dl>
-              <dt>연락처</dt>
-              <dd>010-4807-8870</dd>
-            </dl>
-            <dl>
-              <dt>이메일</dt>
-              <dd>help@schoolmoa.com</dd>
-            </dl>
-          </div>
-
-          <p>@Copyright Schoolmoa All rights reserved</p>
-        </div>
-        <div>
-          <div>
-            <button>
-              <span class="txt-hidden">카카오톡</span>
-              <img src="" alt="">
-            </button>
-
-            <button>
-              <span class="txt-hidden">페이스북</span>
-              <img src="" alt="">
-            </button>
-
-            <button>
-              <span class="txt-hidden">인스타그램</span>
-              <img src="" alt="">
-            </button>
-
-            <button>
-              <span class="txt-hidden">블로그</span>
-              <img src="" alt="">
-            </button>
-          </div>
-        </div>
-      </div>
-    </footer>
   </div>
-</body>
+</div>
+<!-- END 페이지: 마이클래스 결제내역 -->
 
-</html>
+<include src="include/layout/footer.html"></include>
+<include src="include/tail.html"></include>

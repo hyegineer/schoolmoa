@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스쿨모아 과외</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+
+    <!-- #app -->
+    <div id="app">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-left-wrap">
+            <h1 class="hd-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h1>
+            <div class="hd-nav-btn-grp">
+              <a href="" class="hd-nav-btn">홈</a>
+              <a href="" class="hd-nav-btn">쌤스킬</a>
+              <a href="" class="hd-nav-btn">클래스</a>
+              <a href="" class="hd-nav-btn">커뮤니티</a>
+              <a href="" class="hd-nav-btn">마이클래스</a>
+            </div>
+          </div>
+          <div class="header-btn-wrap">
+            <button type="button" class="hd-btn">
+              <span class="txt-hidden">검색하기</span>
+              <img src="" alt="검색 아이콘" class="ico ico-search">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">알림</span>
+              <img src="" alt="알림 아이콘" class="ico ico-alarm">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">공유하기</span>
+              <img src="" alt="공유 아이콘" class="ico ico-share">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">장바구니</span>
+              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">찜리스트</span>
+              <img src="" alt="찜 아이콘" class="ico ico-like">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 페이지: 커뮤니티 -->
+      <div class="commu-main-page page-wrapper">
+        <div class="page-container">
+          <div class="inner">
+
+            <!-- 제목 -->
+            <div class="title-wrap">
+              <h2 class="title">커뮤니티</h2>
+            </div>
+
+            <!-- END 제목 -->
+
+            <!-- 내용 (1. 공지사항) -->
+            <div>
+              <div class="title-wrap">
+                <h3 class="title-sm">공지사항</h3>
+              </div>
+              <div class="ment-box">
+
+                <!-- TODO: 장바구니 있을 때 -->
+                <p class="txt">총 10개의 클래스가 있어요.</p>
+
+                <!-- TODO: 장바구니 없을 때 -->
+                <p class="txt">총 0개의 쌤후기가 있어요.</p>
+              </div>
+              <div>
+                <div>
+                  <div class="sort-btn-grp">
+                    <button type="button" class="sort-btn">최신순</button>
+                    <button type="button" class="sort-btn">인기순</button>
+                  </div>
+                  <div class="bd-inp-wrap type-search">
+                    <img src="" alt="검색 아이콘" class="ico ico-search">
+                    <input type="text" placeholder="검색어를 입력하세요" class="inp">
+                  </div>
+                </div>
+                <div>
+
+                  <!-- 리스트 -->
+                  <div class="">
+
+                    <!-- 공지사항 -->
+                    <div class="list-card type-03">
+                      <span class="list-num">999</span>
+                      <ul class="card-information">
+                        <li>
+                          <h3 class="card-ttl">게시글 제목</h3>
+                        </li>
+                        <li>
+                          <div class="sm-txt-grp">
+                            <span class="sm-txt blue-txt">관리자</span>
+                            <span class="sm-txt">2024.00.00</span>
+                            <span class="sm-txt">조회 999+</span>
+                            <span class="sm-txt">추천 999+</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!-- END 공지사항 -->
+                  </div>
+
+                  <!-- END 리스트 -->
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="pagination">
+                  <button type="button" class="page-btn">
+                    <span class="txt-hidden">이전</span>
+                    <img src="" alt="이전 아이콘" class="ico ico-next-arrow">
+                  </button>
+                  <button type="button" class="page-btn">1</button>
+                  <button type="button" class="page-btn">2</button>
+                  <button type="button" class="page-btn">
+                    <span class="txt-hidden">더보기</span>
+                    <img src="" alt="더보기 아이콘" class="ico ico-dots">
+                  </button>
+                  <button type="button" class="page-btn">100</button>
+                  <button type="button" class="page-btn">
+                    <span class="txt-hidden">다음</span>
+                    <img src="" alt="다음 아이콘" class="ico ico-next-arrow">
+                  </button>
+                </div>
+
+                <!-- END 페이지네이션 -->
+              </div>
+            </div>
+
+            <!-- END 내용 (1. 공지사항) -->
+
+            <!-- 내용 (2. 자주묻는 질문) -->
+            <div>
+              <div class="title-wrap">
+                <h3 class="title-sm">자주묻는 질문</h3>
+              </div>
+              <div>
+                <div>
+
+                  <!-- 리스트 -->
+                  <div>
+
+                    <!-- 자주 묻는 질문 -->
+                    <div class="faq-card">
+                      <div class="card-top">
+                        <div class="card-content">
+                          <span class="left-txt">Q</span>
+                          <div class="txt-wrap">
+                            <p class="txt">웹접근성 인증마크나 최적화 홈페이지 제작도 가능한가요?</p>
+                          </div>
+                          <img src="" alt="접기 아이콘" class="ico ico-faq-arrow">
+                        </div>
+                      </div>
+                      <div class="card-bottom">
+                        <div class="card-content">
+                          <span class="left-txt">A</span>
+                          <div class="txt-wrap">
+                            <p class="txt">SERP란 Search Engine Result Page의 약자로 검색 엔진에서 검색 결과를 보여주는 페이지를 말합니다. 일반적으로 사용자는 첫 페이지에 노출되는 검색
+                              결과 중에서 원하는 정보를 찾아보게 됩니다. 따라서, SERP 상위에 노출되는 것은 해당 검색어와 관련된 정보를 제공하는 웹 사이트에게 매우 중요합니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- END 자주 묻는 질문 -->
+                  </div>
+
+                  <!-- END 리스트 -->
+                </div>
+
+                <!-- 1:1 상담 카드 -->
+                <div class="support-card">
+                  <div class="title-wrap">
+                    <img src="" alt="스마일 아이콘" class="ico ico-smile">
+                    <h4 class="title">1:1 상담하기</h4>
+                    <p class="desc">상담 가능 시간 : 10:00 ~ 17: 00</p>
+                  </div>
+                  <button type="button" class="blue-solid-btn btn-lg">상담하러 가기</button>
+                </div>
+
+                <!-- END 1:1 상담 카드 -->
+              </div>
+            </div>
+
+            <!-- END 내용 (2. 자주묻는 질문) -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END 페이지: 커뮤니티 -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <h6 class="ft-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h6>
+            <div class="ft-sns-btn-grp">
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">카카오톡</span>
+                <img src="" alt="카카오톡 아이콘" class="ico ico-kakao">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">페이스북</span>
+                <img src="" alt="페이스북 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">인스타그램</span>
+                <img src="" alt="인스타그램 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">블로그</span>
+                <img src="" alt="블로그 아이콘" class="ico ico-blog">
+              </button>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="ft-nav-btn-grp">
+              <a href="#" class="ft-nav-btn">서비스이용약관</a>
+              <a href="#" class="ft-nav-btn">개인정보처리방침</a>
+            </div>
+            <div class="ft-info-list-grp">
+              <span class="bold-txt">고객센터</span>
+              <dl class="ft-info-list">
+                <dt class="dt">연락처</dt>
+                <dd class="dd">010-4807-8870</dd>
+              </dl>
+              <dl class="ft-info-list">
+                <dt class="dt">이메일</dt>
+                <dd class="dd">help@schoolmoa.com</dd>
+              </dl>
+            </div>
+            <p class="ft-copyright">@Copyright Schoolmoa All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- END #app-->
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

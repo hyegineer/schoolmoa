@@ -2,37 +2,8 @@
 @import "utility/function";
 @import "utility/mixin";
 
-@import 'setting/common.scss';
-
+@import 'layout/layout.scss';
 @import 'layout/header.scss';
 @import 'layout/footer.scss';
 
-@import 'pages/main.scss'; // 메인페이지
-
-@import 'pages/sub.scss';
-@import 'pages/com-introduce.scss'; // company - 회사소개
-@import 'pages/com-history.scss'; // company - 연혁
-@import 'pages/com-business.scss'; // company - 사업영역
-@import 'pages/com-certificate.scss'; // company - 사업영역
-@import 'pages/com-ci.scss'; // company - CI
-@import 'pages/com-character.scss'; // company - 캐릭터
-@import 'pages/com-map.scss'; // company - 오시는 길
-
-@import 'pages/technology.scss'; // technology
-
-@import 'pages/portfolio-list.scss'; // portfolio - 목록
-@import 'pages/portfolio-detail.scss'; // portfolio - 상세
-
-@import 'pages/media-news-detail.scss'; // media center - 뉴스상세
-@import 'pages/media-sns.scss'; // media center - SNS
-
-@import 'pages/career-ideal.scss'; // career - 인재상
-@import 'pages/career-recruit.scss'; // career - 채용공고
-
-@import 'pages/contact-qna.scss'; // contact - Q&A
-@import 'pages/contact-qna-write.scss'; // contact - 1:1문의
-@import 'pages/contact-faq.scss'; // contact - FAQ
-
-@import 'pages/admin-login.scss'; // 관리자 - 로그인
-@import 'pages/admin-board-list.scss'; // 관리자 - 게시글 목록
-@import 'pages/admin-board-write.scss'; // 관리자 - 게시글 작성
+@import 'setting/common.scss';

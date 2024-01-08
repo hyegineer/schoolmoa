@@ -1,299 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
+<include src="include/head.html"></include>
+<include src="include/layout/header.html"></include>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<!-- 페이지: 클래스 디테일 -->
+<div class="class-detail-page page-wrapper">
+  <div class="page-container">
+    <div class="inner">
+      <!-- 상단 -->
+      <section>
+        <figure>
+          <img src="" alt="썸네일 이미지">
+        </figure>
 
-<body>
-  <div id="app">
-    <header class="header">
-      <div class="header-inner">
         <div>
-          <h1>
-            <a href="#">
-              <img src="" alt="">
-            </a>
-          </h1>
-
           <div>
-            <a href="">홈</a>
-            <a href="">쌤스킬</a>
-            <a href="">클래스</a>
-            <a href="">커뮤니티</a>
-            <a href="">마이클래스</a>
+            <p>서울대쌤</p>
+            <h3>중학교 정규분포 심화</h3>
           </div>
-        </div>
-
-        <div>
-          <button type="button">
-            <span class="txt-hidden">검색하기</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">알림</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">공유하기</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">장바구니</span>
-            <img src="" alt="">
-          </button>
-
-          <button type="button">
-            <span class="txt-hidden">찜리스트</span>
-            <img src="" alt="">
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <div class="page-wrapper">
-      <div class="page-container">
-        <div class="inner">
-          <!-- 상단 -->
-          <section>
-            <figure>
-              <img src="" alt="">
-            </figure>
-
-            <div>
-              <div>
-                <p>서울대쌤</p>
-                <h3>중학교 정규분포 심화</h3>
-              </div>
-
-              <ul>
-                <li>
-                  <span>1회 30분 X 총 1회</span>
-                  <span>무료</span>
-                </li>
-
-                <li>
-                  <span>1회 30분 X 총 1회</span>
-                  <span>무료</span>
-                </li>
-              </ul>
-
-              <div>
-                <button type="button">
-                  <span class="txt-hidden">장바구니</span>
-                  <img src="" alt="">
-                </button>
-
-                <button type="button">수강신청</button>
-              </div>
-
-              <div>
-                <button type="button">
-                  <span>공유하기</span>
-                  <img src="" alt="">
-                </button>
-
-                <button type="button">
-                  <span>찜하기</span>
-                  <img src="" alt="">
-                </button>
-              </div>
-            </div>
-          </section>
-
-          <!-- 하단 -->
-          <section>
-            <div>
-              <button type="button">클래스 설명</button>
-              <button type="button">커리큘럼</button>
-              <button type="button">쌤후기</button>
-            </div>
-
-            <div>
-              <!-- 클래스 설명 -->
-              <article>
-                <h4>클래스 설명</h4>
-
-                <div>
-                  <div>
-                    <h5>기초 과정</h5>
-
-                    <ul>
-                      <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5>중급 과정</h5>
-
-                    <ul>
-                      <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5>심화 과정</h5>
-
-                    <ul>
-                      <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-
-              <!-- 커리큘럼 -->
-              <article>
-                <h4>커리큘럼</h4>
-
-                <div>
-                  <div>
-                    <i></i>
-                    <p>커리큘럼 상세보기</p>
-                  </div>
-
-                  <div>
-                    <div>
-                      <span>챕터</span>
-                      <p>챕터 제목</p>
-                    </div>
-
-                    <ul>
-                      <li>
-                        <button type="button">
-                          <img src="" alt="">
-                        </button>
-
-                        <div>
-                          <span>00:00:00</span>
-                          <p>강의제목</p>
-                        </div>
-
-                        <img src="" alt="">
-                      </li>
-
-                      <li>
-                        <button type="button">
-                          <img src="" alt="">
-                        </button>
-
-                        <div>
-                          <span>00:00:00</span>
-                          <p>강의제목</p>
-                        </div>
-
-                        <img src="" alt="">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-
-              <!-- 쌤후기 -->
-              <article>
-                <h4>쌤후기</h4>
-
-                <div>
-                  <!-- TODO: 후기 있을 때 -->
-                  <p>총 10개의 쌤후기가 있어요.</p>
-
-                  <!-- TODO: 후기 없을 때 -->
-                  <p>총 0개의 쌤후기가 있어요.</p>
-                </div>
-
-                <div>
-                  <div>
-                    <!-- 리뷰 카드 -->
-                    <div>
-                      <div>
-                        <figure>
-                          <img src="" alt="">
-                        </figure>
-
-                        <ul>
-                          <li>
-                            <p>중학교 3학년 수학</p>
-                          </li>
-                          <li>
-                            <h3>김민지</h3>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <p>쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-
-                        <span>23.00.00</span>
-                      </div>
-                    </div>
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        <div>
-          <h6>
-            <a href="#">
-              <img src="" alt="">
-            </a>
-          </h6>
 
           <ul>
-            <li><a href="#">서비스이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
+            <li>
+              <span>1회 30분 X 총 1회</span>
+              <span>무료</span>
+            </li>
+
+            <li>
+              <span>1회 30분 X 총 1회</span>
+              <span>무료</span>
+            </li>
           </ul>
 
           <div>
-            <span>고객센터</span>
-            <dl>
-              <dt>연락처</dt>
-              <dd>010-4807-8870</dd>
-            </dl>
-            <dl>
-              <dt>이메일</dt>
-              <dd>help@schoolmoa.com</dd>
-            </dl>
+            <button type="button">
+              <span class="txt-hidden">장바구니</span>
+              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+            </button>
+
+            <button type="button">수강신청</button>
           </div>
 
-          <p>@Copyright Schoolmoa All rights reserved</p>
-        </div>
-        <div>
           <div>
-            <button>
-              <span class="txt-hidden">카카오톡</span>
-              <img src="" alt="">
+            <button type="button">
+              <span>공유하기</span>
+              <img src="" alt="공유 아이콘" class="ico ico-share">
             </button>
 
-            <button>
-              <span class="txt-hidden">페이스북</span>
-              <img src="" alt="">
-            </button>
-
-            <button>
-              <span class="txt-hidden">인스타그램</span>
-              <img src="" alt="">
-            </button>
-
-            <button>
-              <span class="txt-hidden">블로그</span>
-              <img src="" alt="">
+            <button type="button">
+              <span>찜하기</span>
+              <img src="" alt="찜 아이콘" class="ico ico-like">
             </button>
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
-</body>
+      </section>
 
-</html>
+      <!-- 하단 -->
+      <section>
+        <div>
+          <button type="button">클래스 설명</button>
+          <button type="button">커리큘럼</button>
+          <button type="button">쌤후기</button>
+        </div>
+
+        <div>
+          <!-- 클래스 설명 -->
+          <article>
+            <h4>클래스 설명</h4>
+
+            <div>
+              <div>
+                <h5>기초 과정</h5>
+
+                <ul>
+                  <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5>중급 과정</h5>
+
+                <ul>
+                  <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h5>심화 과정</h5>
+
+                <ul>
+                  <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- 커리큘럼 -->
+          <article>
+            <h4>커리큘럼</h4>
+
+            <div>
+              <div class="">
+                <i></i>
+                <p>커리큘럼 상세보기</p>
+              </div>
+
+              <div class="accordion-card type-01">
+                <div class="card-top">
+                  <div class="list-chapter-card">
+                    <div class="card-content">
+                      <span class="sub-ttl">챕터</span>
+                      <p class="card-ttl">챕터 제목</p>
+                    </div>
+
+                    <img src="" alt="화살표" class="ico ico-arrow">
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <ul class="col-list-grp">
+                    <li class="list">
+                      <div class="list-class-card">
+                        <button type="button" class="btn">
+                          <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
+                          <img src="" alt="수강완료 아이콘" class="ico ico-complete">
+                          <!-- <img src="" alt="수강중 아이콘" class="ico ico-ing"> -->
+                          <!-- <img src="" alt="수강전 아이콘" class="ico ico-imcomplete"> -->
+                        </button>
+
+                        <div class="card-content">
+                          <span class="sm-gray-txt">00:00:00</span>
+                          <h3 class="card-ttl">강의제목</h3>
+                        </div>
+
+                        <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
+                        <img src="" alt="수강완료 체크 아이콘" class="ico ico-checked">
+                      </div>
+                    </li>
+
+                    <li class="list">
+                      <div class="list-class-card">
+                        <button type="button" class="btn">
+                          <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
+                          <img src="" alt="수강완료 아이콘" class="ico ico-complete">
+                          <!-- <img src="" alt="수강중 아이콘" class="ico ico-ing"> -->
+                          <!-- <img src="" alt="수강전 아이콘" class="ico ico-imcomplete"> -->
+                        </button>
+
+                        <div class="card-content">
+                          <span class="sm-gray-txt">00:00:00</span>
+                          <h3 class="card-ttl">강의제목</h3>
+                        </div>
+
+                        <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
+                        <img src="" alt="수강완료 체크 아이콘" class="ico ico-checked">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 쌤후기 -->
+          <article>
+            <h4>쌤후기</h4>
+
+            <div class="ment-box">
+              <!-- TODO: 후기 있을 때 -->
+              <p class="txt">총 10개의 쌤후기가 있어요.</p>
+
+              <!-- TODO: 후기 없을 때 -->
+              <p class="txt">총 0개의 쌤후기가 있어요.</p>
+            </div>
+
+            <div>
+              <div>
+                <!-- 리뷰 카드 -->
+                <div class="review-card type-02">
+                  <div class="card-top">
+                    <div class="user-item">
+                      <figure class="thumbnail type-circle">
+                        <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                      </figure>
+
+                      <ul class="card-information">
+                        <li>
+                          <p class="sub-txt gray-txt">중학교 3학년 수학</p>
+                        </li>
+                        <li>
+                          <h3 class="card-name">김민지</h3>
+                        </li>
+                      </ul>
+
+                      <!-- <div class="btn-wrap">
+                        <button type="button" class="btn">
+                          <span class="txt-hidden">수정하기</span>
+                          <img src="" alt="수정 아이콘" class="ico ico-edit">
+                        </button>
+
+                        <button type="button" class="btn">
+                          <span class="txt-hidden">삭제하기</span>
+                          <img src="" alt="삭제 아이콘" class="ico ico-x">
+                        </button>
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="card-bottom">
+                    <div class="txt-wrap">
+                      <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                    </div>
+
+                    <span class="sm-txt">23.00.00</span>
+                  </div>
+                </div>
+                <!-- END 리뷰 카드 -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- END 페이지: 클래스 디테일 -->
+
+<include src="include/layout/footer.html"></include>
+<include src="include/tail.html"></include>

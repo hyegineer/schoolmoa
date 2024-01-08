@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스쿨모아 과외</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+
+    <!-- #app -->
+    <div id="app">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-left-wrap">
+            <h1 class="hd-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h1>
+            <div class="hd-nav-btn-grp">
+              <a href="" class="hd-nav-btn">홈</a>
+              <a href="" class="hd-nav-btn">쌤스킬</a>
+              <a href="" class="hd-nav-btn">클래스</a>
+              <a href="" class="hd-nav-btn">커뮤니티</a>
+              <a href="" class="hd-nav-btn">마이클래스</a>
+            </div>
+          </div>
+          <div class="header-btn-wrap">
+            <button type="button" class="hd-btn">
+              <span class="txt-hidden">검색하기</span>
+              <img src="" alt="검색 아이콘" class="ico ico-search">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">알림</span>
+              <img src="" alt="알림 아이콘" class="ico ico-alarm">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">공유하기</span>
+              <img src="" alt="공유 아이콘" class="ico ico-share">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">장바구니</span>
+              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">찜리스트</span>
+              <img src="" alt="찜 아이콘" class="ico ico-like">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 페이지: 마이클래스 알림 -->
+      <div class="myc-alarm-page page-wrapper">
+        <div class="page-container">
+          <div>
+
+            <!-- 왼쪽 -->
+            <div>
+
+              <!-- 수강생 정보 -->
+              <div class="user-card">
+                <figure class="thumbnail type-circle">
+                  <img src="" alt="수강생 프로필 사진" class="thumbnail-img">
+                </figure>
+                <div class="card-content">
+                  <p class="card-name">닉네임을 설정하세요.</p>
+                  <span class="gray-txt">수강생</span>
+                </div>
+              </div>
+
+              <!-- END 수강생 정보 -->
+              <div>
+                <a href="#">홈</a>
+                <a href="#">대시보드</a>
+                <a href="#">알림</a>
+                <a href="#">클래스</a>
+                <a href="#">결제내역</a>
+                <a href="#">회원정보변경</a>
+                <a href="#">로그아웃</a>
+              </div>
+            </div>
+
+            <!-- END 왼쪽 -->
+
+            <!-- 오른쪽 -->
+            <div>
+
+              <!-- 제목 -->
+              <div class="title-wrap">
+                <h2 class="title-sm">알림</h2>
+              </div>
+
+              <!-- END 제목 -->
+
+              <!-- 내용 -->
+              <div>
+                <div>
+                  <p>스쿨모아 플랫폼 알림은 사이트내에서만 이루어 집니다. <br>이메일/문자 알림을 받고자 하시는 수강생은 아래 설정을 완료해주시기 바랍니다.</p>
+                  <button type="button">이메일/문자 설정하기</button>
+                </div>
+                <div>
+                  <div>
+                    <p>읽지 않은 알림 <span>2</span>개</p>
+                    <div>
+                      <button type="button">읽은 알림 삭제</button>
+                      <button type="button">전체삭제</button>
+                    </div>
+                  </div>
+
+                  <!-- TODO: 알림 있을 때 -->
+                  <div>
+
+                    <!-- 리스트 -->
+                    <div>
+
+                      <!-- 알림 카드 -->
+                      <div class="alarm-card">
+                        <span class="circle-badge"></span>
+                        <div class="user-item">
+                          <figure class="thumbnail type-circle">
+                            <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                          </figure>
+                          <ul class="card-information">
+                            <li>
+                              <p class="sub-txt blue-txt">서울대쌤</p>
+                            </li>
+                            <li>
+                              <h3 class="card-txt">서울대쌤 알림내용</h3>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="date-del-wrap">
+                          <span class="sm-txt">23.00.00</span>
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <img src="" alt="삭제하기 아이콘" class="ico ico-x">
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 알림 카드 -->
+                    </div>
+
+                    <!-- END 리스트 -->
+                    <button type="button">더보기</button>
+                  </div>
+
+                  <!-- TODO: 알림 없을 때 -->
+                  <div class="nothing-wrap">
+                    <p class="nothing-txt">수강중인 클래스가 없습니다.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 내용 -->
+            </div>
+
+            <!-- END 오른쪽 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END 페이지: 마이클래스 알림 -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <h6 class="ft-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h6>
+            <div class="ft-sns-btn-grp">
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">카카오톡</span>
+                <img src="" alt="카카오톡 아이콘" class="ico ico-kakao">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">페이스북</span>
+                <img src="" alt="페이스북 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">인스타그램</span>
+                <img src="" alt="인스타그램 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">블로그</span>
+                <img src="" alt="블로그 아이콘" class="ico ico-blog">
+              </button>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="ft-nav-btn-grp">
+              <a href="#" class="ft-nav-btn">서비스이용약관</a>
+              <a href="#" class="ft-nav-btn">개인정보처리방침</a>
+            </div>
+            <div class="ft-info-list-grp">
+              <span class="bold-txt">고객센터</span>
+              <dl class="ft-info-list">
+                <dt class="dt">연락처</dt>
+                <dd class="dd">010-4807-8870</dd>
+              </dl>
+              <dl class="ft-info-list">
+                <dt class="dt">이메일</dt>
+                <dd class="dd">help@schoolmoa.com</dd>
+              </dl>
+            </div>
+            <p class="ft-copyright">@Copyright Schoolmoa All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- END #app-->
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

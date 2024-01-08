@@ -10,51 +10,21 @@
   /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
 }
 
-@mixin button-reset {
+@mixin btn-reset {
   background-color: transparent;
   border: 0;
   padding: 0;
   border-radius: 0;
   cursor: pointer;
-}
-
-@mixin button-flex {
+  outline: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-@mixin button-common {
-  border-radius: rem(30);
-  border: 1.5px solid #000;
-  background-color: #fff;
-}
-
-@mixin button-navy {
-  background-color: #171E43;
-  border-color: #171E43;
-  color: white;
-}
-
-@mixin round-btn {
-  font-size: 15px;
-  font-weight: 500;
-  padding: rem(20) rem(30);
-}
-
-@mixin rbtn {
-  font-size: rem(18);
-  font-weight: 500;
-  padding: rem(15.5) rem(27);
-}
-
-@mixin grid-item-width ($value) {
-  flex: 1 1 $value;
-  width: $value;
-  max-width: $value;
-}
-
-@mixin subpage-head-short {
-  height: rem(353);
-  align-items: flex-end;
+@mixin media($px, $range: max) {
+  @media all and (#{$range}-width: $px) {
+    @content;
+  }
 }

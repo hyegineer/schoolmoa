@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스쿨모아 과외</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+
+    <!-- #app -->
+    <div id="app">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-left-wrap">
+            <h1 class="hd-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h1>
+            <div class="hd-nav-btn-grp">
+              <a href="" class="hd-nav-btn">홈</a>
+              <a href="" class="hd-nav-btn">쌤스킬</a>
+              <a href="" class="hd-nav-btn">클래스</a>
+              <a href="" class="hd-nav-btn">커뮤니티</a>
+              <a href="" class="hd-nav-btn">마이클래스</a>
+            </div>
+          </div>
+          <div class="header-btn-wrap">
+            <button type="button" class="hd-btn">
+              <span class="txt-hidden">검색하기</span>
+              <img src="" alt="검색 아이콘" class="ico ico-search">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">알림</span>
+              <img src="" alt="알림 아이콘" class="ico ico-alarm">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">공유하기</span>
+              <img src="" alt="공유 아이콘" class="ico ico-share">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">장바구니</span>
+              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">찜리스트</span>
+              <img src="" alt="찜 아이콘" class="ico ico-like">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 페이지: 마이클래스 대시보드 -->
+      <div class="myc-main-page page-wrapper">
+        <div class="page-container">
+          <div>
+
+            <!-- 왼쪽 -->
+            <div>
+
+              <!-- 수강생 정보 -->
+              <div class="user-card">
+                <figure class="thumbnail type-circle">
+                  <img src="" alt="수강생 프로필 사진" class="thumbnail-img">
+                </figure>
+                <div class="card-content">
+                  <p class="card-name">닉네임을 설정하세요.</p>
+                  <span class="gray-txt">수강생</span>
+                </div>
+              </div>
+
+              <!-- END 수강생 정보 -->
+              <div>
+                <a href="#">홈</a>
+                <a href="#">대시보드</a>
+                <a href="#">알림</a>
+                <a href="#">클래스</a>
+                <a href="#">결제내역</a>
+                <a href="#">회원정보변경</a>
+                <a href="#">로그아웃</a>
+              </div>
+            </div>
+
+            <!-- END 왼쪽 -->
+
+            <!-- 오른쪽 -->
+            <div>
+
+              <!-- 제목 -->
+              <div class="title-wrap">
+                <h2 class="title-sm">대시보드</h2>
+              </div>
+
+              <!-- END 제목 -->
+
+              <!-- 내용 -->
+              <div>
+                <div class="status-box">
+                  <dl class="status-dl">
+                    <dt class="dt">수강 예정 클래스</dt>
+                    <dd class="dd">0</dd>
+                  </dl>
+                  <dl class="status-dl">
+                    <dt class="dt">수강 중 클래스</dt>
+                    <dd class="dd">0</dd>
+                  </dl>
+                  <dl class="status-dl">
+                    <dt class="dt">완료된 클래스</dt>
+                    <dd class="dd">0</dd>
+                  </dl>
+                  <dl class="status-dl">
+                    <dt class="dt">결제내역</dt>
+                    <dd class="dd">0</dd>
+                  </dl>
+                </div>
+
+                <!-- 최근 수강중인 클래스 -->
+                <div class="gray-bd-box">
+                  <div class="ttl-wrap">
+                    <h3 class="ttl">최근 수강중인 클래스</h3>
+                    <button type="button" class="txt-arrow-btn">
+                      <span class="txt">전체보기</span>
+                      <img src="" alt="화살표 아이콘" class="ico ico-arrow">
+                    </button>
+                  </div>
+
+                  <!-- TODO: 있을 때 -->
+                  <div class="row-list-grp">
+                    <div class="list">
+
+                      <!-- 카드 -->
+                      <div class="class-card type-02">
+                        <figure class="thumbnail">
+                          <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <h3 class="card-name">중학교 정규분포 심화</h3>
+                          </li>
+                          <li>
+                            <div class="progress-wrap">
+                              <div class="progress">
+                                <span class="bar"></span>
+                              </div>
+                              <p class="gray-txt">진행률 : 80%</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 카드 -->
+                    </div>
+                  </div>
+
+                  <!-- TODO: 없을 때 -->
+                  <div class="nothing-wrap">
+                    <p class="nothing-txt">수강중인 클래스가 없습니다.</p>
+                  </div>
+                </div>
+
+                <!-- END 최근 수강중인 클래스 -->
+
+                <!-- 최근 강의 클래스 -->
+                <div class="gray-bd-box">
+                  <div class="ttl-wrap">
+                    <h3 class="ttl">최근 수강중인 강의</h3>
+
+                    <!-- <button type="button" class="txt-arrow-btn">
+                <span class="txt">전체보기</span>
+                <img src="" alt="화살표 아이콘" class="ico ico-arrow">
+              </button> -->
+                  </div>
+
+                  <!-- TODO: 있을 때 -->
+                  <div class="row-list-grp">
+                    <div class="list">
+
+                      <!-- 카드 -->
+                      <div class="class-card type-02">
+                        <figure class="thumbnail">
+                          <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt blue-txt">중학교 정규분포 심화</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">중학교 정규분포 심화</h3>
+                          </li>
+                          <li>
+                            <div class="progress-wrap">
+                              <div class="progress">
+                                <span class="bar"></span>
+                              </div>
+                              <p class="gray-txt">진행률 : 80%</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 카드 -->
+                    </div>
+                  </div>
+
+                  <!-- TODO: 없을 때 -->
+                  <div class="nothing-wrap">
+                    <p class="nothing-txt">수강중인 강의가 없습니다.</p>
+                  </div>
+                </div>
+
+                <!-- END 최근 수강중인 클래스 -->
+
+                <!-- 최근 결제 내역 -->
+                <div class="gray-bd-box">
+                  <div class="ttl-wrap">
+                    <h3 class="ttl">최근 결제 내역</h3>
+                    <button type="button" class="txt-arrow-btn">
+                      <span class="txt">전체보기</span>
+                      <img src="" alt="화살표 아이콘" class="ico ico-arrow">
+                    </button>
+                  </div>
+
+                  <!-- TODO: 있을 때 -->
+                  <div class="row-list-grp">
+                    <div class="list">
+
+                      <!-- 카드 -->
+                      <div class="class-card type-04">
+                        <figure class="thumbnail">
+                          <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <h3 class="card-name">중학교 정규분포 심화</h3>
+                          </li>
+                          <li>
+                            <p class="gray-txt">1회 90분 X 총 4회</p>
+                          </li>
+                          <li>
+                            <div class="info-wrap">
+                              <dl class="info-dl">
+                                <dt class="dt">결제금액</dt>
+                                <dd class="dd">
+                                  <span class="bold-txt">150,000원</span>
+                                </dd>
+                              </dl>
+                              <dl class="info-dl">
+                                <dt class="dt">결제일자</dt>
+                                <dd class="dd">24.00.00</dd>
+                              </dl>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 카드 -->
+                    </div>
+                  </div>
+
+                  <!-- TODO: 없을 때 -->
+                  <div class="nothing-wrap">
+                    <p class="nothing-txt">수강중인 강의가 없습니다.</p>
+                  </div>
+                </div>
+
+                <!-- END 최근 수강중인 클래스 -->
+              </div>
+
+              <!-- END 내용 -->
+            </div>
+
+            <!-- END 오른쪽 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END 페이지: 마이클래스 대시보드 -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <h6 class="ft-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h6>
+            <div class="ft-sns-btn-grp">
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">카카오톡</span>
+                <img src="" alt="카카오톡 아이콘" class="ico ico-kakao">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">페이스북</span>
+                <img src="" alt="페이스북 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">인스타그램</span>
+                <img src="" alt="인스타그램 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">블로그</span>
+                <img src="" alt="블로그 아이콘" class="ico ico-blog">
+              </button>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="ft-nav-btn-grp">
+              <a href="#" class="ft-nav-btn">서비스이용약관</a>
+              <a href="#" class="ft-nav-btn">개인정보처리방침</a>
+            </div>
+            <div class="ft-info-list-grp">
+              <span class="bold-txt">고객센터</span>
+              <dl class="ft-info-list">
+                <dt class="dt">연락처</dt>
+                <dd class="dd">010-4807-8870</dd>
+              </dl>
+              <dl class="ft-info-list">
+                <dt class="dt">이메일</dt>
+                <dd class="dd">help@schoolmoa.com</dd>
+              </dl>
+            </div>
+            <p class="ft-copyright">@Copyright Schoolmoa All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- END #app-->
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

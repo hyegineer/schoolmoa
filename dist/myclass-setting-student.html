@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스쿨모아 과외</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+
+    <!-- #app -->
+    <div id="app">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-left-wrap">
+            <h1 class="hd-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h1>
+            <div class="hd-nav-btn-grp">
+              <a href="" class="hd-nav-btn">홈</a>
+              <a href="" class="hd-nav-btn">쌤스킬</a>
+              <a href="" class="hd-nav-btn">클래스</a>
+              <a href="" class="hd-nav-btn">커뮤니티</a>
+              <a href="" class="hd-nav-btn">마이클래스</a>
+            </div>
+          </div>
+          <div class="header-btn-wrap">
+            <button type="button" class="hd-btn">
+              <span class="txt-hidden">검색하기</span>
+              <img src="" alt="검색 아이콘" class="ico ico-search">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">알림</span>
+              <img src="" alt="알림 아이콘" class="ico ico-alarm">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">공유하기</span>
+              <img src="" alt="공유 아이콘" class="ico ico-share">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">장바구니</span>
+              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+            </button>
+            <button type="button">
+              <span class="txt-hidden">찜리스트</span>
+              <img src="" alt="찜 아이콘" class="ico ico-like">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 페이지: 마이클래스 회원정보 변경 (학생) -->
+      <div class="myc-setting-page page-wrapper">
+        <div class="page-container">
+          <div>
+
+            <!-- 왼쪽 -->
+            <div>
+
+              <!-- 수강생 정보 -->
+              <div class="user-card">
+                <figure class="thumbnail type-circle">
+                  <img src="" alt="수강생 프로필 사진" class="thumbnail-img">
+                </figure>
+                <div class="card-content">
+                  <p class="card-name">닉네임을 설정하세요.</p>
+                  <span class="gray-txt">수강생</span>
+                </div>
+              </div>
+
+              <!-- END 수강생 정보 -->
+              <div>
+                <a href="#">홈</a>
+                <a href="#">대시보드</a>
+                <a href="#">알림</a>
+                <a href="#">클래스</a>
+                <a href="#">결제내역</a>
+                <a href="#">회원정보변경</a>
+                <a href="#">로그아웃</a>
+              </div>
+            </div>
+
+            <!-- END 왼쪽 -->
+
+            <!-- 오른쪽 -->
+            <div>
+
+              <!-- 제목 -->
+              <div class="title-wrap">
+                <h2 class="title-sm">회원정보변경</h2>
+              </div>
+
+              <!-- END 제목 -->
+
+              <!-- 내용 -->
+              <div>
+                <div class="gray-bd-box">
+
+                  <!-- 사진 바꾸기 영역 -->
+                  <div>
+                    <div class="thumbnail-wrap">
+                      <figure class="thumbnail type-circle">
+                        <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                      </figure>
+                      <span>
+                  <img src="" alt="사진편집 아이콘">
+                </span>
+                    </div>
+                  </div>
+
+                  <!-- END 사진 바꾸기 영역 -->
+
+                  <!-- 정보입력 -->
+                  <div class="form-item-grp">
+                    <div class="form-item">
+                      <label class="form-label">이메일</label>
+                      <div class="form-inp-wrap">
+                        <div class="bg-skyblue-box id-box">he**@schoolmoa.com</div>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">휴대폰 번호</label>
+                      <div class="form-inp-wrap">
+                        <div class="inp-btn-wrap">
+                          <input type="text" class="inp">
+                          <button type="button" class="blue-solid-btn btn-lg">수정</button>
+                        </div>
+                      </div>
+                      <p class="form-validation-msg">
+                        <img src="" alt="경고 아이콘" class="ico ico-bang">
+                        <span>휴대폰 번호가 변경된 경우 업데이트 해주세요!</span>
+                      </p>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">닉네임</label>
+                      <div class="form-inp-wrap">
+                        <div class="inp-btn-wrap">
+                          <input type="text" class="inp" value="스쿨모아">
+
+                          <!-- TODO: 30일에 한번만 변경할 수 있어서, 변경한 후에는 30일동안 disabled를 설정해놓아야 합니다. -->
+                          <button type="button" class="blue-solid-btn btn-lg" disabled>수정</button>
+                        </div>
+                      </div>
+                      <p class="form-validation-msg">
+                        <img src="" alt="경고 아이콘" class="ico ico-bang">
+                        <span>닉네임은 30일 안에 한 번만 변경할 수 있습니다.</span>
+                      </p>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">비밀번호</label>
+                      <div class="form-inp-wrap">
+                        <div class="bd-inp-wrap">
+                          <input type="password" placeholder="비밀번호를 입력하세요">
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">비밀번호 보기</span>
+                            <div class="ico-wrap">
+                              <img src="" alt="비밀번호 가리기" class="ico ico-off">
+                              <img src="" alt="비밀번호 보이기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+                      <p class="form-validation-msg type-warning">안내텍스트</p>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">비밀번호 확인</label>
+                      <div class="form-inp-wrap">
+                        <div class="bd-inp-wrap">
+                          <input type="password" placeholder="비밀번호를 입력하세요">
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">비밀번호 보기</span>
+                            <div class="ico-wrap">
+                              <img src="" alt="비밀번호 가리기" class="ico ico-off">
+                              <img src="" alt="비밀번호 보이기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+                      <p class="form-validation-msg type-warning">안내텍스트</p>
+                    </div>
+                  </div>
+
+                  <!-- END 정보입력 -->
+                  <button type="button" class="blue-solid-btn btn-lg">저장하기</button>
+                </div>
+                <div class="gray-bd-box">
+                  <div class="">
+                    <h6>회원탈퇴</h6>
+                    <p>회원 탈퇴 즉시 스쿨모아 서비스 이용 정보가 삭제됩니다. <br>
+                      유료로 구매한 클래스는 탈퇴시 환불이 되지 않습니다. <br>
+                      <br>작성한 게시글은 삭제되지 않습니다.
+                    </p>
+                  </div>
+                  <button type="button" class="blue-solid-btn btn-lg">회원탈퇴</button>
+                </div>
+              </div>
+
+              <!-- END 내용 -->
+            </div>
+
+            <!-- END 오른쪽 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- END 페이지: 마이클래스 회원정보 변경 (학생) -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <h6 class="ft-logo">
+              <a href="#">
+                <img src="" alt="스쿨모아 로고">
+              </a>
+            </h6>
+            <div class="ft-sns-btn-grp">
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">카카오톡</span>
+                <img src="" alt="카카오톡 아이콘" class="ico ico-kakao">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">페이스북</span>
+                <img src="" alt="페이스북 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">인스타그램</span>
+                <img src="" alt="인스타그램 아이콘" class="ico ico-facebook">
+              </button>
+              <button class="ft-sns-btn">
+                <span class="txt-hidden">블로그</span>
+                <img src="" alt="블로그 아이콘" class="ico ico-blog">
+              </button>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="ft-nav-btn-grp">
+              <a href="#" class="ft-nav-btn">서비스이용약관</a>
+              <a href="#" class="ft-nav-btn">개인정보처리방침</a>
+            </div>
+            <div class="ft-info-list-grp">
+              <span class="bold-txt">고객센터</span>
+              <dl class="ft-info-list">
+                <dt class="dt">연락처</dt>
+                <dd class="dd">010-4807-8870</dd>
+              </dl>
+              <dl class="ft-info-list">
+                <dt class="dt">이메일</dt>
+                <dd class="dd">help@schoolmoa.com</dd>
+              </dl>
+            </div>
+            <p class="ft-copyright">@Copyright Schoolmoa All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- END #app-->
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

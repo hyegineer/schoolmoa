@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/Solid/heart">
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M20.2123 5.78769C18.1621 3.73744 14.8379 3.73744 12.7877 5.78769L12.7877 5.78771L12 6.57541L11.2123 5.78769C9.16206 3.73744 5.83794 3.73744 3.78769 5.78769C1.73744 7.83794 1.73744 11.1621 3.78769 13.2123L11.4697 20.8943C11.6104 21.035 11.8011 21.114 12.0001 21.114C12.199 21.114 12.3897 21.035 12.5304 20.8943L20.2123 13.2123C22.2626 11.1621 22.2626 7.83794 20.2123 5.78769Z" fill="url(#paint0_linear_50_1804)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_50_1804" x1="12" y1="4.25" x2="12" y2="21.114" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E86993"/>
+<stop offset="1" stop-color="#D83232"/>
+</linearGradient>
+</defs>
+</svg>

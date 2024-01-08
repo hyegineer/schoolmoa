@@ -1,0 +1,11 @@
+html {
+  font-size: 0.052vw;
+
+  @media all and (min-width: 1920px) {
+    font-size: 1px;
+  }
+}
+
+body {
+  font-size: max(16rem, 14px);
+}

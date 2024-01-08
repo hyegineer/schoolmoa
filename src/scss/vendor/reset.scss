@@ -24,11 +24,14 @@ td,
 header,
 footer,
 figure,
-label {
+label,
+button,
+span,
+section {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple Color Emoji", sans-serif;
 }
 
 a {
@@ -72,7 +75,6 @@ ul {
 caption,
 th {
   text-align: left;
-
 }
 
 h1,
@@ -89,7 +91,7 @@ h6 {
 
 q:before,
 q:after {
-  content: '';
+  content: "";
 }
 
 abbr,
@@ -97,7 +99,15 @@ acronym {
   border: 0;
 }
 
-button, input, a, select, textarea {
+button,
+input,
+a,
+select,
+textarea {
   box-sizing: border-box;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple Color Emoji", sans-serif;
+}
+
+textarea {
+  line-height: 1.4;
 }
