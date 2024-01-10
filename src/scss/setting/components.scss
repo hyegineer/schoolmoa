@@ -1,5 +1,5 @@
 .components-page {
-  padding: max(80rem, 30px) 0;
+  padding: 50px 0;
 
   .page-container {
     width: 100%;
@@ -1066,6 +1066,28 @@
 }
 
 .alarm-card {
+  width: 100%;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  .circle-badge {
+    width: 8px;
+    height: 8px;
+    background-color: #94a3b8;
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .circle-badge.active {
+    background-color: #2563EB;
+  }
+
   .user-item {
     .sub-txt {
       font-size: 12px;
@@ -1083,8 +1105,23 @@
     height: 60px;
   }
 
+  .sub-txt {
+    color: #64748B;
+  }
+
   .date-del-wrap {
     flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 28px;
+
+    .sm-txt {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: -0.12px;
+      color: #64748B;
+    }
   }
 }
 
@@ -1174,44 +1211,6 @@
 
   .card-top .ico-faq-arrow {
     transform: rotate(360deg);
-  }
-}
-
-.alarm-card {
-  width: 100%;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-
-  .circle-badge {
-    width: 8px;
-    height: 8px;
-    background-color: #94a3b8;
-    display: inline-block;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .circle-badge.active {
-    background-color: #D83232;
-  }
-
-  .date-del-wrap {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 28px;
-  }
-
-  .date-del-wrap .sm-txt {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: -0.12px;
-    color: #64748B;
   }
 }
 
@@ -1684,6 +1683,7 @@
   letter-spacing: -0.16px;
   color: #27364B;
   text-align: center;
+  border-radius: 8px;
 }
 
 .ment-box {
@@ -1694,6 +1694,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
+  border-radius: 8px;
 
   .txt {
     width: 100%;

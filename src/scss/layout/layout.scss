@@ -38,3 +38,22 @@ body {
     border: 4px solid transparent;
   }
 }
+
+.chatbot-btn-wrapper {
+  position: fixed;
+  max-width: 1218px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+  z-index: 100;
+  top: auto;
+
+  .chatbot-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

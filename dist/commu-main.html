@@ -143,38 +143,6 @@
           </div>
         </div>
       </div>
-      <script>
-        function openHdSearch() {
-          $('.header-search-wrap').addClass('active');
-          $('.header-overlay').addClass('active');
-        }
-        function closeHdSearch() {
-          $('.header-search-wrap').removeClass('active');
-          $('.header-overlay').removeClass('active');
-          $('.bottom-bd-inp-wrap .inp').val('');
-          $('.bottom-bd-inp-wrap .del-btn').removeClasS('active');
-        }
-        // 헤더 검색: 검색어 입력시 지우기 버튼 활성화
-        $('.bottom-bd-inp-wrap .inp').on('input', function() {
-          if ($(this).val()) {
-            $(this).siblings('.del-btn').addClass('active');
-          } else {
-            $(this).siblings('.del-btn').removeClass('active');
-          }
-        })
-        // 헤더 검색: 검색어 입력시 지우기 버튼 작동
-        $('.bottom-bd-inp-wrap .del-btn').on('click', function() {
-          $(this).siblings('.inp').val('');
-        })
-        // 헤더 검색: 검색어 포커스할 때 보더 효과 적용
-        $('.bottom-bd-inp-wrap .inp').on('focus', function() {
-          $(this).parent('.bottom-bd-inp-wrap').addClass('active');
-        })
-        // 헤더 검색: 검색어 포커스 뗄 때 보더 효과 해제
-        $('.bottom-bd-inp-wrap .inp').on('blur', function() {
-          $(this).parent('.bottom-bd-inp-wrap').removeClass('active');
-        })
-      </script>
 
       <!-- 페이지: 커뮤니티 -->
       <div class="commu-main-page page-wrapper">
@@ -285,7 +253,7 @@
 
                     <!-- 자주 묻는 질문 -->
                     <div class="faq-card">
-                      <div class="card-top">
+                      <div class="accordion-card-top card-top">
                         <div class="card-content" onclick="showContent(this, 'faq-card');">
                           <span class="left-txt">Q</span>
                           <div class="txt-wrap">
@@ -294,7 +262,7 @@
                           <img src="assets/images/ico/ico-faq-arrow.svg" alt="접기 아이콘" class="ico ico-18 ico-faq-arrow">
                         </div>
                       </div>
-                      <div class="card-bottom">
+                      <div class="accordion-card-bottom card-bottom">
                         <div class="card-content">
                           <span class="left-txt">A</span>
                           <div class="txt-wrap">
@@ -317,7 +285,7 @@
 
                     <!-- 자주 묻는 질문 -->
                     <div class="faq-card">
-                      <div class="card-top">
+                      <div class="accordion-card-top card-top">
                         <div class="card-content" onclick="showContent(this, 'faq-card');">
                           <span class="left-txt">Q</span>
                           <div class="txt-wrap">
@@ -326,7 +294,7 @@
                           <img src="assets/images/ico/ico-faq-arrow.svg" alt="접기 아이콘" class="ico ico-18 ico-faq-arrow">
                         </div>
                       </div>
-                      <div class="card-bottom">
+                      <div class="accordion-card-bottom card-bottom">
                         <div class="card-content">
                           <span class="left-txt">A</span>
                           <div class="txt-wrap">
@@ -367,6 +335,11 @@
       </div>
 
       <!-- END 페이지: 커뮤니티 -->
+      <div class="chatbot-btn-wrapper"><button type="button" class="chatbot-btn">
+          <span class="txt-hidden">챗봇</span>
+          <img src="assets/images/logo/logo-sm.png" alt="챗봇 아이콘" class="ico ico-38">
+        </button>
+      </div>
       <footer class="footer">
         <div class="footer-inner">
           <div class="footer-top">
