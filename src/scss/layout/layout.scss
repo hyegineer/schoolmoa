@@ -1,17 +1,11 @@
-html {
-  font-size: 0.052vw;
-
-  @media all and (min-width: 1920px) {
-    font-size: 1px;
+html, body {
+  @include media (310px) {
+    min-width: 320px;
   }
 }
 
-body {
-  font-size: max(16rem, 14px);
-}
-
 .inner {
-  width: 100%;
+  width: 80%;
   max-width: 1218px;
   margin: 0 auto;
   position: relative;
@@ -44,12 +38,17 @@ body {
   max-width: 1218px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 90%;
   left: 0;
   right: 0;
   bottom: 150px;
   z-index: 100;
   top: auto;
+
+  @include media ($mobile) {
+    width: calc(100% - 40px);
+    bottom: 80px;
+  }
 
   .chatbot-btn {
     position: absolute;

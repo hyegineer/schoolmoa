@@ -1,7 +1,7 @@
 .myc-view-page {
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 700px;
 
   .page-container {
     height: 100%;
@@ -17,13 +17,14 @@
 
   .myc-view-left-container {
     width: 100%;
-    border-right: 1px solid #bfc7d3;
   }
 
   .myc-view-right-container {
     width: 100%;
     max-width: 351px;
     flex-shrink: 0;
+    border-left: 1px solid #bfc7d3;
+    background-color: white;
   }
 }
 
@@ -61,6 +62,13 @@
       letter-spacing: -0.18px;
       line-height: 1.4;
       color: #27364B;
+    }
+
+    .ttl-wrap .desc {
+      font-size: 12px;
+      color: white;
+      letter-spacing: -0.12px;
+      margin-top: 3px;
     }
 
     .blue-txt {
@@ -157,6 +165,14 @@
     .box-top {
       border-bottom: 0;
     }
+
+    .close-btn {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   .myc-view-right-content {
@@ -171,35 +187,116 @@
 
     .list-chapter-card {
       padding: 16px;
+    }
+  }
+}
 
-      .sub-ttl {
-        font-size: 12px;
-        min-width: auto;
-        padding: 0 8px;
+@include media ($tab-lg) {
+  .myc-view-layout-container {
+    .myc-view-right-container {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      z-index: 10;
+      transition: all 0.3s;
+      opacity: 0;
+    }
+
+    .myc-view-right-container.active {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  .myc-view-left-container {
+    .myc-view-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+      border-bottom: 0;
+      height: 73px;
+
+      .ttl-wrap .ttl {
+        color: white;
       }
 
-      .card-ttl {
-        font-size: 14px;
-        margin-top: 5px;
+      .mb-show {
+        display: block;
       }
 
-      .card-content {
-        gap: 10px;
+      .mb-none {
+        display: none;
       }
     }
 
-    .list-class-card {
-      gap: 12px;
-      padding: 10px 16px;
+    .myc-view-content-container {
+      padding: 0;
+    }
+  }
 
-      .view-btn {
-        min-width: auto;
-        padding: 0;
-      }
+  .myc-view-right-container {
+    .curriculum-box .close-btn {
+      opacity: 1;
+      pointer-events: visible;
+    }
+  }
+}
 
-      .card-ttl {
+@include media ($mobile) {
+  .myc-view-page {
+    min-height: 500px;
+  }
+
+  .myc-view-page~.chatbot-btn-wrapper {
+    display: none;
+  }
+
+  .myc-view-left-container {
+    .view-controller {
+      height: 54px;
+
+      .ctrl-btn {
         font-size: 14px;
+        padding: 0 10px;
+        margin: 0 10px;
       }
+    }
+
+    .myc-view-header {
+      padding: 0 20px;
+
+      .ttl-wrap .ttl {
+        font-size: 14px;
+        letter-spacing: -0.14px;
+      }
+    }
+  }
+
+  .myc-view-right-container {
+    .curriculum-box .box-top {
+      padding: 8px 24px;
+      padding-top: 20px;
+    }
+
+    .box-top .ttl {
+      font-size: 14px;
+      letter-spacing: -0.14px;
+    }
+
+    .curriculum-box .close-btn {
+      top: 16px;
+    }
+
+    .curriculum-box .ico-paper {
+      width: 16px;
+      height: 16px;
+    }
+
+    .myc-view-right-content {
+      padding: 12px 24px;
     }
   }
 }

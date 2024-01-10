@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
 
     <!-- #app -->
     <div id="app">
@@ -63,6 +64,10 @@
                 <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
+            <button type="button" class="hd-menu-btn" onclick="toggleHdMenu();">
+              <span class="txt-hidden">모바일 메뉴 보기</span>
+              <img src="assets/images/ico/ico-menu.svg" class="ico">
+            </button>
             <div class="hd-nav-btn-grp">
               <a href="main.html" class="hd-nav-btn active">홈</a>
               <a href="skill-main.html" class="hd-nav-btn ">쌤스킬</a>
@@ -168,7 +173,7 @@
             <div class="bg-skyblue-box type-left"></div>
             <div class="profile-box">
               <figure class="thumbnail type-lg">
-                <img src="assets/images/img-teacher-profile.png" alt="썸네일 이미지" class="thumbnail-img">
+                <img src="assets/images/sample/sample-teacher-profile.png" alt="썸네일 이미지" class="thumbnail-img">
               </figure>
               <div class="bg-shining-card">
                 <h3 class="ttl">서울대쌤</h3>
@@ -248,210 +253,292 @@
             <!-- END 제목 -->
 
             <!-- 내용 -->
-            <div id="swiper-01" class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card-grp">
 
-                    <!-- 클래스 카드 -->
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 1</h3>
-                          <p class="desc">서울대쌤</p>
-                        </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 2</h3>
-                          <p class="desc">서울대쌤</p>
-                        </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
-                      </div>
-                    </div>
+            <!-- TODO: PC일 때만 보이는 슬라이드입니다. -->
+            <div class="content mb-none">
+              <div id="swiper-01" class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-grp">
 
-                    <!-- END 클래스 카드 -->
+                      <!-- 클래스 카드 -->
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 1</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 2</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 클래스 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 클래스 카드 -->
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 3</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 4</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 클래스 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 클래스 카드 -->
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 5</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 6</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 클래스 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 클래스 카드 -->
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 7</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 8</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 클래스 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 클래스 카드 -->
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 9</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="class-thumbnail-card type-01">
+                        <div class="thumbnail">
+                          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                          <div class="card-content">
+                            <h3 class="card-name">중학교 정규분포 초급 10</h3>
+                            <p class="desc">서울대쌤</p>
+                          </div>
+                          <button type="button" class="btn toggle-btn">
+                            <span class="txt-hidden">찜하기</span>
+                            <div class="ico-wrap">
+                              <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                              <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- END 클래스 카드 -->
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
+                <div class="swiper-01-pagination custom-swiper-pagination"></div>
+              </div>
+            </div>
 
-                    <!-- 클래스 카드 -->
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 3</h3>
-                          <p class="desc">서울대쌤</p>
-                        </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
+            <!-- TODO: MOBILE일 때만 보이는 카드들입니다. -->
+            <div class="content mb-show">
+              <div class="col-list-grp">
+                <div class="list">
+                  <div class="class-thumbnail-card type-01">
+                    <div class="thumbnail">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                      <div class="card-content">
+                        <h3 class="card-name">중학교 정규분포 초급 1</h3>
+                        <p class="desc">서울대쌤</p>
                       </div>
-                    </div>
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 4</h3>
-                          <p class="desc">서울대쌤</p>
+                      <button type="button" class="btn toggle-btn">
+                        <span class="txt-hidden">찜하기</span>
+                        <div class="ico-wrap">
+                          <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                          <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
                         </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
-                      </div>
+                      </button>
                     </div>
-
-                    <!-- END 클래스 카드 -->
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 클래스 카드 -->
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 5</h3>
-                          <p class="desc">서울대쌤</p>
-                        </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
+                <div class="list">
+                  <div class="class-thumbnail-card type-01">
+                    <div class="thumbnail">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                      <div class="card-content">
+                        <h3 class="card-name">중학교 정규분포 초급 1</h3>
+                        <p class="desc">서울대쌤</p>
                       </div>
-                    </div>
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 6</h3>
-                          <p class="desc">서울대쌤</p>
+                      <button type="button" class="btn toggle-btn">
+                        <span class="txt-hidden">찜하기</span>
+                        <div class="ico-wrap">
+                          <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                          <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
                         </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
-                      </div>
+                      </button>
                     </div>
-
-                    <!-- END 클래스 카드 -->
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 클래스 카드 -->
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 7</h3>
-                          <p class="desc">서울대쌤</p>
-                        </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
+                <div class="list">
+                  <div class="class-thumbnail-card type-01">
+                    <div class="thumbnail">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                      <div class="card-content">
+                        <h3 class="card-name">중학교 정규분포 초급 1</h3>
+                        <p class="desc">서울대쌤</p>
                       </div>
-                    </div>
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 8</h3>
-                          <p class="desc">서울대쌤</p>
+                      <button type="button" class="btn toggle-btn">
+                        <span class="txt-hidden">찜하기</span>
+                        <div class="ico-wrap">
+                          <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                          <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
                         </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
-                      </div>
+                      </button>
                     </div>
-
-                    <!-- END 클래스 카드 -->
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 클래스 카드 -->
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 9</h3>
-                          <p class="desc">서울대쌤</p>
-                        </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
+                <div class="list">
+                  <div class="class-thumbnail-card type-01">
+                    <div class="thumbnail">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                      <div class="card-content">
+                        <h3 class="card-name">중학교 정규분포 초급 1</h3>
+                        <p class="desc">서울대쌤</p>
                       </div>
-                    </div>
-                    <div class="class-thumbnail-card type-01">
-                      <div class="thumbnail">
-                        <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                        <div class="card-content">
-                          <h3 class="card-name">중학교 정규분포 초급 10</h3>
-                          <p class="desc">서울대쌤</p>
+                      <button type="button" class="btn toggle-btn">
+                        <span class="txt-hidden">찜하기</span>
+                        <div class="ico-wrap">
+                          <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
+                          <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
                         </div>
-                        <button type="button" class="btn toggle-btn">
-                          <span class="txt-hidden">찜하기</span>
-                          <div class="ico-wrap">
-                            <img src="assets/images/ico/ico-heart-solid-off.svg" alt="찜 풀기" class="ico ico-off">
-                            <img src="assets/images/ico/ico-heart-on.svg" alt="찜 하기" class="ico ico-on">
-                          </div>
-                        </button>
-                      </div>
+                      </button>
                     </div>
-
-                    <!-- END 클래스 카드 -->
                   </div>
                 </div>
               </div>
-              <div class="swiper-01-pagination custom-swiper-pagination"></div>
             </div>
 
             <!-- END 내용 -->
@@ -487,405 +574,527 @@
             <!-- END 제목 -->
 
             <!-- 내용 -->
-            <div id="swiper-02" class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card-grp">
 
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
+            <!-- TODO: PC일 때만 보이는 슬라이드입니다. -->
+            <div class="content mb-none">
+              <div id="swiper-02" class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
                         </div>
                       </div>
+
+                      <!-- END 리뷰 카드 -->
                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
 
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
                         </div>
                       </div>
+
+                      <!-- END 리뷰 카드 -->
                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
 
-                    <!-- END 리뷰 카드 -->
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-grp">
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+
+                      <!-- 리뷰 카드 -->
+                      <div class="review-card type-01">
+                        <div class="card-top">
+                          <div class="user-item">
+                            <figure class="thumbnail type-circle">
+                              <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+                                <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                              </li>
+                              <li>
+                                <h3 class="card-name">김민지</h3>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-bottom">
+                          <div class="txt-wrap">
+                            <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END 리뷰 카드 -->
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card-grp">
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-
-                    <!-- 리뷰 카드 -->
-                    <div class="review-card type-01">
-                      <div class="card-top">
-                        <div class="user-item">
-                          <figure class="thumbnail type-circle">
-                            <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
-                          </figure>
-                          <ul class="card-information">
-                            <li>
-                              <p class="sub-txt red-txt">중학교 3학년 수학</p>
-                            </li>
-                            <li>
-                              <h3 class="card-name">김민지</h3>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="card-bottom">
-                        <div class="txt-wrap">
-                          <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- END 리뷰 카드 -->
-                  </div>
-                </div>
+                <div class="swiper-02-pagination custom-swiper-pagination"></div>
               </div>
-              <div class="swiper-02-pagination custom-swiper-pagination"></div>
             </div>
 
             <!-- END 내용 -->
+
+            <!-- TODO: MOBILE일 때만 보이는 카드들입니다. -->
+            <div class="content mb-show">
+              <div class="col-list-grp">
+                <div class="list">
+
+                  <!-- 리뷰 카드 -->
+                  <div class="review-card type-01">
+                    <div class="card-top">
+                      <div class="user-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">김민지</h3>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="txt-wrap">
+                        <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리뷰 카드 -->
+                </div>
+                <div class="list">
+
+                  <!-- 리뷰 카드 -->
+                  <div class="review-card type-01">
+                    <div class="card-top">
+                      <div class="user-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">김민지</h3>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="txt-wrap">
+                        <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리뷰 카드 -->
+                </div>
+                <div class="list">
+
+                  <!-- 리뷰 카드 -->
+                  <div class="review-card type-01">
+                    <div class="card-top">
+                      <div class="user-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">김민지</h3>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="txt-wrap">
+                        <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리뷰 카드 -->
+                </div>
+                <div class="list">
+
+                  <!-- 리뷰 카드 -->
+                  <div class="review-card type-01">
+                    <div class="card-top">
+                      <div class="user-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt red-txt">중학교 3학년 수학</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">김민지</h3>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="txt-wrap">
+                        <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END 리뷰 카드 -->
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </div>

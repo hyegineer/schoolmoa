@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
 
     <!-- #app -->
     <div id="app">
@@ -63,6 +64,10 @@
                 <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
+            <button type="button" class="hd-menu-btn" onclick="toggleHdMenu();">
+              <span class="txt-hidden">모바일 메뉴 보기</span>
+              <img src="assets/images/ico/ico-menu.svg" class="ico">
+            </button>
             <div class="hd-nav-btn-grp">
               <a href="main.html" class="hd-nav-btn ">홈</a>
               <a href="skill-main.html" class="hd-nav-btn ">쌤스킬</a>
@@ -316,7 +321,7 @@
                             <!-- TODO: 내가 쓴 후기가 없을 때 -->
                             <div class="nothing-wrap">
                               <p class="nothing-txt">작성된 후기가 없습니다.</p>
-                              <button type="button" class="gray-01-bd-btn btn-md">후기 작성</button>
+                              <button type="button" onclick="openModal('modal-1');" class="gray-01-bd-btn btn-md">후기 작성</button>
                             </div>
                           </div>
                         </div>

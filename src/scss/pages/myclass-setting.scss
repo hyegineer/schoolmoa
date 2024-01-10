@@ -47,6 +47,7 @@
         font-weight: 400;
         letter-spacing: -0.14px;
         line-height: 1.5;
+        word-break: keep-all;
       }
     }
 
@@ -70,4 +71,43 @@
   align-items: stretch;
   justify-content: center;
   gap: 10px;
+}
+
+@include media ($tab) {
+  .myc-setting-page {
+    .page-content {
+      padding: 20px;
+    }
+
+    .gray-bd-box {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@include media ($mobile) {
+  .myc-setting-page {
+    .myc-setting-box {
+      padding: 24px 16px;
+    }
+
+    .myc-desc-box {
+      padding: 24px 16px;
+
+      .ttl-wrap .desc {
+        font-size: 12px;
+      }
+
+      .btn-grp-wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        min-width: 170px;
+        margin: 0 auto;
+        width: max-content;
+      }
+    }
+  }
 }

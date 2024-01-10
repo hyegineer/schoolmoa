@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   table {
@@ -18,7 +19,7 @@
       tr th {
         border-bottom: 1px solid #CBD4E1;
         color: #64748B;
-        padding: 10px 0;
+        padding: 10px;
       }
     }
 
@@ -28,7 +29,7 @@
       }
 
       tr td {
-        padding: 10px 0;
+        padding: 10px;
         border-bottom: 1px solid #E2E8F0;
         font-size: 14px;
       }

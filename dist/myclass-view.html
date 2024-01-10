@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
 
     <!-- #app -->
     <div id="app">
@@ -63,6 +64,10 @@
                 <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
+            <button type="button" class="hd-menu-btn" onclick="toggleHdMenu();">
+              <span class="txt-hidden">모바일 메뉴 보기</span>
+              <img src="assets/images/ico/ico-menu.svg" class="ico">
+            </button>
             <div class="hd-nav-btn-grp">
               <a href="main.html" class="hd-nav-btn ">홈</a>
               <a href="skill-main.html" class="hd-nav-btn ">쌤스킬</a>
@@ -157,12 +162,22 @@
                 <div class="ttl-wrap">
                   <button type="button" class="btn">
                     <span class="txt-hidden">뒤로 가기</span>
-                    <img src="assets/images/ico/ico-back-arrow.svg" alt="뒤로가기 아이콘" class="ico">
+                    <img src="assets/images/ico/ico-back-arrow.svg" alt="뒤로가기 아이콘" class="ico mb-none">
+                    <img src="assets/images/ico/ico-white-back-arrow.svg" alt="뒤로가기 아이콘" class="ico mb-show">
                   </button>
-                  <h2 class="ttl">중학교 정규분포 심화</h2>
+                  <div>
+                    <h2 class="ttl">중학교 정규분포 심화</h2>
+                    <p class="mb-show desc">서울대쌤</p>
+                  </div>
                 </div>
                 <div class="mg-left">
-                  <span class="blue-txt">서울대쌤</span>
+                  <span class="blue-txt mb-none">서울대쌤</span>
+                  <div class="mb-show">
+                    <button type="button" onclick="openCurri();" class="btn">
+                      <span class="txt-hidden">커리큘럼 보기</span>
+                      <img src="assets/images/ico/ico-white-paper.svg" alt="커리큘럼 상세 아이콘" class="ico">
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -209,6 +224,10 @@
                   <img src="assets/images/ico/ico-paper.svg" alt="커리큘럼 아이콘" class="ico ico-paper">
                   <p class="ttl">커리큘럼 상세보기</p>
                 </div>
+                <button type="button" onclick="closeCurri();" class="btn close-btn">
+                  <span class="txt-hidden">닫기</span>
+                  <img src="assets/images/ico/ico-x.svg" alt="닫기 아이콘" class="ico">
+                </button>
               </div>
 
               <!-- END 오른쪽 상단 제목 -->
@@ -336,6 +355,14 @@
       if ($('.page-wrapper').hasClass('myc-view-page')) {
         $('.header').hide();
         $('.footer').hide();
+      }
+      // 커리큘럼 상세 버튼 누를 때 동작
+      function openCurri() {
+        $('.myc-view-right-container').addClass('active');
+      }
+      // 커리큘럼 상세 닫기버튼 누를 때 동작
+      function closeCurri() {
+        $('.myc-view-right-container').removeClass('active');
       }
     </script>
   </body>

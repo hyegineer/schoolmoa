@@ -1,3 +1,7 @@
+@import "../utility/variable";
+@import "../utility/function";
+@import "../utility/mixin";
+
 .cart-list-page {
   padding: 83px 0 200px;
 
@@ -62,7 +66,6 @@
 
   .cart-tbl-body {
     .list-card {
-      padding: 12px 24px;
       border-bottom: 1px solid #E2E8F0;
     }
   }
@@ -101,5 +104,105 @@
     max-width: 300px;
     margin: 0 auto;
     margin-top: 80px;
+  }
+}
+
+@include media ($web-lg) {
+  .cart-list-page {
+    padding: 50px 0 130px;
+
+    .inner {
+      width: 90%;
+    }
+
+    .title-wrap {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@include media ($web-sm) {
+  .cart-list-page {}
+}
+
+@include media ($tab-lg) {
+  .cart-list-page {
+    .cart-tbl-head {
+      display: none;
+    }
+
+    .cart-tbl {
+      .cell {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      .cell:nth-child(1) {
+        width: 100%;
+        padding-right: 15px;
+      }
+
+      .cell:nth-child(2) {
+        width: 100%;
+      }
+
+      .cell:nth-child(3) {
+        width: 100%;
+      }
+    }
+
+    .cart-tbl-tail {
+      padding: 24px 0;
+    }
+  }
+}
+
+@include media ($tab) {
+  .cart-list-page {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .inner {
+      width: 100%;
+    }
+
+    .cart-tbl-tail .right-txt {
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+  }
+}
+
+@include media ($mobile) {
+  .cart-list-page {
+    padding: 20px 0 90px;
+
+    .title-wrap {
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+
+    .ment-box {
+      width: calc(100% - 40px);
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .cart-tbl {
+      .cell:nth-child(1) {
+        padding-right: 0;
+      }
+    }
+
+    .cart-tbl-tail {
+      padding: 20px;
+    }
+
+    .apply-btn {
+      max-width: calc(100% - 40px);
+    }
   }
 }

@@ -10,6 +10,10 @@ function closeHdSearch() {
   $('.bottom-bd-inp-wrap .del-btn').removeClasS('active');
 }
 
+function toggleHdMenu() {
+  $('.header-btn-wrap').toggleClass('active');
+}
+
 // 헤더 검색: 검색어 입력시 지우기 버튼 활성화
 $('.bottom-bd-inp-wrap .inp').on('input', function () {
   if ($(this).val()) {

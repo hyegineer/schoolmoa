@@ -42,10 +42,62 @@
   }
 
   .desc {
+    word-break: keep-all;
     color: #64748B;
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: -0.12px;
+  }
+}
+
+@include media ($tab) {
+  .myc-alarm-page {
+    .page-content {
+      padding: 20px;
+    }
+
+    .myc-alarm-col-grp {
+      gap: 12px;
+    }
+
+    .desc-btn-box {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .mg-left {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@include media ($tab-sm) {
+  .myc-alarm-page {
+    .desc-btn-box {
+      padding: 18px 10px;
+    }
+  }
+}
+
+@include media ($mobile) {
+  .myc-alarm-page {
+    .ment-box {
+      padding: 12px 16px;
+    }
+  }
+}
+
+@include media (320px) {
+  .myc-alarm-page {
+    .ment-box {
+      flex-direction: column;
+
+      .btn-wrap {
+        margin-left: auto;
+      }
+    }
   }
 }

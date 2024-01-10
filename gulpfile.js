@@ -63,6 +63,13 @@ gulp.task('styles:pages', function () {
     .pipe(gulp.dest(dist + '/assets/css'))
 });
 
+gulp.task('styles:responsive', function () {
+  return gulp.src(src + '/scss/responsive/*.scss')
+    .pipe(concat('responsive.css'))
+    .pipe(sass(scssOptions).on('error', sass.logError))
+    .pipe(gulp.dest(dist + '/assets/css'))
+});
+
 gulp.task('styles:vendor', function () {
   return gulp.src(src + '/scss/vendor/*.scss')
     .pipe(sass(scssOptions).on('error', sass.logError))
@@ -96,6 +103,7 @@ gulp.task('watch', function () {
   gulp.watch(src + "/**/*.html", gulp.series('include'));
   gulp.watch(src + '/**/*.scss', gulp.series('styles:ui'));
   gulp.watch(src + '/**/*.scss', gulp.series('styles:pages'));
+  gulp.watch(src + '/**/*.scss', gulp.series('styles:responsive'));
   gulp.watch(src + '/**/*.scss', gulp.series('styles:vendor'));
   gulp.watch(src + '/**/*.js', gulp.series('js'));
   gulp.watch(src + '/**/*.js', gulp.series('js:vendor'));

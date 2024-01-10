@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
 
     <!-- #app -->
     <div id="app">
@@ -63,6 +64,10 @@
                 <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
+            <button type="button" class="hd-menu-btn" onclick="toggleHdMenu();">
+              <span class="txt-hidden">모바일 메뉴 보기</span>
+              <img src="assets/images/ico/ico-menu.svg" class="ico">
+            </button>
             <div class="hd-nav-btn-grp">
               <a href="main.html" class="hd-nav-btn ">홈</a>
               <a href="skill-main.html" class="hd-nav-btn ">쌤스킬</a>
@@ -207,9 +212,12 @@
                       <ul class="card-information">
                         <li>
                           <div class="badge-sm-txt-wrap">
-                            <span class="badge">수강 전</span>
-                            <span class="badge type-gray-blue">수강중</span>
-                            <span class="badge type-gray-bd">수강 완료</span>
+
+                            <!-- <span class="badge">수강 전</span> -->
+
+                            <!-- <span class="badge type-gray-blue">수강중</span> -->
+
+                            <!-- <span class="badge type-gray-bd">수강 완료</span> -->
                             <span class="badge type-red-bd">환불</span>
                             <ul class="sm-txt-grp">
                               <li class="sm-txt">1234567890</li>
@@ -250,9 +258,12 @@
                         <li>
                           <div class="badge-sm-txt-wrap">
                             <span class="badge">수강 전</span>
-                            <span class="badge type-gray-blue">수강중</span>
-                            <span class="badge type-gray-bd">수강 완료</span>
-                            <span class="badge type-red-bd">환불</span>
+
+                            <!-- <span class="badge type-gray-blue">수강중</span> -->
+
+                            <!-- <span class="badge type-gray-bd">수강 완료</span> -->
+
+                            <!-- <span class="badge type-red-bd">환불</span> -->
                             <ul class="sm-txt-grp">
                               <li class="sm-txt">1234567890</li>
                               <li class="sm-txt">24.01.02</li>

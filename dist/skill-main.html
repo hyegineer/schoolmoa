@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
 
     <!-- #app -->
     <div id="app">
@@ -63,6 +64,10 @@
                 <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
+            <button type="button" class="hd-menu-btn" onclick="toggleHdMenu();">
+              <span class="txt-hidden">모바일 메뉴 보기</span>
+              <img src="assets/images/ico/ico-menu.svg" class="ico">
+            </button>
             <div class="hd-nav-btn-grp">
               <a href="main.html" class="hd-nav-btn ">홈</a>
               <a href="skill-main.html" class="hd-nav-btn active">쌤스킬</a>
@@ -173,7 +178,7 @@
             <div class="bg-skyblue-box type-left"></div>
             <div class="profile-box">
               <figure class="thumbnail type-lg">
-                <img src="assets/images/img-teacher-profile.png" alt="썸네일 이미지" class="thumbnail-img">
+                <img src="assets/images/sample/sample-teacher-profile.png" alt="썸네일 이미지" class="thumbnail-img">
               </figure>
               <div class="bg-shining-card">
                 <h3 class="ttl">서울대쌤</h3>

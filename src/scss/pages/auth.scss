@@ -1,3 +1,7 @@
+@import "../utility/variable";
+@import "../utility/function";
+@import "../utility/mixin";
+
 .auth-page {
   padding: 50px 0 200px;
 }
@@ -124,6 +128,7 @@
     font-size: 12px;
     letter-spacing: -0.12px;
     color: #64748B;
+    margin-top: 6px;
   }
 
   .light-gray-btn {
@@ -145,7 +150,7 @@
 
 .find-box {
   max-width: 360px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 
   .blue-back-btn {
@@ -153,6 +158,8 @@
   }
 
   .gray-bd-box {
+    overflow: hidden;
+
     .tabs {
       padding: 0;
       gap: 0;
@@ -194,6 +201,7 @@
     letter-spacing: -0.16px;
     line-height: 1.5;
     font-weight: 400;
+    text-align: center;
   }
 
   .id-box-desc-wrap {
@@ -206,5 +214,71 @@
 
   .form-item-grp {
     margin-bottom: 48px;
+  }
+}
+
+@include media ($mobile) {
+  .auth-page {
+    padding: 20px 0 100px;
+  }
+
+  .auth-box {
+    padding: 30px 16px;
+
+    .title-wrap {
+      margin-bottom: 20px;
+    }
+
+    .divider-txt {
+      margin-bottom: 25px;
+    }
+
+    .sns-btn-grp {
+      margin-bottom: 25px;
+    }
+
+    .form-item-grp {
+      margin-bottom: 25px;
+    }
+
+    .agree-box {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .find-box {
+    .guide-ment-box {
+      margin-bottom: 20px;
+    }
+
+    .find-content {
+      padding: 24px 16px 16px;
+    }
+
+    .gray-bd-box .tabs {
+      padding-top: 2px;
+    }
+
+    .guide-ttl {
+      font-size: 18px;
+      letter-spacing: -0.18px;
+    }
+
+    .guide-desc {
+      font-size: 12px;
+      letter-spacing: -0.12px;
+    }
+
+    .id-box-desc-wrap {
+      margin-bottom: 25px;
+    }
+
+    .form-item-grp {
+      margin-bottom: 25px;
+    }
   }
 }

@@ -19,3 +19,23 @@
     margin-top: 80px;
   }
 }
+
+@include media ($tab) {
+  .myc-class-page {
+    .sort-inp-container {
+      padding: 0 20px;
+    }
+
+    .myc-class-col-grp {
+      padding: 0 20px;
+    }
+  }
+}
+
+@include media ($mobile) {
+  .myc-class-page {
+    .pagination {
+      margin-top: 60px;
+    }
+  }
+}

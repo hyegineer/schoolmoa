@@ -15,3 +15,24 @@
     margin-top: 80px;
   }
 }
+
+@include media ($tab) {
+  .myc-pay-history-page {
+    .page-content {
+      padding: 20px;
+    }
+
+    .myc-pay-history-col-grp {
+      gap: 12px;
+    }
+  }
+}
+
+@include media ($mobile) {
+
+  .myc-pay-history-page {
+    .pagination {
+      margin-top: 60px;
+    }
+  }
+}

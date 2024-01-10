@@ -50,3 +50,58 @@
     }
   }
 }
+
+@include media ($web-sm) {
+  .myc-main-page {
+    .myc-main-box .row-list-grp {
+      flex-wrap: wrap;
+
+      .list {
+        width: calc((100% - 32px) / 2);
+      }
+    }
+  }
+}
+
+@include media ($tab) {
+  .myc-main-page {
+    .status-box {
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+
+    .myc-main-box {
+      border: 0;
+      padding: 40px 20px;
+      border-bottom: 1px solid #E2E8F0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .row-list-grp .list {
+        width: calc((100% - 42px) / 4);
+      }
+    }
+  }
+}
+
+@include media ($tab-sm) {
+  .myc-main-page {
+    .myc-main-box {
+      .row-list-grp .list {
+        width: calc((100% - 32px) / 2);
+      }
+    }
+  }
+}
+
+@include media ($mobile) {
+  .myc-main-page {
+    .myc-main-box {
+      .row-list-grp .list {
+        width: 100%;
+      }
+    }
+  }
+}

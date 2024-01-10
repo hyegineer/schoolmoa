@@ -4,6 +4,7 @@
   .section {
     width: 100%;
     padding: 110px 0;
+    overflow: hidden;
   }
 
   .main-section {
@@ -53,12 +54,12 @@
 
   .bg-skyblue-box {
     flex: 1;
+    height: 442px;
   }
 
   .bg-skyblue-box.type-left {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    height: 442px;
   }
 
   .profile-box {
@@ -69,7 +70,6 @@
   .bg-skyblue-box.type-right {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    height: 442px;
   }
 }
 
@@ -124,14 +124,14 @@
 
 .mclass-section {
   .main-title-wrap {
-    width: 90%;
+    width: 80%;
     max-width: 1218px;
     margin: 0 auto;
     margin-bottom: 55px;
   }
 
   .swiper-slide {
-    width: 1218px;
+    width: 80%;
   }
 
   .card-grp {
@@ -150,7 +150,7 @@
   background-color: #F1F4F9;
 
   .section-title-wrap {
-    width: 90%;
+    width: 80%;
     max-width: 1218px;
     margin: 0 auto;
     margin-bottom: 55px;
@@ -161,7 +161,7 @@
   }
 
   .swiper-slide {
-    width: 1218px;
+    width: 80%;
   }
 
   .card-grp {
@@ -173,5 +173,254 @@
 
   .custom-swiper-pagination {
     margin-top: 55px;
+  }
+}
+
+@include media ($web-lg) {
+  .main-page {
+    .main-section {
+      padding: 180px 0;
+    }
+
+    .main-title-wrap {
+      .dark-rounded-btn {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .main-section {
+    .img-figure {
+      max-width: 480px;
+      right: 0;
+    }
+  }
+
+  .mpoint-section {
+    .img-ele.type-01 {
+      right: -40px;
+    }
+
+    .img-ele.type-02 {
+      left: 0;
+      top: -50px;
+      left: -70px;
+    }
+  }
+}
+
+@include media ($web-sm) {
+  .main-section {
+    .img-figure {
+      max-width: 390px;
+    }
+  }
+
+  .mteacher-section {
+    .bg-skyblue-box {
+      height: 390px;
+    }
+  }
+
+  .mreview-section {
+    .main-title-wrap {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include media ($tab-lg) {
+  .main-page {
+    .section {
+      padding: 90px 0;
+    }
+
+    .main-section {
+      padding: 70px 0;
+    }
+  }
+
+  .main-section {
+    .img-figure {
+      max-width: 300px;
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: none;
+    }
+
+    .inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-title-wrap.type-col {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@include media ($tab) {
+  .mteacher-section {
+    .bg-skyblue-box {
+      display: none;
+    }
+
+    .profile-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .mpoint-section {
+    .card-grp {
+      flex-direction: column;
+    }
+  }
+
+  .mclass-section {
+    .main-title-wrap .btn-wrap {
+      display: none;
+    }
+
+    .content.mb-none {
+      display: none;
+    }
+
+    .content.mb-show {
+      display: block;
+    }
+
+    .col-list-grp {
+      max-width: 1010px;
+      width: 80%;
+      margin: 0 auto;
+      gap: 12px;
+    }
+  }
+
+  .mreview-section {
+    .main-title-wrap .btn-wrap {
+      display: none;
+    }
+
+    .content.mb-none {
+      display: none;
+    }
+
+    .content.mb-show {
+      display: block;
+    }
+
+    .col-list-grp {
+      max-width: 1010px;
+      width: 80%;
+      margin: 0 auto;
+      gap: 12px;
+    }
+  }
+}
+
+@include media ($mobile) {
+  .main-page {
+    .inner {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .main-title-wrap {
+      .dark-rounded-btn {
+        margin-top: 22px;
+      }
+    }
+
+    .section {
+      padding: 0;
+    }
+
+    .main-section {
+      padding: 50px 0 70px;
+    }
+
+    .mteacher-section {
+      padding: 24px 20px;
+    }
+
+    .mpoint-section {
+      padding: 40px 0;
+    }
+
+    .mclass-section {
+      padding: 40px 20px;
+    }
+
+    .mreview-section {
+      padding: 34px 20px;
+    }
+  }
+
+  .main-section {
+    background-image: url(../images/img-bg-top-mobile.png);
+
+    .img-figure {
+      max-width: 210px;
+    }
+  }
+
+  .mteacher-section {
+    .profile-box {
+      width: 100%;
+    }
+  }
+
+  .mpoint-section {
+    .main-title-wrap {
+      margin-bottom: 30px;
+    }
+
+    .img-ele.type-01 {
+      right: 28px;
+      width: 37px;
+      top: -6px;
+    }
+
+    .img-ele.type-02 {
+      left: -10px;
+      width: 48px;
+      top: 220px;
+    }
+
+    .img-ele.type-03 {
+      bottom: -15px;
+      right: -5px;
+      width: 42px;
+    }
+  }
+
+  .mclass-section {
+    .main-title-wrap {
+      width: 100%;
+      margin-bottom: 42px;
+    }
+
+    .col-list-grp {
+      width: 100%;
+    }
+  }
+
+  .mreview-section {
+    .section-title-wrap {
+      width: 100%;
+      margin-bottom: 42px;
+    }
+
+    .main-title-wrap {
+      margin-bottom: 20px;
+    }
+
+    .col-list-grp {
+      width: 100%;
+    }
   }
 }

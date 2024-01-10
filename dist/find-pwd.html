@@ -48,10 +48,11 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
 
     <!-- #app -->
     <div id="app">
@@ -63,6 +64,10 @@
                 <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
+            <button type="button" class="hd-menu-btn" onclick="toggleHdMenu();">
+              <span class="txt-hidden">모바일 메뉴 보기</span>
+              <img src="assets/images/ico/ico-menu.svg" class="ico">
+            </button>
             <div class="hd-nav-btn-grp">
               <a href="main.html" class="hd-nav-btn ">홈</a>
               <a href="skill-main.html" class="hd-nav-btn ">쌤스킬</a>
@@ -148,7 +153,7 @@
       <div class="auth-page page-wrapper">
         <div class="page-container">
           <div class="find-box">
-            <button type="button" class="blue-back-btn">
+            <button type="button" onclick="location.href='login.html';" class="blue-back-btn">
               <img src="assets/images/ico/ico-blue-arrow-back.svg" alt="화살표 아이콘" class="ico ico-18 ico-back-arrow">
               <span class="txt">로그인으로 돌아가기</span>
             </button>

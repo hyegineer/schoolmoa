@@ -4,6 +4,7 @@
   .section {
     width: 100%;
     padding: 110px 0;
+    overflow: hidden;
   }
 
   .skill-main-section {
@@ -74,7 +75,7 @@
     position: relative;
 
     .sub-txt {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   }
 
@@ -108,12 +109,12 @@
 
   .bg-skyblue-box {
     flex: 1;
+    height: 442px;
   }
 
   .bg-skyblue-box.type-left {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    height: 442px;
   }
 
   .profile-box {
@@ -124,7 +125,6 @@
   .bg-skyblue-box.type-right {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    height: 442px;
   }
 }
 
@@ -214,6 +214,198 @@
 
     .dark-rounded-btn {
       margin-top: 28px;
+    }
+  }
+}
+
+@include media ($web-lg) {
+  .skill-main-page {
+    .skill-main-section {
+      padding: 100px 0 80px;
+    }
+  }
+
+  .spoint-section {
+    .img-ele.type-01 {
+      right: -40px;
+    }
+
+    .img-ele.type-02 {
+      left: 0;
+      top: -50px;
+      left: -70px;
+    }
+  }
+
+  .slast-section {
+    padding: 80px 0px 70px;
+
+    .main-title-wrap {
+      .title-sm {
+        font-size: 37px;
+        letter-spacing: -0.37px;
+      }
+
+      .sub-txt {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+}
+
+@include media ($web-sm) {
+  .steacher-section {
+    .bg-skyblue-box {
+      height: 390px;
+    }
+  }
+}
+
+@include media ($tab-lg) {
+  .skill-main-page {
+    .skill-main-section {
+      padding-top: 70px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .skill-main-section {
+    .img-ele.type-02 {
+      top: 135px;
+    }
+  }
+}
+
+@include media ($tab) {
+  .skill-main-page {}
+
+  .steacher-section {
+    .bg-skyblue-box {
+      display: none;
+    }
+
+    .profile-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .spoint-section {
+    .card-grp {
+      flex-direction: column;
+    }
+  }
+
+  .scertify-section {
+    .row-list-grp {
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .row-list-grp .list {
+      width: calc((100% - 16px) / 2);
+      flex: auto;
+    }
+  }
+}
+
+@include media ($mobile) {
+  .skill-main-page {
+    .inner {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .skill-main-section {
+      padding: 50px 0 80px;
+      margin-bottom: 0;
+    }
+
+    .steacher-section {
+      padding: 0 20px;
+    }
+
+    .scertify-section {
+      padding: 64px 0;
+    }
+
+    .spoint-section {
+      padding: 40px 0;
+    }
+
+    .slast-section {
+      padding: 40px 20px;
+    }
+  }
+
+  .skill-main-section {
+    .video-wrap {
+      border-radius: 16px;
+      padding-top: 55%;
+    }
+
+    .main-title-wrap {
+      margin-bottom: 35px;
+    }
+
+    .img-ele {
+      display: none;
+    }
+  }
+
+  .spoint-section {
+    .main-title-wrap {
+      margin-bottom: 30px;
+    }
+
+    .img-ele.type-01 {
+      right: 28px;
+      width: 37px;
+      top: -6px;
+    }
+
+    .img-ele.type-02 {
+      left: -10px;
+      width: 48px;
+      top: 220px;
+    }
+
+    .img-ele.type-03 {
+      bottom: -15px;
+      right: -5px;
+      width: 42px;
+    }
+  }
+
+  .steacher-section {
+    .profile-box {
+      width: 100%;
+    }
+  }
+
+  .scertify-section {
+    .main-title-wrap {
+      margin-bottom: 30px;
+    }
+  }
+
+  .slast-section {
+    .main-title-wrap {
+      .sub-txt {
+        font-size: 14px;
+        letter-spacing: -0.14px;
+        line-height: 1.5;
+      }
+
+      .title-sm {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+      }
+
+      .dark-rounded-btn {
+        margin-top: 22px;
+      }
     }
   }
 }
