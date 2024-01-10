@@ -3,12 +3,53 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스쿨모아 과외</title>
+    <title>스쿨모아 과외 솔루션</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="스쿨모아 과외 솔루션">
+    <meta name="author" content="스쿨모아 과외 솔루션">
+    <meta name="description" content="오프라인을 강화하는 솔루션, 스쿨모아 과외 솔루션입니다.">
+    <meta name="keywords" content="스쿨모아 과외, 오프라인 수업">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야함 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="스쿨모아 과외">
+    <meta property="og:description" content="오프라인을 강화하는 솔루션, 스쿨모아 과외 솔루션입니다.">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
   <body>
 
@@ -18,72 +59,152 @@
         <div class="header-inner">
           <div class="header-left-wrap">
             <h1 class="hd-logo">
-              <a href="#">
-                <img src="" alt="스쿨모아 로고">
+              <a href="main.html">
+                <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h1>
             <div class="hd-nav-btn-grp">
-              <a href="" class="hd-nav-btn">홈</a>
-              <a href="" class="hd-nav-btn">쌤스킬</a>
-              <a href="" class="hd-nav-btn">클래스</a>
-              <a href="" class="hd-nav-btn">커뮤니티</a>
-              <a href="" class="hd-nav-btn">마이클래스</a>
+              <a href="main.html" class="hd-nav-btn ">홈</a>
+              <a href="skill-main.html" class="hd-nav-btn ">쌤스킬</a>
+              <a href="class-list.html" class="hd-nav-btn ">클래스</a>
+              <a href="commu-main.html" class="hd-nav-btn ">커뮤니티</a>
+              <a href="myclass-main.html" class="hd-nav-btn ">마이클래스</a>
             </div>
           </div>
           <div class="header-btn-wrap">
-            <button type="button" class="hd-btn">
+            <button type="button" class="hd-btn" onclick="openHdSearch();">
               <span class="txt-hidden">검색하기</span>
-              <img src="" alt="검색 아이콘" class="ico ico-search">
+              <img src="assets/images/ico/ico-hd-search.svg" alt="검색 아이콘" class="ico ico-22 ico-search">
             </button>
-            <button type="button">
+
+            <!-- TODO: 알림 있을 경우 active 클래스가 추가됩니다. -->
+            <button type="button" class="hd-btn active" onclick="location.href='myclass-alarm.html';">
               <span class="txt-hidden">알림</span>
-              <img src="" alt="알림 아이콘" class="ico ico-alarm">
+              <img src="assets/images/ico/ico-hd-bell.svg" alt="알림 아이콘" class="ico ico-22 ico-alarm">
             </button>
-            <button type="button">
+            <button type="button" class="hd-btn" onclick="openModal('modal-share');">
               <span class="txt-hidden">공유하기</span>
-              <img src="" alt="공유 아이콘" class="ico ico-share">
+              <img src="assets/images/ico/ico-hd-share.svg" alt="공유 아이콘" class="ico ico-22 ico-share">
             </button>
-            <button type="button">
+            <button type="button" class="hd-btn" onclick="location.href='cart-list.html';">
               <span class="txt-hidden">장바구니</span>
-              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+              <img src="assets/images/ico/ico-hd-cart.svg" alt="장바구니 아이콘" class="ico ico-22 ico-cart">
             </button>
-            <button type="button">
+            <button type="button" class="hd-btn" onclick="location.href='like-list.html';">
               <span class="txt-hidden">찜리스트</span>
-              <img src="" alt="찜 아이콘" class="ico ico-like">
+              <img src="assets/images/ico/ico-hd-heart.svg" alt="찜 아이콘" class="ico ico-22 ico-like">
             </button>
           </div>
         </div>
+        <div class="header-search-wrap">
+          <div class="bottom-bd-inp-wrap">
+            <img src="assets/images/ico/ico-gray-search.svg" alt="ico ico-22">
+            <input type="text" class="inp" placeholder="원하는 클래스를 검색하세요.">
+            <button type="button" class="btn del-btn">
+              <span class="txt-hidden">검색어 지우기</span>
+              <img src="assets/images/ico/ico-gray-x.svg" alt="검색어 지우기 아이콘" class="ico ico-14">
+            </button>
+          </div>
+        </div>
+        <div class="header-overlay" onclick="closeHdSearch();"></div>
       </header>
 
+      <!-- 1. 공유하기 모달 -->
+      <div id="modal-share" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-share');"></div>
+        <div class="custom-modal content-modal share-modal">
+          <div class="title-wrap">
+            <h6 class="title-xsm">공유하기</h6>
+            <button type="button" onclick="closeModal('modal-share');" class="btn close-btn">
+              <span class="txt-hidden">모달 닫기</span>
+              <img src="assets/images/ico/ico-x.svg" alt="모달 닫기 아이콘" class="ico">
+            </button>
+          </div>
+          <div class="modal-content">
+            <p class="txt">공유할 채널을 선택하세요.</p>
+            <div class="btn-grp">
+              <button type="button" class="share-sns-btn type-naver">
+                <span class="txt-hidden">페이스북 공유</span>
+                <img src="assets/images/ico/ico-share-facebook.svg" alt="페이스북 아이콘" class="ico ico-40">
+              </button>
+              <button type="button" class="share-sns-btn type-kakao">
+                <span class="txt-hidden">카카오톡 공유</span>
+                <img src="assets/images/ico/ico-share-kakao.svg" alt="카카오톡 아이콘" class="ico ico-40">
+              </button>
+              <button type="button" class="share-sns-btn type-naver">
+                <span class="txt-hidden">네이버 라인 공유</span>
+                <img src="assets/images/ico/ico-share-line.svg" alt="라인 아이콘" class="ico ico-40">
+              </button>
+              <button type="button" class="share-sns-btn type-google">
+                <span class="txt-hidden">직접 복사하여 공유</span>
+                <img src="assets/images/ico/ico-share-copy.svg" alt="클립 아이콘" class="ico ico-40">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openHdSearch() {
+          $('.header-search-wrap').addClass('active');
+          $('.header-overlay').addClass('active');
+        }
+        function closeHdSearch() {
+          $('.header-search-wrap').removeClass('active');
+          $('.header-overlay').removeClass('active');
+          $('.bottom-bd-inp-wrap .inp').val('');
+          $('.bottom-bd-inp-wrap .del-btn').removeClasS('active');
+        }
+        // 헤더 검색: 검색어 입력시 지우기 버튼 활성화
+        $('.bottom-bd-inp-wrap .inp').on('input', function() {
+          if ($(this).val()) {
+            $(this).siblings('.del-btn').addClass('active');
+          } else {
+            $(this).siblings('.del-btn').removeClass('active');
+          }
+        })
+        // 헤더 검색: 검색어 입력시 지우기 버튼 작동
+        $('.bottom-bd-inp-wrap .del-btn').on('click', function() {
+          $(this).siblings('.inp').val('');
+        })
+        // 헤더 검색: 검색어 포커스할 때 보더 효과 적용
+        $('.bottom-bd-inp-wrap .inp').on('focus', function() {
+          $(this).parent('.bottom-bd-inp-wrap').addClass('active');
+        })
+        // 헤더 검색: 검색어 포커스 뗄 때 보더 효과 해제
+        $('.bottom-bd-inp-wrap .inp').on('blur', function() {
+          $(this).parent('.bottom-bd-inp-wrap').removeClass('active');
+        })
+      </script>
+
       <!-- 페이지: 아이디 찾기 -->
-      <div class="auth-find-page page-wrapper">
+      <div class="auth-page page-wrapper">
         <div class="page-container">
-          <div>
-            <button type="button">
-              <img src="" alt="화살표 아이콘" class="ico ico-back-arrow">
-              <span>로그인으로 돌아가기</span>
+          <div class="find-box">
+            <button type="button" class="blue-back-btn">
+              <img src="assets/images/ico/ico-blue-arrow-back.svg" alt="화살표 아이콘" class="ico ico-18 ico-back-arrow">
+              <span class="txt">로그인으로 돌아가기</span>
             </button>
             <div class="gray-bd-box">
               <div class="tabs">
-                <button type="button" class="tab active">아이디 찾기</button>
-                <button type="button" class="tab">비밀번호 찾기</button>
+                <button type="button" class="tab active" onclick="location.href='find-id.html';">아이디 찾기</button>
+                <button type="button" class="tab" onclick="location.href='find-pwd.html';">비밀번호 찾기</button>
               </div>
-              <div>
-                <div>
-                  <h2>휴대폰 번호를 인증해주세요.</h2>
-                  <p>휴대폰 인증 후에 아이디를 찾을 수 있어요.</p>
+              <div class="find-content">
+                <div class="guide-ment-box">
+                  <h2 class="guide-ttl">휴대폰 번호를 인증해주세요.</h2>
+                  <p class="guide-desc">휴대폰 인증 후에 아이디를 찾을 수 있어요.</p>
                 </div>
-                <button type="button">인증하기</button>
+                <button type="button" class="blue-solid-btn btn-lg btn-w100">인증하기</button>
               </div>
-              <div>
-                <div>
-                  <h2>가입된 아이디를 찾았어요. <br>이 계정으로 로그인을 진행해주세요.</h2>
+              <div class="find-content">
+                <div class="guide-ment-box type-mb-narrow">
+                  <h2 class="guide-ttl">가입된 아이디를 찾았어요. <br>이 계정으로 로그인을 진행해주세요.</h2>
                 </div>
-                <div>
+                <div class="id-box-desc-wrap">
                   <div class="bg-skyblue-box id-box">he**@schoolmoa.com</div>
-                  <p>개인정보 보호를 위해 일부 정보는 *로 표시합니다.</p>
+                  <p class="guide-desc">개인정보 보호를 위해 일부 정보는 *로 표시합니다.</p>
                 </div>
-                <button type="button">로그인하기</button>
+                <button type="button" class="blue-solid-btn btn-lg btn-w100">로그인하기</button>
               </div>
             </div>
           </div>
@@ -96,25 +217,25 @@
           <div class="footer-top">
             <h6 class="ft-logo">
               <a href="#">
-                <img src="" alt="스쿨모아 로고">
+                <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
               </a>
             </h6>
             <div class="ft-sns-btn-grp">
-              <button class="ft-sns-btn">
+              <button type="button" class="ft-sns-btn">
                 <span class="txt-hidden">카카오톡</span>
-                <img src="" alt="카카오톡 아이콘" class="ico ico-kakao">
+                <img src="assets/images/ico/ico-ft-kakao.svg" alt="카카오톡 아이콘" class="ico ico-kakao">
               </button>
-              <button class="ft-sns-btn">
+              <button type="button" class="ft-sns-btn">
                 <span class="txt-hidden">페이스북</span>
-                <img src="" alt="페이스북 아이콘" class="ico ico-facebook">
+                <img src="assets/images/ico/ico-ft-facebook.svg" alt="페이스북 아이콘" class="ico ico-facebook">
               </button>
-              <button class="ft-sns-btn">
+              <button type="button" class="ft-sns-btn">
                 <span class="txt-hidden">인스타그램</span>
-                <img src="" alt="인스타그램 아이콘" class="ico ico-facebook">
+                <img src="assets/images/ico/ico-ft-instagram.svg" alt="인스타그램 아이콘" class="ico ico-facebook">
               </button>
-              <button class="ft-sns-btn">
+              <button type="button" class="ft-sns-btn">
                 <span class="txt-hidden">블로그</span>
-                <img src="" alt="블로그 아이콘" class="ico ico-blog">
+                <img src="assets/images/ico/ico-ft-blog.svg" alt="블로그 아이콘" class="ico ico-blog">
               </button>
             </div>
           </div>

@@ -1,0 +1,73 @@
+.myc-setting-page {
+  .myc-setting-box {
+    padding: 30px 24px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-item-grp {
+      margin-bottom: 30px;
+    }
+  }
+
+  .edit-thumbnail-wrap {
+    margin: 0 auto;
+  }
+
+  .gray-bd-box {
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .myc-desc-box {
+    padding: 36px 24px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .ttl-wrap {
+      margin-bottom: 30px;
+
+      .ttl {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.16px;
+        color: #0F1A2A;
+        line-height: 1.5;
+        margin-bottom: 23px;
+      }
+
+      .desc {
+        color: #64748B;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.14px;
+        line-height: 1.5;
+      }
+    }
+
+    .btn-grp-wrap {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      gap: 12px;
+    }
+
+    .btn-grp-wrap .double-btn-grp {
+      width: 100%;
+    }
+  }
+}
+
+.double-btn-grp {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+}

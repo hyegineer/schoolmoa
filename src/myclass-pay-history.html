@@ -1,16 +1,16 @@
 <include src="include/head.html"></include>
-<include src="include/layout/header.html"></include>
+<include src="include/layout/header.html" nav05="active"></include>
 
 <!-- 페이지: 마이클래스 결제내역 -->
 <div class="myc-pay-history-page page-wrapper">
   <div class="page-container">
-    <div>
+    <div class="myc-layout-container">
       <!-- 왼쪽 -->
-      <include src="include/layout/myclass-left-container.html"></include>
+      <include src="include/layout/myclass-left-container.html" mycnav04="active"></include>
       <!-- END 왼쪽 -->
 
       <!-- 오른쪽 -->
-      <div>
+      <div class="myc-right-container">
         <!-- 제목 -->
         <div class="title-wrap">
           <h2 class="title-sm">결제내역</h2>
@@ -18,64 +18,104 @@
         <!-- END 제목 -->
 
         <!-- 내용 -->
-        <div>
-          <div>
+        <div class="page-content">
+          <div class="sort-inp-container">
             <div class="bd-inp-wrap type-search">
-              <img src="" alt="검색 아이콘" class="ico ico-search">
+              <img src="assets/images/ico/ico-search.svg" alt="검색 아이콘" class="ico ico-18 ico-search">
               <input type="text" placeholder="검색어를 입력하세요" class="inp">
             </div>
           </div>
 
-          <div>
-            <!-- TODO: 결제내역 있을 때 -->
-            <div class="col-list-grp">
-              <!-- 리스트 -->
-              <div class="list">
-                <!-- 결제내역 카드 -->
-                <div class="list-card type-01">
-                  <ul class="card-information">
-                    <li>
-                      <div class="badge-sm-txt-wrap">
-                        <span class="badge type-red-bd">환불</span>
-                        <ul class="sm-txt-grp">
-                          <li class="sm-txt">1234567890</li>
-                          <li class="sm-txt">24.01.02</li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <h3 class="card-name">중학교 정규분포 심화</h3>
-                    </li>
-                    <li>
-                      <p class="gray-txt">1회 90분 X 총 4회</p>
-                    </li>
-                    <li>
-                      <p class="sm-gray-txt">수량 1</p>
-                    </li>
-                  </ul>
-
-                  <div class="mg-left">
-                    <p class="ttl">결제금액</p>
-                    <div class="price-wrap">
-                      <span class="strikethrough-txt">200,000</span>
-                      <p class="bold-txt">150,000원</p>
+          <!-- TODO: 결제내역 있을 때 -->
+          <div class="col-list-grp myc-pay-history-col-grp">
+            <!-- 리스트 -->
+            <div class="list">
+              <!-- 결제내역 카드 -->
+              <div class="list-card type-01">
+                <ul class="card-information">
+                  <li>
+                    <div class="badge-sm-txt-wrap">
+                      <span class="badge">수강 전</span>
+                      <span class="badge type-gray-blue">수강중</span>
+                      <span class="badge type-gray-bd">수강 완료</span>
+                      <span class="badge type-red-bd">환불</span>
+                      <ul class="sm-txt-grp">
+                        <li class="sm-txt">1234567890</li>
+                        <li class="sm-txt">24.01.02</li>
+                      </ul>
                     </div>
+                  </li>
+                  <li>
+                    <h3 class="card-name">중학교 정규분포 심화</h3>
+                  </li>
+                  <li>
+                    <p class="gray-txt">1회 90분 X 총 4회</p>
+                  </li>
+                  <li>
+                    <p class="sm-gray-txt">수량 1</p>
+                  </li>
+                </ul>
+
+                <div class="mg-left">
+                  <p class="ttl">결제금액</p>
+                  <div class="price-wrap">
+                    <span class="strikethrough-txt">200,000</span>
+                    <p class="bold-txt">150,000원</p>
                   </div>
                 </div>
-                <!-- END 결제내역 카드 -->
               </div>
-              <!-- END 리스트 -->
+              <!-- END 결제내역 카드 -->
             </div>
+            <!-- END 리스트 -->
+            <!-- 리스트 -->
+            <div class="list">
+              <!-- 결제내역 카드 -->
+              <div class="list-card type-01">
+                <ul class="card-information">
+                  <li>
+                    <div class="badge-sm-txt-wrap">
+                      <span class="badge">수강 전</span>
+                      <span class="badge type-gray-blue">수강중</span>
+                      <span class="badge type-gray-bd">수강 완료</span>
+                      <span class="badge type-red-bd">환불</span>
+                      <ul class="sm-txt-grp">
+                        <li class="sm-txt">1234567890</li>
+                        <li class="sm-txt">24.01.02</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <h3 class="card-name">중학교 정규분포 심화</h3>
+                  </li>
+                  <li>
+                    <p class="gray-txt">1회 90분 X 총 4회</p>
+                  </li>
+                  <li>
+                    <p class="sm-gray-txt">수량 1</p>
+                  </li>
+                </ul>
 
-            <!-- TODO: 결제내역 없을 때 -->
-            <div class="nothing-wrap">
-              <p class="nothing-txt">등록된 정보가 없습니다.</p>
+                <div class="mg-left">
+                  <p class="ttl">결제금액</p>
+                  <div class="price-wrap">
+                    <span class="strikethrough-txt">200,000</span>
+                    <p class="bold-txt">150,000원</p>
+                  </div>
+                </div>
+              </div>
+              <!-- END 결제내역 카드 -->
             </div>
-
-            <!-- 페이지네이션 -->
-            <include src="include/layout/module/pagination.html"></include>
-            <!-- END 페이지네이션 -->
+            <!-- END 리스트 -->
           </div>
+
+          <!-- TODO: 결제내역 없을 때 -->
+          <div class="nothing-wrap">
+            <p class="nothing-txt">등록된 정보가 없습니다.</p>
+          </div>
+
+          <!-- 페이지네이션 -->
+          <include src="include/layout/module/pagination.html"></include>
+          <!-- END 페이지네이션 -->
         </div>
         <!-- END 내용 -->
       </div>

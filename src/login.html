@@ -2,35 +2,36 @@
 <include src="include/layout/header.html"></include>
 
 <!-- 페이지: 로그인 -->
-<div class="login-page page-wrapper">
+<div class="auth-page page-wrapper">
   <div class="page-container">
-    <div>
-      <h2>로그인</h2>
+    <div class="auth-box">
+      <div class="title-wrap">
+        <h2 class="title-sm">로그인</h2>
+      </div>
 
-      <div>
-        <div>
-          <button type="button" class="list-sns-btn type-kakao">
-            <img src="" alt="카카오톡 로그인" class="ico ico-kakao">
-            <span class="txt">카카오로 계속하기</span>
-          </button>
+      <div class="sns-btn-grp type-col">
+        <button type="button" class="list-sns-btn btn-w100 type-kakao">
+          <img src="assets/images/ico/ico-kakao.svg" alt="카카오톡 로그인" class="ico ico-18 ico-kakao">
+          <span class="txt">카카오로 계속하기</span>
+        </button>
 
-          <button type="button" class="list-sns-btn type-naver">
-            <img src="" alt="네이버로 로그인" class="ico ico-naver">
-            <span class="txt">네이버로 계속하기</span>
-          </button>
+        <button type="button" class="list-sns-btn btn-w100 type-naver">
+          <img src="assets/images/ico/ico-naver.svg" alt="네이버로 로그인" class="ico ico-18 ico-naver">
+          <span class="txt">네이버로 계속하기</span>
+        </button>
 
-          <button type="button" class="list-sns-btn type-google">
-            <img src="" alt="구글로 로그인" class="ico ico-google">
-            <span class="txt">구글로 계속하기</span>
-          </button>
-        </div>
+        <button type="button" class="list-sns-btn btn-w100 type-google">
+          <img src="assets/images/ico/ico-google.svg" alt="구글로 로그인" class="ico ico-18 ico-google">
+          <span class="txt">구글로 계속하기</span>
+        </button>
       </div>
 
       <!-- 정보입력 -->
-      <div>
+      <div class="form-item-grp">
         <div class="form-item">
           <label class="form-label">이메일</label>
           <div class="form-inp-wrap">
+            <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
             <input type="text" placeholder="이메일을 입력하세요" class="inp">
           </div>
         </div>
@@ -38,38 +39,44 @@
         <div class="form-item">
           <label class="form-label">비밀번호</label>
           <div class="form-inp-wrap">
-            <div class="bd-inp-wrap">
-              <input type="password" placeholder="비밀번호를 입력하세요">
+            <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
+            <div class="bd-inp-wrap type-square">
+              <input type="password" placeholder="비밀번호를 입력하세요" autocomplete="new-password" class="inp">
               <button type="button" class="btn toggle-btn">
                 <span class="txt-hidden">비밀번호 보기</span>
-                <div class="ico-wrap">
-                  <img src="" alt="비밀번호 가리기" class="ico ico-off">
-                  <img src="" alt="비밀번호 보이기" class="ico ico-on">
-                </div>
+
+                <button type="button" class="btn toggle-btn toggle-eyes-btn">
+                  <span class="txt-hidden">비밀번호 보기</span>
+                  <div class="ico-wrap">
+                    <img src="assets/images/ico/ico-eyes-off.svg" alt="비밀번호 가리기" class="ico ico-off">
+                    <img src="assets/images/ico/ico-eyes-on.svg" alt="비밀번호 보이기" class="ico ico-on">
+                  </div>
+                </button>
               </button>
             </div>
           </div>
-          <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+          <!-- <p class="form-validation-msg">안내텍스트</p> -->
+          <!-- TODO: 경고일 때는 type-warning 클래스가 붙습니다. -->
           <p class="form-validation-msg type-warning">안내텍스트</p>
         </div>
       </div>
       <!-- END 정보입력 -->
 
-      <button type="button">로그인</button>
+      <button type="button" class="blue-solid-btn btn-lg btn-w100">로그인</button>
 
-      <div>
+      <div class="login-opt">
         <div class="checkbox-item">
-          <input type="checkbox" class="custom-checkbox-inp">
-          <label for="" class="custom-checkbox"></label>
-          <label for="label-txt">자동 로그인</label>
+          <input id="auth-login" type="checkbox" class="custom-checkbox-inp">
+          <label for="auth-login" class="custom-checkbox"></label>
+          <label for="auth-login" class="label-txt">자동 로그인</label>
         </div>
 
-        <a href="#">아이디 또는 비밀번호 찾기</a>
+        <a href="#" class="link-txt">아이디 또는 비밀번호 찾기</a>
       </div>
 
-      <div>
-        <p>아직 회원이 아니신가요?</p>
-        <a href="#">회원가입</a>
+      <div class="question-txt">
+        <p class="txt">아직 회원이 아니신가요?</p>
+        <a href="register.html" class="link-txt">회원가입</a>
       </div>
     </div>
   </div>

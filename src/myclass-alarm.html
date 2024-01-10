@@ -1,16 +1,16 @@
 <include src="include/head.html"></include>
-<include src="include/layout/header.html"></include>
+<include src="include/layout/header.html" nav05="active"></include>
 
 <!-- 페이지: 마이클래스 알림 -->
 <div class="myc-alarm-page page-wrapper">
   <div class="page-container">
-    <div>
+    <div class="myc-layout-container">
       <!-- 왼쪽 -->
-      <include src="include/layout/myclass-left-container.html"></include>
+      <include src="include/layout/myclass-left-container.html" mycnav02="active"></include>
       <!-- END 왼쪽 -->
 
       <!-- 오른쪽 -->
-      <div>
+      <div class="myc-right-container">
         <!-- 제목 -->
         <div class="title-wrap">
           <h2 class="title-sm">알림</h2>
@@ -18,33 +18,36 @@
         <!-- END 제목 -->
 
         <!-- 내용 -->
-        <div>
-          <div>
-            <p>스쿨모아 플랫폼 알림은 사이트내에서만 이루어 집니다. <br>이메일/문자 알림을 받고자 하시는 수강생은 아래 설정을 완료해주시기 바랍니다.</p>
-            <button type="button">이메일/문자 설정하기</button>
+        <div class="page-content">
+          <div class="desc-btn-box">
+            <p class="desc">스쿨모아 플랫폼 알림은 사이트내에서만 이루어 집니다. <br>이메일/문자 알림을 받고자 하시는 수강생은 아래 설정을 완료해주시기 바랍니다.</p>
+            <div class="mg-left">
+              <button type="button" class="gray-01-bd-btn btn-md">이메일/문자 설정하기</button>
+            </div>
           </div>
 
-          <div>
-            <div>
-              <p>읽지 않은 알림 <span>2</span>개</p>
+          <div class="ment-box">
+            <p class="txt">읽지 않은 알림 <span>2</span>개</p>
 
-              <div>
-                <button type="button">읽은 알림 삭제</button>
-                <button type="button">전체삭제</button>
-              </div>
+            <div class="btn-wrap">
+              <button type="button" class="txt-btn">읽은 알림 삭제</button>
+              <button type="button" class="txt-btn type-red">전체삭제</button>
             </div>
+          </div>
 
-            <!-- TODO: 알림 있을 때 -->
-            <div>
+          <!-- TODO: 알림 있을 때 -->
+          <div class="col-list-btn-wrap">
+            <div class="col-list-grp myc-alarm-col-grp">
               <!-- 리스트 -->
-              <div>
+              <div class="list">
                 <!-- 알림 카드 -->
                 <div class="alarm-card">
+                  <!-- TODO: 활동중일 시 active 클래스가 달립니다. -->
                   <span class="circle-badge"></span>
 
                   <div class="user-item">
                     <figure class="thumbnail type-circle">
-                      <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
                     </figure>
 
                     <ul class="card-information">
@@ -62,7 +65,7 @@
 
                     <button type="button" class="btn">
                       <span class="txt-hidden">삭제하기</span>
-                      <img src="" alt="삭제하기 아이콘" class="ico ico-x">
+                      <img src="assets/images/ico/ico-x.svg" alt="삭제하기 아이콘" class="ico ico-18 ico-x">
                     </button>
                   </div>
                 </div>
@@ -70,13 +73,82 @@
               </div>
               <!-- END 리스트 -->
 
-              <button type="button">더보기</button>
-            </div>
+              <!-- 리스트 -->
+              <div class="list">
+                <!-- 알림 카드 -->
+                <div class="alarm-card">
+                  <!-- TODO: 활동중일 시 active 클래스가 달립니다. -->
+                  <span class="circle-badge active"></span>
 
-            <!-- TODO: 알림 없을 때 -->
-            <div class="nothing-wrap">
-              <p class="nothing-txt">수강중인 클래스가 없습니다.</p>
+                  <div class="user-item">
+                    <figure class="thumbnail type-circle">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                    </figure>
+
+                    <ul class="card-information">
+                      <li>
+                        <p class="sub-txt blue-txt">서울대쌤</p>
+                      </li>
+                      <li>
+                        <h3 class="card-txt">서울대쌤 알림내용</h3>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="date-del-wrap">
+                    <span class="sm-txt">23.00.00</span>
+
+                    <button type="button" class="btn">
+                      <span class="txt-hidden">삭제하기</span>
+                      <img src="assets/images/ico/ico-x.svg" alt="삭제하기 아이콘" class="ico ico-18 ico-x">
+                    </button>
+                  </div>
+                </div>
+                <!-- END 알림 카드 -->
+              </div>
+              <!-- END 리스트 -->
+
+              <!-- 리스트 -->
+              <div class="list">
+                <!-- 알림 카드 -->
+                <div class="alarm-card">
+                  <!-- TODO: 활동중일 시 active 클래스가 달립니다. -->
+                  <span class="circle-badge"></span>
+
+                  <div class="user-item">
+                    <figure class="thumbnail type-circle">
+                      <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                    </figure>
+
+                    <ul class="card-information">
+                      <li>
+                        <p class="sub-txt blue-txt">서울대쌤</p>
+                      </li>
+                      <li>
+                        <h3 class="card-txt">서울대쌤 알림내용</h3>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="date-del-wrap">
+                    <span class="sm-txt">23.00.00</span>
+
+                    <button type="button" class="btn">
+                      <span class="txt-hidden">삭제하기</span>
+                      <img src="assets/images/ico/ico-x.svg" alt="삭제하기 아이콘" class="ico ico-18 ico-x">
+                    </button>
+                  </div>
+                </div>
+                <!-- END 알림 카드 -->
+              </div>
+              <!-- END 리스트 -->
             </div>
+            <button type="button" class="gray-02-bd-btn btn-w100 more-btn">더보기</button>
+          </div>
+
+          <!-- TODO: 알림 없을 때 -->
+          <div class="nothing-wrap">
+            <p class="nothing-txt">수강중인 클래스가 없습니다.</p>
           </div>
         </div>
         <!-- END 내용 -->

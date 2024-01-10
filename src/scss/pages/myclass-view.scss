@@ -1,0 +1,205 @@
+.myc-view-page {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+
+  .page-container {
+    height: 100%;
+  }
+}
+
+.myc-view-layout-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  .myc-view-left-container {
+    width: 100%;
+    border-right: 1px solid #bfc7d3;
+  }
+
+  .myc-view-right-container {
+    width: 100%;
+    max-width: 351px;
+    flex-shrink: 0;
+  }
+}
+
+.myc-view-left-container {
+  background-color: #F6F8FC;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .myc-view-header {
+    background-color: white;
+    border-bottom: 1px solid #bfc7d3;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 40px;
+    gap: 12px;
+    width: 100%;
+
+    .ttl-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+
+    .ttl-wrap .ttl {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.18px;
+      line-height: 1.4;
+      color: #27364B;
+    }
+
+    .blue-txt {
+      color: #2563EB;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.12px;
+    }
+  }
+
+  .myc-view-content-container {
+    padding: 28px 40px;
+    flex: 1;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .video-wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1490px;
+    padding-top: 56.24%;
+    position: relative;
+    background-color: #eaeaea;
+
+    @media all and (min-width: 1920px) {
+      padding-top: 0;
+      height: 837px;
+    }
+
+    .video-box {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+
+  .myc-view-bottom-container {
+    width: 100%;
+  }
+
+  .view-controller {
+    width: 100%;
+    background-color: #0F1A2A;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+}
+
+.ctrl-btn {
+  color: white;
+  font-size: 16px;
+  gap: 7px;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  line-height: 1.5;
+  padding: 0 24px;
+  margin: 0 40px;
+
+  &:first-child:before {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    display: inline-block;
+    background-color: #27364B;
+    transform: translateY(-50%);
+  }
+}
+
+.myc-view-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .curriculum-box {
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+
+    .box-top {
+      border-bottom: 0;
+    }
+  }
+
+  .myc-view-right-content {
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    padding: 24px;
+
+    .accordion-card {
+      border: 1px solid #CBD4E1;
+    }
+
+    .list-chapter-card {
+      padding: 16px;
+
+      .sub-ttl {
+        font-size: 12px;
+        min-width: auto;
+        padding: 0 8px;
+      }
+
+      .card-ttl {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      .card-content {
+        gap: 10px;
+      }
+    }
+
+    .list-class-card {
+      gap: 12px;
+      padding: 10px 16px;
+
+      .view-btn {
+        min-width: auto;
+        padding: 0;
+      }
+
+      .card-ttl {
+        font-size: 14px;
+      }
+    }
+  }
+}

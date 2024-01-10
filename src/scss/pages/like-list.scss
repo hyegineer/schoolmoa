@@ -1,0 +1,32 @@
+.like-list-page {
+  padding: 83px 0 200px;
+
+  .title-wrap {
+    margin-bottom: 45px;
+  }
+
+  .page-content {
+    width: 100%;
+  }
+
+  .sort-inp-container {
+    margin-bottom: 26px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .class-grid-grp {
+    column-gap: 24px;
+    row-gap: 48px;
+
+    .list {
+      width: calc((100% - 48px) / 3);
+    }
+  }
+
+  .pagination {
+    margin-top: 90px;
+  }
+}

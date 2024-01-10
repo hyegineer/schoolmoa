@@ -2,33 +2,35 @@
 <include src="include/layout/header.html"></include>
 
 <!-- 페이지: 회원가입 -->
-<div class="register-page page-wrapper">
+<div class="auth-page page-wrapper">
   <div class="page-container">
-    <div>
-      <h2>회원가입</h2>
+    <div class="auth-box">
+      <div class="title-wrap">
+        <h2 class="title-sm">회원가입</h2>
+      </div>
 
-      <div>
-        <p>SNS 간편 회원가입</p>
-        <div>
+      <div class="sns-btn-wrap">
+        <p class="ttl">SNS 간편 회원가입</p>
+        <div class="sns-btn-grp">
           <button type="button" class="sns-btn type-kakao">
             <span class="txt-hidden">카카오톡 회원가입</span>
-            <img src="" alt="카카오톡 회원가입" class="ico ico-kakao">
+            <img src="assets/images/ico/ico-kakao.svg" alt="카카오톡 아이콘" class="ico ico-18 ico-kakao">
           </button>
 
           <button type="button" class="sns-btn type-naver">
             <span class="txt-hidden">네이버 회원가입</span>
-            <img src="" alt="네이버 회원가입" class="ico ico-naver">
+            <img src="assets/images/ico/ico-naver.svg" alt="네이버 아이콘" class="ico ico-18 ico-naver">
           </button>
 
           <button type="button" class="sns-btn type-google">
             <span class="txt-hidden">구글 회원가입</span>
-            <img src="" alt="구글 회원가입" class="ico ico-google">
+            <img src="assets/images/ico/ico-google.svg" alt="구글 아이콘" class="ico ico-18 ico-google">
           </button>
         </div>
       </div>
 
-      <div>
-        <span>또는</span>
+      <div class="divider-txt">
+        <span class="txt">또는</span>
       </div>
 
       <!-- 정보입력 -->
@@ -36,6 +38,7 @@
         <div class="form-item">
           <label class="form-label">이메일</label>
           <div class="form-inp-wrap">
+            <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
             <input type="text" placeholder="이메일을 입력하세요" class="inp">
           </div>
         </div>
@@ -43,73 +46,80 @@
         <div class="form-item">
           <label class="form-label">비밀번호</label>
           <div class="form-inp-wrap">
-            <div class="bd-inp-wrap">
-              <input type="password" placeholder="비밀번호를 입력하세요">
+            <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
+            <div class="bd-inp-wrap type-square">
+              <input type="password" placeholder="비밀번호를 입력하세요" autocomplete="new-password" class="inp">
               <button type="button" class="btn toggle-btn">
                 <span class="txt-hidden">비밀번호 보기</span>
-                <div class="ico-wrap">
-                  <img src="" alt="비밀번호 가리기" class="ico ico-off">
-                  <img src="" alt="비밀번호 보이기" class="ico ico-on">
-                </div>
+
+                <button type="button" class="btn toggle-btn toggle-eyes-btn">
+                  <span class="txt-hidden">비밀번호 보기</span>
+                  <div class="ico-wrap">
+                    <img src="assets/images/ico/ico-eyes-off.svg" alt="비밀번호 가리기" class="ico ico-off">
+                    <img src="assets/images/ico/ico-eyes-on.svg" alt="비밀번호 보이기" class="ico ico-on">
+                  </div>
+                </button>
               </button>
             </div>
           </div>
-          <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+          <!-- <p class="form-validation-msg">안내텍스트</p> -->
+          <!-- TODO: 경고일 때는 type-warning 클래스가 붙습니다. -->
           <p class="form-validation-msg type-warning">안내텍스트</p>
         </div>
       </div>
       <!-- END 정보입력 -->
 
       <!-- 동의 -->
-      <div>
-        <div>
-          <div>
-            <input type="checkbox">
-            <label for=""></label>
-            <label for="">모두 동의</label>
+      <div class="agree-box">
+        <div class="agree-list">
+          <div class="checkbox-item">
+            <input id="option1" type="checkbox" class="custom-checkbox-inp">
+            <label for="option1" class="custom-checkbox"></label>
+            <label for="option1" class="label-txt">모두 동의</label>
           </div>
         </div>
 
-        <ul>
-          <li>
-            <div>
-              <input type="checkbox">
-              <label for=""></label>
-              <label for="">(필수) 서비스 이용약관</label>
+        <ul class="agree-list-grp">
+          <li class="agree-list">
+            <div class="checkbox-item">
+              <input id="option2" type="checkbox" class="custom-checkbox-inp">
+              <label for="option2" class="custom-checkbox"></label>
+              <label for="option2" class="label-txt">(필수) 서비스 이용약관</label>
             </div>
 
-            <button type="button">보기</button>
+            <button type="button" class="light-gray-btn">보기</button>
+          </li>
+          <li class="agree-list">
+            <div class="checkbox-item">
+              <input id="option3" type="checkbox" class="custom-checkbox-inp">
+              <label for="option3" class="custom-checkbox"></label>
+              <label for="option3" class="label-txt">(필수) 개인정보처리방침</label>
+            </div>
+
+            <button type="button" class="light-gray-btn">보기</button>
           </li>
 
-          <li>
-            <div>
-              <input type="checkbox">
-              <label for=""></label>
-              <label for="">(필수) 개인정보처리방침</label>
+          <li class="agree-list">
+            <div class="checkbox-item">
+              <input id="option4" type="checkbox" class="custom-checkbox-inp">
+              <label for="option4" class="custom-checkbox"></label>
+              <label for="option4" class="label-txt">
+                <span>(선택) 마케팅 및 이벤트 정보 수신 동의</span>
+                <span class="sm-txt">스쿨모아의 할인 소식 및 유용한 소식을 받습니다.</span>
+              </label>
             </div>
 
-            <button type="button">보기</button>
-          </li>
-
-          <li>
-            <div>
-              <input type="checkbox">
-              <label for=""></label>
-              <label for="">(선택) 마케팅 및 이벤트 정보 수신 동의</label>
-              <p>스쿨모아의 할인 소식 및 유용한 소식을 받습니다.</p>
-            </div>
-
-            <button type="button">보기</button>
+            <button type="button" class="light-gray-btn">보기</button>
           </li>
         </ul>
       </div>
       <!-- END 동의 -->
 
-      <button type="button" class="blue-solid-btn btn-lg">가입하기</button>
+      <button type="button" class="blue-solid-btn btn-lg btn-w100">가입하기</button>
 
-      <div>
-        <p>이미 스쿨모아 회원이신가요?</p>
-        <a href="#">로그인</a>
+      <div class="question-txt">
+        <p class="txt">이미 스쿨모아 회원이신가요?</p>
+        <a href="login.html" class="link-txt">로그인</a>
       </div>
     </div>
   </div>

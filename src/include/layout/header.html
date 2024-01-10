@@ -2,45 +2,141 @@
   <div class="header-inner">
     <div class="header-left-wrap">
       <h1 class="hd-logo">
-        <a href="#">
-          <img src="" alt="스쿨모아 로고">
+        <a href="main.html">
+          <img src="assets/images/logo/logo.png" alt="스쿨모아 로고">
         </a>
       </h1>
 
       <div class="hd-nav-btn-grp">
-        <a href="" class="hd-nav-btn">홈</a>
-        <a href="" class="hd-nav-btn">쌤스킬</a>
-        <a href="" class="hd-nav-btn">클래스</a>
-        <a href="" class="hd-nav-btn">커뮤니티</a>
-        <a href="" class="hd-nav-btn">마이클래스</a>
+        <a href="main.html" class="hd-nav-btn @@nav01">홈</a>
+        <a href="skill-main.html" class="hd-nav-btn @@nav02">쌤스킬</a>
+        <a href="class-list.html" class="hd-nav-btn @@nav03">클래스</a>
+        <a href="commu-main.html" class="hd-nav-btn @@nav04">커뮤니티</a>
+        <a href="myclass-main.html" class="hd-nav-btn @@nav05">마이클래스</a>
       </div>
     </div>
 
     <div class="header-btn-wrap">
-      <button type="button" class="hd-btn">
+      <button type="button" class="hd-btn" onclick="openHdSearch();">
         <span class="txt-hidden">검색하기</span>
-        <img src="" alt="검색 아이콘" class="ico ico-search">
+        <img src="assets/images/ico/ico-hd-search.svg" alt="검색 아이콘" class="ico ico-22 ico-search">
       </button>
 
-      <button type="button">
+      <!-- TODO: 알림 있을 경우 active 클래스가 추가됩니다. -->
+      <button type="button" class="hd-btn active" onclick="location.href='myclass-alarm.html';">
         <span class="txt-hidden">알림</span>
-        <img src="" alt="알림 아이콘" class="ico ico-alarm">
+        <img src="assets/images/ico/ico-hd-bell.svg" alt="알림 아이콘" class="ico ico-22 ico-alarm">
       </button>
 
-      <button type="button">
+      <button type="button" class="hd-btn" onclick="openModal('modal-share');">
         <span class="txt-hidden">공유하기</span>
-        <img src="" alt="공유 아이콘" class="ico ico-share">
+        <img src="assets/images/ico/ico-hd-share.svg" alt="공유 아이콘" class="ico ico-22 ico-share">
       </button>
 
-      <button type="button">
+      <button type="button" class="hd-btn" onclick="location.href='cart-list.html';">
         <span class="txt-hidden">장바구니</span>
-        <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+        <img src="assets/images/ico/ico-hd-cart.svg" alt="장바구니 아이콘" class="ico ico-22 ico-cart">
       </button>
 
-      <button type="button">
+      <button type="button" class="hd-btn" onclick="location.href='like-list.html';">
         <span class="txt-hidden">찜리스트</span>
-        <img src="" alt="찜 아이콘" class="ico ico-like">
+        <img src="assets/images/ico/ico-hd-heart.svg" alt="찜 아이콘" class="ico ico-22 ico-like">
       </button>
     </div>
   </div>
+
+  <div class="header-search-wrap">
+    <div class="bottom-bd-inp-wrap">
+      <img src="assets/images/ico/ico-gray-search.svg" alt="ico ico-22">
+
+      <input type="text" class="inp" placeholder="원하는 클래스를 검색하세요.">
+
+      <button type="button" class="btn del-btn">
+        <span class="txt-hidden">검색어 지우기</span>
+        <img src="assets/images/ico/ico-gray-x.svg" alt="검색어 지우기 아이콘" class="ico ico-14">
+      </button>
+    </div>
+  </div>
+
+  <div class="header-overlay" onclick="closeHdSearch();"></div>
 </header>
+
+<!-- 1. 공유하기 모달 -->
+<div id="modal-share" class="modal-wrapper">
+  <div class="modal-overlay" onclick="closeModal('modal-share');"></div>
+
+  <div class="custom-modal content-modal share-modal">
+    <div class="title-wrap">
+      <h6 class="title-xsm">공유하기</h6>
+
+      <button type="button" onclick="closeModal('modal-share');" class="btn close-btn">
+        <span class="txt-hidden">모달 닫기</span>
+        <img src="assets/images/ico/ico-x.svg" alt="모달 닫기 아이콘" class="ico">
+      </button>
+    </div>
+
+    <div class="modal-content">
+      <p class="txt">공유할 채널을 선택하세요.</p>
+
+      <div class="btn-grp">
+        <button type="button" class="share-sns-btn type-naver">
+          <span class="txt-hidden">페이스북 공유</span>
+          <img src="assets/images/ico/ico-share-facebook.svg" alt="페이스북 아이콘" class="ico ico-40">
+        </button>
+
+        <button type="button" class="share-sns-btn type-kakao">
+          <span class="txt-hidden">카카오톡 공유</span>
+          <img src="assets/images/ico/ico-share-kakao.svg" alt="카카오톡 아이콘" class="ico ico-40">
+        </button>
+
+        <button type="button" class="share-sns-btn type-naver">
+          <span class="txt-hidden">네이버 라인 공유</span>
+          <img src="assets/images/ico/ico-share-line.svg" alt="라인 아이콘" class="ico ico-40">
+        </button>
+
+        <button type="button" class="share-sns-btn type-google">
+          <span class="txt-hidden">직접 복사하여 공유</span>
+          <img src="assets/images/ico/ico-share-copy.svg" alt="클립 아이콘" class="ico ico-40">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openHdSearch() {
+    $('.header-search-wrap').addClass('active');
+    $('.header-overlay').addClass('active');
+  }
+
+  function closeHdSearch() {
+    $('.header-search-wrap').removeClass('active');
+    $('.header-overlay').removeClass('active');
+    $('.bottom-bd-inp-wrap .inp').val('');
+    $('.bottom-bd-inp-wrap .del-btn').removeClasS('active');
+  }
+
+  // 헤더 검색: 검색어 입력시 지우기 버튼 활성화
+  $('.bottom-bd-inp-wrap .inp').on('input', function () {
+    if ($(this).val()) {
+      $(this).siblings('.del-btn').addClass('active');
+    } else {
+      $(this).siblings('.del-btn').removeClass('active');
+    }
+  })
+
+  // 헤더 검색: 검색어 입력시 지우기 버튼 작동
+  $('.bottom-bd-inp-wrap .del-btn').on('click', function () {
+    $(this).siblings('.inp').val('');
+  })
+
+  // 헤더 검색: 검색어 포커스할 때 보더 효과 적용
+  $('.bottom-bd-inp-wrap .inp').on('focus', function () {
+    $(this).parent('.bottom-bd-inp-wrap').addClass('active');
+  })
+
+  // 헤더 검색: 검색어 포커스 뗄 때 보더 효과 해제
+  $('.bottom-bd-inp-wrap .inp').on('blur', function () {
+    $(this).parent('.bottom-bd-inp-wrap').removeClass('active');
+  })
+</script>

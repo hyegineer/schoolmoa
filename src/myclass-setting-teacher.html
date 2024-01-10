@@ -1,17 +1,17 @@
 <include src="include/head.html"></include>
-<include src="include/layout/header.html"></include>
+<include src="include/layout/header.html" nav05="active"></include>
 
 <!-- 페이지: 마이클래스 회원정보 변경 (쌤용) -->
 <div class="myc-setting-page page-wrapper">
   <div class="page-container">
-    <div>
+    <div class="myc-layout-container">
       <!-- 왼쪽 -->
-      <include src="include/layout/myclass-left-container.html"></include>
+      <include src="include/layout/myclass-left-container.html" mycnav05="active"></include>
       <!-- END 왼쪽 -->
 
 
       <!-- 오른쪽 -->
-      <div>
+      <div class="myc-right-container">
         <!-- 제목 -->
         <div class="title-wrap">
           <h2 class="title-sm">회원정보변경</h2>
@@ -19,23 +19,24 @@
         <!-- END 제목 -->
 
         <!-- 내용 -->
-        <div>
-          <div class="gray-bd-box">
-            <!-- 사진 바꾸기 영역 -->
-            <div>
-              <div class="thumbnail-wrap">
-                <figure class="thumbnail type-circle">
-                  <img src="" alt="썸네일 이미지" class="thumbnail-img">
-                </figure>
-                <span>
-                  <img src="" alt="사진편집 아이콘">
-                </span>
-              </div>
-            </div>
-            <!-- END 사진 바꾸기 영역 -->
-
+        <div class="page-content">
+          <div class="gray-bd-box myc-setting-box">
             <!-- 정보입력 -->
             <div class="form-item-grp">
+              <!-- 사진 바꾸기 영역 -->
+              <div class="form-item">
+                <div class="edit-thumbnail-wrap">
+                  <figure class="thumbnail type-circle">
+                    <img src="assets/images/img-default.svg" alt="썸네일 이미지" class="thumbnail-img">
+                  </figure>
+                  <input type="file" id="upload" class="none">
+                  <label for="upload" class="btn edit-btn">
+                    <img src="assets/images/ico/ico-edit-camera.svg" alt="사진편집 아이콘">
+                  </label>
+                </div>
+              </div>
+              <!-- END 사진 바꾸기 영역 -->
+
               <div class="form-item">
                 <label class="form-label">이메일</label>
                 <div class="form-inp-wrap">
@@ -48,11 +49,11 @@
                 <div class="form-inp-wrap">
                   <div class="inp-btn-wrap">
                     <input type="text" class="inp">
-                    <button type="button" class="blue-solid-btn btn-lg">수정</button>
+                    <button type="button" class="blue-solid-btn btn-lg inp-btn">수정</button>
                   </div>
                 </div>
                 <p class="form-validation-msg">
-                  <img src="" alt="경고 아이콘" class="ico ico-bang">
+                  <img src="assets/images/ico/ico-bang.svg" alt="경고 아이콘" class="ico ico-16 ico-bang">
                   <span>휴대폰 번호가 변경된 경우 업데이트 해주세요!</span>
                 </p>
               </div>
@@ -63,11 +64,11 @@
                   <div class="inp-btn-wrap">
                     <input type="text" class="inp" value="스쿨모아">
                     <!-- TODO: 30일에 한번만 변경할 수 있어서, 변경한 후에는 30일동안 disabled를 설정해놓아야 합니다. -->
-                    <button type="button" class="blue-solid-btn btn-lg" disabled>수정</button>
+                    <button type="button" class="blue-solid-btn btn-lg inp-btn">수정</button>
                   </div>
                 </div>
                 <p class="form-validation-msg">
-                  <img src="" alt="경고 아이콘" class="ico ico-bang">
+                  <img src="assets/images/ico/ico-bang.svg" alt="경고 아이콘" class="ico ico-16 ico-bang">
                   <span>닉네임은 30일 안에 한 번만 변경할 수 있습니다.</span>
                 </p>
               </div>
@@ -75,81 +76,92 @@
               <div class="form-item">
                 <label class="form-label">비밀번호</label>
                 <div class="form-inp-wrap">
-                  <div class="bd-inp-wrap">
-                    <input type="password" placeholder="비밀번호를 입력하세요">
+                  <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
+                  <div class="bd-inp-wrap type-square">
+                    <input type="password" placeholder="비밀번호를 입력하세요" autocomplete="new-password" class="inp">
                     <button type="button" class="btn toggle-btn">
                       <span class="txt-hidden">비밀번호 보기</span>
-                      <div class="ico-wrap">
-                        <img src="" alt="비밀번호 가리기" class="ico ico-off">
-                        <img src="" alt="비밀번호 보이기" class="ico ico-on">
-                      </div>
+
+                      <button type="button" class="btn toggle-btn toggle-eyes-btn">
+                        <span class="txt-hidden">비밀번호 보기</span>
+                        <div class="ico-wrap">
+                          <img src="assets/images/ico/ico-eyes-off.svg" alt="비밀번호 가리기" class="ico ico-off">
+                          <img src="assets/images/ico/ico-eyes-on.svg" alt="비밀번호 보이기" class="ico ico-on">
+                        </div>
+                      </button>
                     </button>
                   </div>
                 </div>
-                <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+                <!-- <p class="form-validation-msg">안내텍스트</p> -->
+                <!-- TODO: 경고일 때는 type-warning 클래스가 붙습니다. -->
                 <p class="form-validation-msg type-warning">안내텍스트</p>
               </div>
 
               <div class="form-item">
-                <label class="form-label">비밀번호 확인</label>
+                <label class="form-label">비밀번호</label>
                 <div class="form-inp-wrap">
-                  <div class="bd-inp-wrap">
-                    <input type="password" placeholder="비밀번호를 입력하세요">
+                  <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
+                  <div class="bd-inp-wrap type-square">
+                    <input type="password" placeholder="비밀번호를 입력하세요" autocomplete="new-password" class="inp">
                     <button type="button" class="btn toggle-btn">
                       <span class="txt-hidden">비밀번호 보기</span>
-                      <div class="ico-wrap">
-                        <img src="" alt="비밀번호 가리기" class="ico ico-off">
-                        <img src="" alt="비밀번호 보이기" class="ico ico-on">
-                      </div>
+
+                      <button type="button" class="btn toggle-btn toggle-eyes-btn">
+                        <span class="txt-hidden">비밀번호 보기</span>
+                        <div class="ico-wrap">
+                          <img src="assets/images/ico/ico-eyes-off.svg" alt="비밀번호 가리기" class="ico ico-off">
+                          <img src="assets/images/ico/ico-eyes-on.svg" alt="비밀번호 보이기" class="ico ico-on">
+                        </div>
+                      </button>
                     </button>
                   </div>
                 </div>
-                <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+                <!-- <p class="form-validation-msg">안내텍스트</p> -->
+                <!-- TODO: 경고일 때는 type-warning 클래스가 붙습니다. -->
                 <p class="form-validation-msg type-warning">안내텍스트</p>
               </div>
             </div>
             <!-- END 정보입력 -->
 
-            <button type="button" class="blue-solid-btn btn-lg">저장하기</button>
+            <button type="button" class="blue-solid-btn btn-lg btn-w100">저장하기</button>
           </div>
 
-          <div class="gray-bd-box">
-            <div>
-              <h6>알림 설정</h6>
-              <p>스쿨모아 플랫폼 알림은 사이트내에서만 이루어 집니다. <br>
+          <div class="gray-bd-box myc-desc-box">
+            <div class="ttl-wrap">
+              <h6 class="ttl">알림 설정</h6>
+              <p class="desc">스쿨모아 플랫폼 알림은 사이트내에서만 이루어 집니다. <br>
                 이메일/문자/알림톡 알림을 받고자 하시는 쌤은 <br>
                 아래 설정을 완료해주시기 바랍니다.
               </p>
             </div>
 
-            <div>
-              <div>
-                <button type="button">알림 이메일 설정</button>
+            <div class="btn-grp-wrap">
+              <div class="double-btn-grp">
+                <button type="button" onclick="openModal('modal-1');" class="gray-01-bd-btn btn-md">알림 이메일 설정</button>
                 <button type="button" class="txt-arrow-btn">
                   <span class="txt">이메일 설정방법 메뉴얼</span>
-                  <img src="" alt="화살표 아이콘" class="ico ico-arrow">
+                  <img src="assets/images/ico/ico-gray-cheveron-right.svg" alt="화살표 아이콘" class="ico ico-14 ico-arrow">
                 </button>
               </div>
-              <div>
-                <button type="button">문자/알림톡 설정</button>
+              <div class="double-btn-grp">
+                <button type="button" onclick="openModal('modal-2');" class="gray-01-bd-btn btn-md">문자/알림톡 설정</button>
                 <button type="button" class="txt-arrow-btn">
                   <span class="txt">문자/알림톡 설정방법 메뉴얼</span>
-                  <img src="" alt="화살표 아이콘" class="ico ico-arrow">
+                  <img src="assets/images/ico/ico-gray-cheveron-right.svg" alt="화살표 아이콘" class="ico ico-14 ico-arrow">
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="gray-bd-box">
-            <div>
-              <h6>회원탈퇴</h6>
-              <p>회원 탈퇴 즉시 스쿨모아 서비스 이용 정보가 삭제됩니다. <br>
-                유료로 구매한 클래스는 탈퇴시 환불이 되지 않습니다. <br>
-                <br>작성한 게시글은 삭제되지 않습니다.
+          <div class="gray-bd-box myc-desc-box">
+            <div class="ttl-wrap">
+              <h6 class="ttl">회원탈퇴</h6>
+              <p class="desc">회원 탈퇴 즉시 스쿨모아 서비스 이용 정보가 삭제됩니다. <br>
+                유료로 구매한 클래스는 탈퇴시 환불이 되지 않습니다. <br>작성한 게시글은 삭제되지 않습니다.
               </p>
             </div>
 
-            <button type="button" class="blue-solid-btn btn-lg">회원탈퇴</button>
+            <button type="button" class="blue-solid-btn btn-lg btn-w100">회원탈퇴</button>
           </div>
         </div>
         <!-- END 내용 -->
@@ -159,59 +171,250 @@
   </div>
 </div>
 
-<div>
-  <div></div>
+<!-- 1. 알림 이메일 설정 모달 -->
+<div id="modal-1" class="modal-wrapper">
+  <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
 
-  <div>
+  <div class="custom-modal content-modal setting-modal">
     <!-- 모달 제목 -->
-    <div>
-      <h5>알림 이메일 설정</h5>
+    <div class="title-wrap">
+      <h6 class="title-xsm">알림 이메일 설정</h6>
 
-      <button type="button">
+      <button type="button" onclick="closeModal('modal-1');" class="btn close-btn">
         <span class="txt-hidden">모달 닫기</span>
-        <img src="" alt="닫기 아이콘" class="ico ico-x">
+        <img src="assets/images/ico/ico-x.svg" alt="모달 닫기 아이콘" class="ico">
       </button>
     </div>
     <!-- END 모달 제목 -->
 
     <!-- 모달 내용 -->
-    <div>
-      <div>
-        <div>
-          <label>사용할 이메일 설정</label>
-          <div>
-            <div>
-              <div>
-                <input type="checkbox">
-                <label for=""></label>
-                <label for="">네이버/카카오/기타</label>
-              </div>
+    <div class="modal-content">
+      <div class="bg-skyblue-box myc-setting-opt-box">
+        <div class="checkbox-item">
+          <input id="email-opt1" data-content="email-opt1-content" type="radio" name="email-opt"
+            class="custom-checkbox-inp" checked>
+          <label for="email-opt1" class="custom-checkbox"></label>
+          <label for="email-opt1" class="label-txt">네이버/카카오/기타</label>
+        </div>
+        <div class="checkbox-item">
+          <input id="email-opt2" data-content="email-opt2-content" type="radio" name="email-opt"
+            class="custom-checkbox-inp">
+          <label for="email-opt2" class="custom-checkbox"></label>
+          <label for="email-opt2" class="label-txt">구글</label>
+        </div>
+      </div>
 
-              <div>
-                <input type="checkbox">
-                <label for=""></label>
-                <label for="">구글</label>
+      <div id="email-opt1-content" class="myc-email-opt-content active">
+        <div class="modal-scrollarea">
+          <div class="form-item-grp">
+            <div class="form-item">
+              <label class="form-label">발신 이메일</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">발신자</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">SMTP 호스트</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item type-row">
+              <label class="form-label">암호화</label>
+              <div class="form-inp-wrap">
+                <div class="checkbox-item">
+                  <input id="ssl" type="radio" name="pwd-opt" class="custom-checkbox-inp">
+                  <label for="ssl" class="custom-checkbox"></label>
+                  <label for="ssl" class="label-txt">네이버/카카오/기타</label>
+                </div>
+                <div class="checkbox-item">
+                  <input id="email-opt2" type="radio" name="pwd-opt" class="custom-checkbox-inp">
+                  <label for="email-opt2" class="custom-checkbox"></label>
+                  <label for="email-opt2" class="label-txt">구글</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">SMTP 포트</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">SMTP 사용자 이름</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">SMTP 비밀번호</label>
+              <div class="form-inp-wrap">
+                <input type="password" autocomplete="new-password" class="inp">
               </div>
             </div>
           </div>
+
+          <div class="double-btn-grp">
+            <button type="button" class="gray-01-bd-btn btn-md">알림 이메일 설정</button>
+            <button type="button" class="txt-arrow-btn">
+              <span class="txt">이메일 설정방법 메뉴얼</span>
+              <img src="assets/images/ico/ico-gray-cheveron-right.svg" alt="화살표 아이콘" class="ico ico-14 ico-arrow">
+            </button>
+          </div>
         </div>
 
-        <div>
-          <label>사용할 이메일 설정</label>
+        <div class="modal-btn-grp">
+          <button type="button" onclick="closeModal('modal-1');" class="btn gray-01-bd-btn btn-md">취소</button>
+          <button type="button" onclick="alert('구글 이메일 설정이 저장되었습니다.');closeModal('modal-1');"
+            class="btn blue-solid-btn btn-sm confirm-btn">저장하기</button>
+        </div>
+      </div>
+
+      <div id="email-opt2-content" class="myc-email-opt-content">
+        <div class="modal-scrollarea">
+          <div class="form-item-grp">
+            <div class="form-item">
+              <label class="form-label">클라이언트 ID</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">클라이언트 비밀번호</label>
+              <div class="form-inp-wrap">
+                <input type="password" autocomplete="new-password" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">승인된 리디렉션 URL</label>
+              <div class="form-inp-wrap">
+                <input type="text" autocomplete="new-password" class="inp" value="https://funnelmoa.com/google/">
+              </div>
+            </div>
+          </div>
+
+          <div class="double-btn-grp">
+            <button type="button" class="gray-01-bd-btn btn-md">알림 이메일 설정</button>
+            <button type="button" class="txt-arrow-btn">
+              <span class="txt">이메일 설정방법 메뉴얼</span>
+              <img src="assets/images/ico/ico-gray-cheveron-right.svg" alt="화살표 아이콘" class="ico ico-14 ico-arrow">
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-btn-grp">
+          <button type="button" onclick="closeModal('modal-1');" class="btn gray-01-bd-btn btn-md">취소</button>
+          <button type="button" onclick="alert('네이버/카카오/기타 이메일 설정이 저장되었습니다.');closeModal('modal-1');"
+            class="btn blue-solid-btn btn-sm confirm-btn">저장하기</button>
         </div>
       </div>
     </div>
     <!-- END 모달 내용 -->
-
-    <!-- 모달 하단 버튼영역 -->
-    <div>
-      <button type="button">취소</button>
-      <button type="button">저장하기</button>
-    </div>
-    <!-- END 모달 하단 버튼영역 -->
   </div>
 </div>
+
+<!-- 1. 알림 이메일 설정 모달 -->
+<div id="modal-2" class="modal-wrapper">
+  <div class="modal-overlay" onclick="closeModal('modal-2');"></div>
+
+  <div class="custom-modal content-modal setting-modal">
+    <!-- 모달 제목 -->
+    <div class="title-wrap">
+      <h6 class="title-xsm">문자/알림톡 설정</h6>
+
+      <button type="button" onclick="closeModal('modal-2');" class="btn close-btn">
+        <span class="txt-hidden">모달 닫기</span>
+        <img src="assets/images/ico/ico-x.svg" alt="모달 닫기 아이콘" class="ico">
+      </button>
+    </div>
+    <!-- END 모달 제목 -->
+
+    <!-- 모달 내용 -->
+    <div class="modal-content">
+      <div class="bg-skyblue-box myc-setting-opt-box">
+        <div class="checkbox-item">
+          <input id="msg-opt1" type="checkbox" name="email-opt" class="custom-checkbox-inp" checked>
+          <label for="msg-opt1" class="custom-checkbox"></label>
+          <label for="msg-opt1" class="label-txt">문자</label>
+        </div>
+        <div class="checkbox-item">
+          <input id="msg-opt2" type="checkbox" name="email-opt" class="custom-checkbox-inp">
+          <label for="msg-opt2" class="custom-checkbox"></label>
+          <label for="msg-opt2" class="label-txt">알림톡</label>
+        </div>
+      </div>
+
+      <div class="myc-msg-opt-content">
+        <div class="modal-scrollarea">
+          <div class="form-item-grp">
+            <div class="form-item">
+              <label class="form-label">발신번호</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">API Key</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+
+            <div class="form-item">
+              <label class="form-label">API Secret</label>
+              <div class="form-inp-wrap">
+                <input type="text" class="inp">
+              </div>
+            </div>
+          </div>
+
+          <div class="double-btn-grp">
+            <button type="button" class="gray-01-bd-btn btn-md">테스트 문자/알림톡 보내기</button>
+            <button type="button" class="txt-arrow-btn">
+              <span class="txt">문자/알림톡 설정방법 메뉴얼</span>
+              <img src="assets/images/ico/ico-gray-cheveron-right.svg" alt="화살표 아이콘" class="ico ico-14 ico-arrow">
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-btn-grp">
+          <button type="button" onclick="closeModal('modal-2');" class="btn gray-01-bd-btn btn-md">취소</button>
+          <button type="button" onclick="alert('저장되었습니다.');closeModal('modal-1');"
+            class="btn blue-solid-btn btn-sm confirm-btn">저장하기</button>
+        </div>
+      </div>
+    </div>
+    <!-- END 모달 내용 -->
+  </div>
+</div>
+
 <!-- END 페이지: 마이클래스 회원정보 변경 (쌤용) -->
 
 <include src="include/layout/footer.html"></include>
-<include src="include/tail.html"></include>
+<include src="include/tail.html">
+  <script>
+    // 알림 이메일 설정 모달 안 라디오 작동
+    $('[name="email-opt"]').on('change', function () {
+      var content = $(this).attr('data-content');
+
+      $('.myc-email-opt-content').removeClass('active');
+      $('#' + content).addClass('active');
+      $('#' + content).children('.modal-scrollarea').scrollTop(0);
+    })
+  </script>
+</include>

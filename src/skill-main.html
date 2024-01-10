@@ -1,28 +1,38 @@
 <include src="include/head.html"></include>
-<include src="include/layout/header.html"></include>
+<include src="include/layout/header.html" nav02="active"></include>
 
 <!-- 페이지: 쌤스킬 -->
 <div class="skill-main-page page-wrapper">
   <div class="page-container">
     <!-- 1. 샘스킬 메인 섹션 -->
-    <section>
+    <section class="section skill-main-section">
       <div class="inner">
-        <div class="main-title-wrap">
+        <div class="main-title-wrap type-col">
           <p class="sub-txt">수학 전교 1등을 원해?</p>
-          <h2 class="title">서울대쌤과 함께라면, <br>문장을 정확히 채워주세요!</h2>
+          <h2 class="title">서울대쌤과 함께라면, <br><span class="blue-txt">문장을 정확히</span> 채워주세요!</h2>
+
+          <img src="assets/images/img-mpoint-ele01.png" alt="요소 장식" class="img-ele type-01">
         </div>
 
-        <div>
-          <!-- FIXME: 비디오 재생버튼 스타일링 몬함 -->
+        <div class="content">
+          <img src="assets/images/img-mpoint-ele02.png" alt="요소 장식" class="img-ele type-02">
+          <img src="assets/images/img-mpoint-ele03.png" alt="요소 장식" class="img-ele type-03">
+
+          <div class="video-wrap">
+            <div class="video-box">비디오 삽입</div>
+            <!-- TODO: 비디오를 넣을 경우 video-box 클래스를 넣어주세요 -->
+          </div>
         </div>
       </div>
     </section>
 
     <!-- 2. 샘스킬 쌤 소개 -->
-    <section>
-      <div class="inner">
+    <section class="section steacher-section">
+      <div class="bg-skyblue-box type-left"></div>
+
+      <div class="profile-box">
         <figure class="thumbnail type-lg">
-          <img src="" alt="썸네일 이미지" class="thumbnail-img">
+          <img src="assets/images/img-teacher-profile.png" alt="썸네일 이미지" class="thumbnail-img">
         </figure>
 
         <div class="bg-shining-card">
@@ -30,14 +40,19 @@
 
           <ul class="list-txt-grp">
             <li class="list-txt">서울대학교 수학교육과 재학 중</li>
-            <li class="list-txt">서울대학교 수학교육과 재학 중</li>
+            <li class="list-txt">서울고등학교 전교 1등</li>
+            <li class="list-txt">서울고등학교 학생회장</li>
+            <li class="list-txt">수학올림피아드 전체 1등</li>
+            <li class="list-txt">멘사회원</li>
           </ul>
         </div>
       </div>
+
+      <div class="bg-skyblue-box type-right"></div>
     </section>
 
     <!-- 3. 샘스킬 인증서 -->
-    <section>
+    <section class="section scertify-section">
       <div class="inner">
         <!-- 제목 -->
         <div class="main-title-wrap">
@@ -49,15 +64,51 @@
         <!-- END 제목 -->
 
         <!-- 내용 -->
-        <div>
-          <div>
+        <div class="row-list-grp">
+          <div class="list">
             <!-- 인증서 -->
-            <div>
-              <figure>
-                <img src="" alt="인증서 이미지">
+            <div class="certify-card">
+              <figure class="thumbnail">
+                <img src="assets/images/sample/sample-certify-01.png" alt="인증서 이미지" class="thumbnail-img">
               </figure>
 
-              <p>서울대 입학증명서</p>
+              <p class="txt">서울대 입학증명서</p>
+            </div>
+            <!-- END 인증서 -->
+          </div>
+
+          <div class="list">
+            <!-- 인증서 -->
+            <div class="certify-card">
+              <figure class="thumbnail">
+                <img src="assets/images/sample/sample-certify-02.png" alt="인증서 이미지" class="thumbnail-img">
+              </figure>
+
+              <p class="txt">서울대 입학증명서</p>
+            </div>
+            <!-- END 인증서 -->
+          </div>
+
+          <div class="list">
+            <!-- 인증서 -->
+            <div class="certify-card">
+              <figure class="thumbnail">
+                <img src="assets/images/sample/sample-certify-03.png" alt="인증서 이미지" class="thumbnail-img">
+              </figure>
+
+              <p class="txt">서울대 입학증명서</p>
+            </div>
+            <!-- END 인증서 -->
+          </div>
+
+          <div class="list">
+            <!-- 인증서 -->
+            <div class="certify-card">
+              <figure class="thumbnail">
+                <img src="assets/images/sample/sample-certify-04.png" alt="인증서 이미지" class="thumbnail-img">
+              </figure>
+
+              <p class="txt">서울대 입학증명서</p>
             </div>
             <!-- END 인증서 -->
           </div>
@@ -67,7 +118,7 @@
     </section>
 
     <!-- 4. 샘스킬 과외 포인트 -->
-    <section>
+    <section class="section spoint-section">
       <div class="inner">
         <!-- 제목 -->
         <div class="main-title-wrap">
@@ -75,11 +126,16 @@
             서울대쌤의 <br>
             3가지 <span class="red-txt">과외 포인트</span>
           </h2>
+
+          <img src="assets/images/img-mpoint-ele01.png" alt="요소 장식" class="img-ele type-01">
         </div>
         <!-- END 제목 -->
 
         <!-- 내용 -->
-        <div>
+        <div class="card-grp">
+          <img src="assets/images/img-mpoint-ele02.png" alt="요소 장식" class="img-ele type-02">
+          <img src="assets/images/img-mpoint-ele03.png" alt="요소 장식" class="img-ele type-03">
+
           <div class="num-white-card">
             <h3 class="ttl">온/오프라인 <br>선택가능</h3>
             <p class="desc">서울대쌤은 <br>대면/비대면 선택이 가능합니다.</p>
@@ -103,16 +159,14 @@
     </section>
 
     <!-- 5. 샘스킬 마지막 섹션 -->
-    <section>
-      <img src="" alt="배경 이미지" class="bg-img">
-      
-      <div class="main-title-rap">
+    <section class="section slast-section">
+      <div class="main-title-wrap type-col">
         <p class="sub-txt">수학 전교 1등을 원해?</p>
-        <h2 class="title">서울대쌤과 함께라면, <br>문장을 정확히 채워주세요!</h2>
+        <h2 class="title-sm">서울대쌤과 함께라면, <br>문장을 정확히 채워주세요!</h2>
 
         <button type="button" class="dark-rounded-btn">
           <span class="txt">과외 신청하기</span>
-          <img src="" alt="화살표 아이콘" class="ico ico-arrow">
+          <img src="assets/images/ico/ico-arrow-right.svg" alt="화살표 아이콘" class="ico ico-arrow">
         </button>
       </div>
     </section>

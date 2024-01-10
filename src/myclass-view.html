@@ -4,107 +4,131 @@
 <!-- 페이지: 마이클래스 강의시청 -->
 <div class="myc-view-page page-wrapper">
   <div class="page-container">
-    <!-- 왼쪽 -->
-    <div>
-      <!-- 왼쪽 상단 헤더 -->
-      <div>
-        <div>
-          <button type="button">
-            <span class="txt-hidden">뒤로 가기</span>
-            <img src="" alt="">
-          </button>
+    <div class="myc-view-layout-container">
+      <!-- 왼쪽 -->
+      <div class="myc-view-left-container">
+        <!-- 왼쪽 상단 헤더 -->
+        <div class="myc-view-header">
+          <div class="ttl-wrap">
+            <button type="button" class="btn">
+              <span class="txt-hidden">뒤로 가기</span>
+              <img src="assets/images/ico/ico-back-arrow.svg" alt="뒤로가기 아이콘" class="ico">
+            </button>
 
-          <h2>중학교 정규분포 심화</h2>
+            <h2 class="ttl">중학교 정규분포 심화</h2>
+          </div>
+
+          <div class="mg-left">
+            <span class="blue-txt">서울대쌤</span>
+          </div>
         </div>
+        <!-- END 왼쪽 상단 헤더 -->
 
-        <span>서울대쌤</span>
-      </div>
-      <!-- END 왼쪽 상단 헤더 -->
-
-      <!-- 왼쪽 중앙 컨텐츠 -->
-      <div>
-        <div>
-          <div></div>
+        <!-- 왼쪽 중앙 컨텐츠 -->
+        <div class="myc-view-content-container">
+          <div class="page-content">
+            <div class="video-wrap">
+              <div class="video-box">비디오 삽입</div>
+              <!-- TODO: 비디오를 넣을 경우 video-box 클래스를 넣어주세요 -->
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- END 왼쪽 중앙 컨텐츠 -->
+        <!-- END 왼쪽 중앙 컨텐츠 -->
 
-      <!-- 왼쪽 하단 컨트롤러 -->
-      <div>
-        <div>
-          <button type="button">
-            <img src="" alt="">
-            <span>이전 강의</span>
-          </button>
+        <!-- 왼쪽 하단 컨트롤러 -->
+        <div class="myc-view-bottom-container">
+          <div class="view-controller">
+            <button type="button" class="btn ctrl-btn">
+              <img src="assets/images/ico/ico-white-cheveron-left.svg" class="ico ico-14" alt="이전 강의 아이콘">
+              <span class="txt">이전 강의</span>
+            </button>
 
-          <button type="button">
-            <span>다음 강의</span>
-            <img src="" alt="">
-          </button>
+            <button type="button" class="btn ctrl-btn">
+              <span class="txt">다음 강의</span>
+              <img src="assets/images/ico/ico-white-cheveron-right.svg" class="ico ico-14" alt="다음 강의 아이콘">
+            </button>
+          </div>
         </div>
+        <!-- END 왼쪽 하단 컨트롤러 -->
       </div>
-      <!-- END 왼쪽 하단 컨트롤러 -->
-    </div>
-    <!-- END 왼쪽 -->
+      <!-- END 왼쪽 -->
 
-    <!-- 오른쪽 -->
-    <div>
-      <!-- 오른쪽 상단 제목 -->
-      <div>
-        <div>
-          <i></i>
-          <p>커리큘럼 상세보기</p>
+      <!-- 오른쪽 -->
+      <div class="myc-view-right-container">
+        <!-- 오른쪽 상단 제목 -->
+        <div class="curriculum-box">
+          <div class="box-top">
+            <img src="assets/images/ico/ico-paper.svg" alt="커리큘럼 아이콘" class="ico ico-paper">
+            <p class="ttl">커리큘럼 상세보기</p>
+          </div>
         </div>
-      </div>
-      <!-- END 오른쪽 상단 제목 -->
+        <!-- END 오른쪽 상단 제목 -->
 
-      <!-- 오른쪽 중앙 컨텐츠 -->
-      <div>
-        <div>
-          <!-- 리스트 -->
-          <div>
-            <div>
-              <span>챕터</span>
-              <p>챕터 제목</p>
+        <!-- 오른쪽 중앙 컨텐츠 -->
+        <div class="myc-view-right-content">
+          <div class="accordion-card type-01">
+            <div class="accordion-card-top">
+              <div class="list-chapter-card">
+                <div class="card-content" onclick="showContent(this, 'list-chapter-card');">
+                  <span class="sub-ttl">챕터</span>
+                  <p class="card-ttl">챕터 제목</p>
+                </div>
+
+                <img src="assets/images/ico/ico-arrow-down.svg" alt="화살표" class="ico ico-18 ico-arrow">
+              </div>
             </div>
 
-            <ul>
-              <li>
-                <button type="button">
-                  <img src="" alt="">
+            <div class="accordion-card-bottom">
+              <div class="list-class-card">
+                <button type="button" class="btn view-btn">
+                  <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
+                  <img src="assets/images/ico/ico-play-complete.svg" alt="수강완료 아이콘" class="ico ico-complete">
+                  <!-- <img src="assets/images/ico/ico-play-ing.svg" alt="수강중 아이콘" class="ico ico-ing"> -->
+                  <!-- <img src="assets/images/ico/ico-play-incomplete.svg" alt="수강전 아이콘" class="ico ico-incomplete"> -->
                 </button>
 
-                <div>
-                  <span>00:00:00</span>
-                  <p>강의제목</p>
+                <div class="card-content">
+                  <span class="sm-gray-txt">00:00:00</span>
+                  <h3 class="card-ttl">강의제목</h3>
                 </div>
 
-                <img src="" alt="">
-              </li>
+                <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
+                <img src="assets/images/ico/ico-accordion-checked.svg" alt="수강완료 체크 아이콘" class="ico ico-18 ico-checked">
+              </div>
 
-              <li>
-                <button type="button">
-                  <img src="" alt="">
+              <div class="list-class-card">
+                <button type="button" class="btn view-btn">
+                  <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
+                  <img src="assets/images/ico/ico-play-complete.svg" alt="수강완료 아이콘" class="ico ico-complete">
+                  <!-- <img src="assets/images/ico/ico-play-ing.svg" alt="수강중 아이콘" class="ico ico-ing"> -->
+                  <!-- <img src="assets/images/ico/ico-play-incomplete.svg" alt="수강전 아이콘" class="ico ico-incomplete"> -->
                 </button>
 
-                <div>
-                  <span>00:00:00</span>
-                  <p>강의제목</p>
+                <div class="card-content">
+                  <span class="sm-gray-txt">00:00:00</span>
+                  <h3 class="card-ttl">강의제목</h3>
                 </div>
 
-                <img src="" alt="">
-              </li>
-            </ul>
+                <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
+                <img src="assets/images/ico/ico-accordion-checked.svg" alt="수강완료 체크 아이콘" class="ico ico-18 ico-checked">
+              </div>
+            </div>
           </div>
-          <!-- END 리스트 -->
         </div>
+        <!-- END 오른쪽 중앙 컨텐츠 -->
       </div>
-      <!-- END 오른쪽 중앙 컨텐츠 -->
+      <!-- END 오른쪽 -->
     </div>
-    <!-- END 오른쪽 -->
   </div>
 </div>
 <!-- END 페이지: 마이클래스 강의시청 -->
 
 <include src="include/layout/footer.html"></include>
-<include src="include/tail.html"></include>
+<include src="include/tail.html">
+  <script>
+    if ($('.page-wrapper').hasClass('myc-view-page')) {
+      $('.header').hide();
+      $('.footer').hide();
+    }
+  </script>
+</include>

@@ -2,27 +2,27 @@
 <include src="include/layout/header.html"></include>
 
 <!-- 페이지: 비밀번호 찾기 -->
-<div class="page-wrapper">
+<div class="auth-page page-wrapper">
   <div class="page-container">
-    <div>
-      <button type="button">
-        <img src="" alt="화살표 아이콘" class="ico ico-back-arrow">
-        <span>로그인으로 돌아가기</span>
+    <div class="find-box">
+      <button type="button" class="blue-back-btn">
+        <img src="assets/images/ico/ico-blue-arrow-back.svg" alt="화살표 아이콘" class="ico ico-18 ico-back-arrow">
+        <span class="txt">로그인으로 돌아가기</span>
       </button>
 
-      <div>
-        <div>
-          <button type="button">아이디 찾기</button>
-          <button type="button">비밀번호 찾기</button>
+      <div class="gray-bd-box">
+        <div class="tabs">
+          <button type="button" class="tab " onclick="location.href='find-id.html';">아이디 찾기</button>
+          <button type="button" class="tab active" onclick="location.href='find-pwd.html';">비밀번호 찾기</button>
         </div>
 
-        <div>
-          <div>
-            <h2>휴대폰 번호를 인증해주세요.</h2>
-            <p>휴대폰 인증 후에 비밀번호를 재설정할 수 있어요.</p>
+        <div class="find-content">
+          <div class="guide-ment-box">
+            <h2 class="guide-ttl">휴대폰 번호를 인증해주세요.</h2>
+            <p class="guide-desc">휴대폰 인증 후에 비밀번호를 재설정할 수 있어요.</p>
           </div>
 
-          <button type="button">인증하기</button>
+          <button type="button" class="blue-solid-btn btn-lg btn-w100">인증하기</button>
         </div>
       </div>
     </div>

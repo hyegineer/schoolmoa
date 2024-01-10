@@ -1,0 +1,52 @@
+.commu-main-page {
+  padding: 83px 0 200px;
+
+  .title-wrap {
+    margin-bottom: 44px;
+  }
+
+  .page-content {
+    margin-bottom: 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .title-wrap {
+      margin-bottom: 28px;
+    }
+  }
+
+  .notice-content {
+    .ment-box {
+      margin-bottom: 28px;
+    }
+
+    .sort-inp-container {
+      margin-bottom: 28px;
+    }
+
+    .pagination {
+      margin-top: 90px;
+    }
+  }
+
+  .notice-col-grp {
+    border-top: 1px solid #E2E8F0;
+  }
+
+  .faq-col-grp {
+    border: 1px solid #CBD4E1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+
+    .list {
+      border-bottom: 1px solid #CBD4E1;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.myc-alarm-page {
+  .desc-btn-box {
+    margin-bottom: 20px;
+  }
+
+  .ment-box {
+    margin-bottom: 20px;
+    padding: 12px 24px;
+  }
+
+  .myc-alarm-col-grp {
+    gap: 8px;
+  }
+
+  .col-list-btn-wrap {
+    .more-btn {
+      margin-top: 20px;
+    }
+  }
+
+  .nothing-wrap {
+    padding: 30px 0;
+  }
+}
+
+.desc-btn-box {
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+
+  .btn {
+    margin-left: auto;
+  }
+
+  .desc {
+    color: #64748B;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.12px;
+  }
+}

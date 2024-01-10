@@ -1,5 +1,5 @@
 <include src="include/head.html"></include>
-<include src="include/layout/header.html"></include>
+<include src="include/layout/header.html" nav04="active"></include>
 
 <!-- 페이지: 커뮤니티 -->
 <div class="commu-main-page page-wrapper">
@@ -12,35 +12,33 @@
       <!-- END 제목 -->
 
       <!-- 내용 (1. 공지사항) -->
-      <div>
+      <div class="page-content notice-content">
         <div class="title-wrap">
           <h3 class="title-sm">공지사항</h3>
         </div>
 
         <div class="ment-box">
-          <!-- TODO: 장바구니 있을 때 -->
-          <p class="txt">총 10개의 클래스가 있어요.</p>
+          <!-- TODO: 공지사항 있을 때 -->
+          <p class="txt">총 10개의 게시글이 있어요.</p>
 
-          <!-- TODO: 장바구니 없을 때 -->
-          <p class="txt">총 0개의 쌤후기가 있어요.</p>
+          <!-- TODO: 공지사항 없을 때 -->
+          <!-- <p class="txt">총 0개의 게시글이 있어요.</p> -->
         </div>
 
-        <div>
-          <div>
-            <div class="sort-btn-grp">
-              <button type="button" class="sort-btn">최신순</button>
-              <button type="button" class="sort-btn">인기순</button>
-            </div>
-
-            <div class="bd-inp-wrap type-search">
-              <img src="" alt="검색 아이콘" class="ico ico-search">
-              <input type="text" placeholder="검색어를 입력하세요" class="inp">
-            </div>
+        <div class="sort-inp-container">
+          <div class="sort-btn-grp">
+            <button type="button" class="sort-btn active">최신순</button>
+            <button type="button" class="sort-btn">추천순</button>
+            <button type="button" class="sort-btn">조회순</button>
+            <button type="button" class="sort-btn">업데이트순</button>
           </div>
+        </div>
 
-          <div>
+        <div class="content">
+          <!-- TODO: 공지사항 있을 때 -->
+          <div class="col-list-grp type-list-bd notice-col-grp">
             <!-- 리스트 -->
-            <div class="">
+            <div class="list">
               <!-- 공지사항 -->
               <div class="list-card type-03">
                 <span class="list-num">999</span>
@@ -64,32 +62,37 @@
             <!-- END 리스트 -->
           </div>
 
-          <!-- 페이지네이션 -->
-          <include src="include/layout/module/pagination.html"></include>
-          <!-- END 페이지네이션 -->
+          <!-- TODO: 공지사항 없을 때 -->
+          <div class="nothing-wrap">
+            <p class="nothing-txt">공지사항이 없습니다.</p>
+          </div>
         </div>
+
+        <!-- 페이지네이션 -->
+        <include src="include/layout/module/pagination.html"></include>
+        <!-- END 페이지네이션 -->
       </div>
       <!-- END 내용 (1. 공지사항) -->
 
       <!-- 내용 (2. 자주묻는 질문) -->
-      <div>
+      <div class="page-content faq-content">
         <div class="title-wrap">
           <h3 class="title-sm">자주묻는 질문</h3>
         </div>
 
-        <div>
-          <div>
+        <div class="content">
+          <div class="col-list-grp faq-col-grp">
             <!-- 리스트 -->
-            <div>
+            <div class="list">
               <!-- 자주 묻는 질문 -->
               <div class="faq-card">
                 <div class="card-top">
-                  <div class="card-content">
+                  <div class="card-content" onclick="showContent(this, 'faq-card');">
                     <span class="left-txt">Q</span>
                     <div class="txt-wrap">
                       <p class="txt">웹접근성 인증마크나 최적화 홈페이지 제작도 가능한가요?</p>
                     </div>
-                    <img src="" alt="접기 아이콘" class="ico ico-faq-arrow">
+                    <img src="assets/images/ico/ico-faq-arrow.svg" alt="접기 아이콘" class="ico ico-18 ico-faq-arrow">
                   </div>
                 </div>
 
@@ -97,7 +100,39 @@
                   <div class="card-content">
                     <span class="left-txt">A</span>
                     <div class="txt-wrap">
-                      <p class="txt">SERP란 Search Engine Result Page의 약자로 검색 엔진에서 검색 결과를 보여주는 페이지를 말합니다. 일반적으로 사용자는 첫 페이지에 노출되는 검색
+                      <p class="txt">SERP란 Search Engine Result Page의 약자로 검색 엔진에서 검색 결과를 보여주는 페이지를 말합니다. 일반적으로 사용자는 첫
+                        페이지에
+                        노출되는 검색
+                        결과 중에서 원하는 정보를 찾아보게 됩니다. 따라서, SERP 상위에 노출되는 것은 해당 검색어와 관련된 정보를 제공하는 웹 사이트에게 매우 중요합니다.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END 자주 묻는 질문 -->
+            </div>
+            <!-- END 리스트 -->
+
+            <!-- 리스트 -->
+            <div class="list">
+              <!-- 자주 묻는 질문 -->
+              <div class="faq-card">
+                <div class="card-top">
+                  <div class="card-content" onclick="showContent(this, 'faq-card');">
+                    <span class="left-txt">Q</span>
+                    <div class="txt-wrap">
+                      <p class="txt">웹접근성 인증마크나 최적화 홈페이지 제작도 가능한가요?</p>
+                    </div>
+                    <img src="assets/images/ico/ico-faq-arrow.svg" alt="접기 아이콘" class="ico ico-18 ico-faq-arrow">
+                  </div>
+                </div>
+
+                <div class="card-bottom">
+                  <div class="card-content">
+                    <span class="left-txt">A</span>
+                    <div class="txt-wrap">
+                      <p class="txt">SERP란 Search Engine Result Page의 약자로 검색 엔진에서 검색 결과를 보여주는 페이지를 말합니다. 일반적으로 사용자는 첫
+                        페이지에
+                        노출되는 검색
                         결과 중에서 원하는 정보를 찾아보게 됩니다. 따라서, SERP 상위에 노출되는 것은 해당 검색어와 관련된 정보를 제공하는 웹 사이트에게 매우 중요합니다.</p>
                     </div>
                   </div>
@@ -111,7 +146,9 @@
           <!-- 1:1 상담 카드 -->
           <div class="support-card">
             <div class="title-wrap">
-              <img src="" alt="스마일 아이콘" class="ico ico-smile">
+              <div class="ico-wrap">
+                <img src="assets/images/ico/ico-smile.svg" alt="스마일 아이콘" class="ico ico-smile">
+              </div>
               <h4 class="title">1:1 상담하기</h4>
               <p class="desc">상담 가능 시간 : 10:00 ~ 17: 00</p>
             </div>

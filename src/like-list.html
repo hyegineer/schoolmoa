@@ -6,34 +6,34 @@
   <div class="page-container">
     <div class="inner">
       <!-- 제목 -->
-      <div>
-        <h2>찜목록</h2>
+      <div class="title-wrap">
+        <h2 class="title">찜목록</h2>
       </div>
       <!-- END 제목 -->
 
       <!-- 내용 -->
-      <div>
-        <div>
+      <div class="page-content">
+        <div class="sort-inp-container">
           <div class="sort-btn-grp">
-            <button type="button" class="sort-btn">최신순</button>
+            <button type="button" class="sort-btn active">최신순</button>
             <button type="button" class="sort-btn">인기순</button>
           </div>
 
           <div class="bd-inp-wrap type-search">
-            <img src="" alt="검색 아이콘" class="ico ico-search">
+            <img src="assets/images/ico/ico-search.svg" alt="검색 아이콘" class="ico ico-18 ico-search">
             <input type="text" placeholder="검색어를 입력하세요" class="inp">
           </div>
         </div>
 
-        <div>
+        <div class="content">
           <!-- TODO: 클래스가 있을 때 -->
           <!-- 그리드 -->
-          <div>
-            <div>
+          <div class="grid-list-grp class-grid-grp">
+            <div class="list">
               <!-- 클래스 카드 -->
-              <div class="class-card type-01">
+              <div class="class-card type-01" onclick="location.href='class-detail.html';">
                 <figure class="thumbnail">
-                  <img src="" alt="썸네일 이미지" class="thumbnail-img">
+                  <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
                 </figure>
 
                 <ul class="card-information">
@@ -50,7 +50,71 @@
                         <span class="strikethrough-txt">200,000</span>
                       </div>
 
-                      <span class="red-txt">30%</span>
+                      <div class="mg-left">
+                        <span class="right-txt red-txt">30%</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- END 클래스 카드 -->
+            </div>
+
+            <div class="list">
+              <!-- 클래스 카드 -->
+              <div class="class-card type-01" onclick="location.href='class-detail.html';">
+                <figure class="thumbnail">
+                  <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                </figure>
+
+                <ul class="card-information">
+                  <li>
+                    <h3 class="card-name">중학교 정규분포 심화</h3>
+                  </li>
+                  <li>
+                    <p class="gray-txt">1회 90분 X 총 4회</p>
+                  </li>
+                  <li>
+                    <div class="price-wrap">
+                      <div class="left-price-txt">
+                        <span class="bold-txt">150,000원</span>
+                        <span class="strikethrough-txt">200,000</span>
+                      </div>
+
+                      <!-- <div class="mg-left">
+                        <span class="right-txt red-txt">30%</span>
+                      </div> -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- END 클래스 카드 -->
+            </div>
+
+            <div class="list">
+              <!-- 클래스 카드 -->
+              <div class="class-card type-01" onclick="location.href='class-detail.html';">
+                <figure class="thumbnail">
+                  <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                </figure>
+
+                <ul class="card-information">
+                  <li>
+                    <h3 class="card-name">중학교 정규분포 심화</h3>
+                  </li>
+                  <li>
+                    <p class="gray-txt">1회 90분 X 총 4회</p>
+                  </li>
+                  <li>
+                    <div class="price-wrap">
+                      <div class="left-price-txt">
+                        <span class="bold-txt">150,000원</span>
+                        <span class="strikethrough-txt">200,000</span>
+                      </div>
+
+                      <div class="mg-left">
+                        <span class="right-txt bold-txt">무료</span>
+                      </div>
                     </div>
                   </li>
                 </ul>

@@ -2,40 +2,40 @@
 <include src="include/layout/header.html"></include>
 
 <!-- 페이지: 아이디 찾기 -->
-<div class="auth-find-page page-wrapper">
+<div class="auth-page page-wrapper">
   <div class="page-container">
-    <div>
-      <button type="button">
-        <img src="" alt="화살표 아이콘" class="ico ico-back-arrow">
-        <span>로그인으로 돌아가기</span>
+    <div class="find-box">
+      <button type="button" class="blue-back-btn">
+        <img src="assets/images/ico/ico-blue-arrow-back.svg" alt="화살표 아이콘" class="ico ico-18 ico-back-arrow">
+        <span class="txt">로그인으로 돌아가기</span>
       </button>
 
       <div class="gray-bd-box">
         <div class="tabs">
-          <button type="button" class="tab active">아이디 찾기</button>
-          <button type="button" class="tab">비밀번호 찾기</button>
+          <button type="button" class="tab active" onclick="location.href='find-id.html';">아이디 찾기</button>
+          <button type="button" class="tab" onclick="location.href='find-pwd.html';">비밀번호 찾기</button>
         </div>
 
-        <div>
-          <div>
-            <h2>휴대폰 번호를 인증해주세요.</h2>
-            <p>휴대폰 인증 후에 아이디를 찾을 수 있어요.</p>
+        <div class="find-content">
+          <div class="guide-ment-box">
+            <h2 class="guide-ttl">휴대폰 번호를 인증해주세요.</h2>
+            <p class="guide-desc">휴대폰 인증 후에 아이디를 찾을 수 있어요.</p>
           </div>
 
-          <button type="button">인증하기</button>
+          <button type="button" class="blue-solid-btn btn-lg btn-w100">인증하기</button>
         </div>
 
-        <div>
-          <div>
-            <h2>가입된 아이디를 찾았어요. <br>이 계정으로 로그인을 진행해주세요.</h2>
+        <div class="find-content">
+          <div class="guide-ment-box type-mb-narrow">
+            <h2 class="guide-ttl">가입된 아이디를 찾았어요. <br>이 계정으로 로그인을 진행해주세요.</h2>
           </div>
 
-          <div>
+          <div class="id-box-desc-wrap">
             <div class="bg-skyblue-box id-box">he**@schoolmoa.com</div>
-            <p>개인정보 보호를 위해 일부 정보는 *로 표시합니다.</p>
+            <p class="guide-desc">개인정보 보호를 위해 일부 정보는 *로 표시합니다.</p>
           </div>
 
-          <button type="button">로그인하기</button>
+          <button type="button" class="blue-solid-btn btn-lg btn-w100">로그인하기</button>
         </div>
       </div>
     </div>

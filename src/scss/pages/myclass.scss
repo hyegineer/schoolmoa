@@ -1,0 +1,78 @@
+.myc-layout-container {
+  width: 90%;
+  max-width: 1218px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+
+  .myc-left-container {
+    padding: 20px 0;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 286px;
+    position: sticky;
+    top: 60px;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .myc-right-container {
+    width: 100%;
+  }
+}
+
+.myc-left-container {
+  .user-card {
+    width: 100%;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+
+  .myc-nav-btn-grp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .myc-nav-btn {
+    @include btn-reset;
+
+    padding: 14px 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    color: #64748B;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.16px;
+    transition: all 0.3s;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #F6F8FC;
+    }
+
+    &:active {
+      background-color: #f2f4f8;
+      transition: all 0s;
+    }
+  }
+
+  .myc-nav-btn.active {
+    font-weight: 700;
+    color: #2563EB;
+  }
+}
+
+.myc-right-container {
+  padding-top: 50px;
+  padding-bottom: 150px;
+
+  .title-wrap {
+    margin-bottom: 32px;
+  }
+}

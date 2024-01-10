@@ -1,219 +1,294 @@
 <include src="include/head.html"></include>
-<include src="include/layout/header.html"></include>
+<include src="include/layout/header.html" nav03="active"></include>
 
 <!-- 페이지: 클래스 디테일 -->
 <div class="class-detail-page page-wrapper">
   <div class="page-container">
     <div class="inner">
       <!-- 상단 -->
-      <section>
-        <figure>
-          <img src="" alt="썸네일 이미지">
+      <section class="section top-section">
+        <figure class="thumbnail page-thumbnail">
+          <img src="assets/images/sample/sample-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
         </figure>
 
-        <div>
-          <div>
-            <p>서울대쌤</p>
-            <h3>중학교 정규분포 심화</h3>
+        <div class="class-detail-card">
+          <div class="ttl-wrap">
+            <p class="sub-txt">서울대쌤</p>
+            <h3 class="ttl">중학교 정규분포 심화</h3>
           </div>
 
-          <ul>
-            <li>
-              <span>1회 30분 X 총 1회</span>
-              <span>무료</span>
-            </li>
+          <div class="class-btn-grp">
+            <!-- TODO: 선택시 active 클래스가 붙습니다. -->
+            <button type="button" class="class-btn active">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
 
-            <li>
-              <span>1회 30분 X 총 1회</span>
-              <span>무료</span>
-            </li>
-          </ul>
+            <button type="button" class="class-btn">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
 
-          <div>
-            <button type="button">
+            <button type="button" class="class-btn">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
+
+            <button type="button" class="class-btn">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
+
+            <button type="button" class="class-btn">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
+
+            <button type="button" class="class-btn">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
+
+            <button type="button" class="class-btn">
+              <span class="left-txt">1회 30분 X 총 1회</span>
+              <span class="right-txt">무료</span>
+            </button>
+          </div>
+
+          <div class="apply-btn-grp">
+            <button type="button" class="btn gray-01-bd-btn cart-btn">
               <span class="txt-hidden">장바구니</span>
-              <img src="" alt="장바구니 아이콘" class="ico ico-cart">
+              <img src="assets/images/ico/ico-cart.svg" alt="장바구니 아이콘" class="ico ico-20 ico-cart">
             </button>
 
-            <button type="button">수강신청</button>
+            <button type="button" class="btn blue-solid-btn">수강신청</button>
           </div>
 
-          <div>
-            <button type="button">
-              <span>공유하기</span>
-              <img src="" alt="공유 아이콘" class="ico ico-share">
+          <div class="etc-btn-grp">
+            <button type="button" class="etc-btn">
+              <span class="txt">공유하기</span>
+              <img src="assets/images/ico/ico-share.svg" alt="공유 아이콘" class="ico ico-20 ico-share">
             </button>
 
-            <button type="button">
-              <span>찜하기</span>
-              <img src="" alt="찜 아이콘" class="ico ico-like">
+            <button type="button" class="etc-btn">
+              <span class="txt">찜하기</span>
+              <img src="assets/images/ico/ico-heart-line.svg" alt="찜 아이콘" class="ico ico-20 ico-like">
             </button>
           </div>
         </div>
       </section>
 
       <!-- 하단 -->
-      <section>
-        <div>
-          <button type="button">클래스 설명</button>
-          <button type="button">커리큘럼</button>
-          <button type="button">쌤후기</button>
+      <section class="section bottom-section">
+        <div class="tabs">
+          <button type="button" class="tab active">클래스 설명</button>
+          <button type="button" class="tab">커리큘럼</button>
+          <button type="button" class="tab">쌤후기</button>
         </div>
 
-        <div>
+        <div class="page-content">
           <!-- 클래스 설명 -->
-          <article>
-            <h4>클래스 설명</h4>
+          <article class="content">
+            <div class="title-wrap">
+              <h4 class="title-sm">클래스 설명</h4>
+            </div>
 
-            <div>
-              <div>
-                <h5>기초 과정</h5>
+            <div class="inner-content">
+              <div class="desc-wrap">
+                <h5 class="desc-ttl">기초 과정</h5>
 
-                <ul>
-                  <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
+                <ul class="desc-ul">
+                  <li class="li">수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
                 </ul>
               </div>
 
-              <div>
-                <h5>중급 과정</h5>
+              <div class="desc-wrap">
+                <h5 class="desc-ttl">중급 과정</h5>
 
-                <ul>
-                  <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
+                <ul class="desc-ul">
+                  <li class="li">수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
                 </ul>
               </div>
 
-              <div>
-                <h5>심화 과정</h5>
+              <div class="desc-wrap">
+                <h5 class="desc-ttl">심화 과정</h5>
 
-                <ul>
-                  <li>수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
+                <ul class="desc-ul">
+                  <li class="li">수학의 기본 개념 복습 : 대수학, 기하학, 삼각법의 기본 개념 복습과 수학적 사고 방식의 기초 다지기.</li>
                 </ul>
               </div>
             </div>
           </article>
 
           <!-- 커리큘럼 -->
-          <article>
-            <h4>커리큘럼</h4>
+          <article class="content">
+            <div class="title-wrap">
+              <h4 class="title-sm">커리큘럼</h4>
+            </div>
 
-            <div>
-              <div class="">
-                <i></i>
-                <p>커리큘럼 상세보기</p>
+            <div class="curriculum-box">
+              <div class="box-top">
+                <img src="assets/images/ico/ico-paper.svg" alt="커리큘럼 아이콘" class="ico ico-paper">
+                <p class="ttl">커리큘럼 상세보기</p>
               </div>
 
               <div class="accordion-card type-01">
-                <div class="card-top">
+                <div class="accordion-card-top">
                   <div class="list-chapter-card">
-                    <div class="card-content">
+                    <div class="card-content" onclick="showContent(this, 'list-chapter-card');">
                       <span class="sub-ttl">챕터</span>
                       <p class="card-ttl">챕터 제목</p>
                     </div>
 
-                    <img src="" alt="화살표" class="ico ico-arrow">
+                    <img src="assets/images/ico/ico-arrow-down.svg" alt="화살표" class="ico ico-18 ico-arrow">
                   </div>
                 </div>
 
-                <div class="card-bottom">
-                  <ul class="col-list-grp">
-                    <li class="list">
-                      <div class="list-class-card">
-                        <button type="button" class="btn">
-                          <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
-                          <img src="" alt="수강완료 아이콘" class="ico ico-complete">
-                          <!-- <img src="" alt="수강중 아이콘" class="ico ico-ing"> -->
-                          <!-- <img src="" alt="수강전 아이콘" class="ico ico-imcomplete"> -->
-                        </button>
+                <div class="accordion-card-bottom">
+                  <div class="list-class-card">
+                    <button type="button" class="btn view-btn" onclick="location.href='myclass-view.html';">
+                      <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
+                      <img src="assets/images/ico/ico-play-complete.svg" alt="수강완료 아이콘" class="ico ico-complete">
+                      <!-- <img src="assets/images/ico/ico-play-ing.svg" alt="수강중 아이콘" class="ico ico-ing"> -->
+                      <!-- <img src="assets/images/ico/ico-play-incomplete.svg" alt="수강전 아이콘" class="ico ico-incomplete"> -->
+                    </button>
 
-                        <div class="card-content">
-                          <span class="sm-gray-txt">00:00:00</span>
-                          <h3 class="card-ttl">강의제목</h3>
-                        </div>
+                    <div class="card-content">
+                      <span class="sm-gray-txt">00:00:00</span>
+                      <h3 class="card-ttl">강의제목</h3>
+                    </div>
 
-                        <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
-                        <img src="" alt="수강완료 체크 아이콘" class="ico ico-checked">
-                      </div>
-                    </li>
+                    <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
+                    <img src="assets/images/ico/ico-accordion-checked.svg" alt="수강완료 체크 아이콘"
+                      class="ico ico-18 ico-checked">
+                  </div>
 
-                    <li class="list">
-                      <div class="list-class-card">
-                        <button type="button" class="btn">
-                          <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
-                          <img src="" alt="수강완료 아이콘" class="ico ico-complete">
-                          <!-- <img src="" alt="수강중 아이콘" class="ico ico-ing"> -->
-                          <!-- <img src="" alt="수강전 아이콘" class="ico ico-imcomplete"> -->
-                        </button>
+                  <div class="list-class-card">
+                    <button type="button" class="btn view-btn" onclick="location.href='myclass-view.html';">
+                      <!-- TODO: 셋 중 하나의 아이콘이 노출됩니다. -->
+                      <img src="assets/images/ico/ico-play-complete.svg" alt="수강완료 아이콘" class="ico ico-complete">
+                      <!-- <img src="assets/images/ico/ico-play-ing.svg" alt="수강중 아이콘" class="ico ico-ing"> -->
+                      <!-- <img src="assets/images/ico/ico-play-incomplete.svg" alt="수강전 아이콘" class="ico ico-incomplete"> -->
+                    </button>
 
-                        <div class="card-content">
-                          <span class="sm-gray-txt">00:00:00</span>
-                          <h3 class="card-ttl">강의제목</h3>
-                        </div>
+                    <div class="card-content">
+                      <span class="sm-gray-txt">00:00:00</span>
+                      <h3 class="card-ttl">강의제목</h3>
+                    </div>
 
-                        <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
-                        <img src="" alt="수강완료 체크 아이콘" class="ico ico-checked">
-                      </div>
-                    </li>
-                  </ul>
+                    <!-- TODO: 수강완료시 나오는 체크표시 아이콘입니다. -->
+                    <img src="assets/images/ico/ico-accordion-checked.svg" alt="수강완료 체크 아이콘"
+                      class="ico ico-18 ico-checked">
+                  </div>
                 </div>
               </div>
             </div>
           </article>
 
           <!-- 쌤후기 -->
-          <article>
-            <h4>쌤후기</h4>
+          <article class="content cdreview-content">
+            <div class="title-wrap">
+              <h4 class="title-sm">쌤후기</h4>
+            </div>
 
             <div class="ment-box">
               <!-- TODO: 후기 있을 때 -->
               <p class="txt">총 10개의 쌤후기가 있어요.</p>
 
               <!-- TODO: 후기 없을 때 -->
-              <p class="txt">총 0개의 쌤후기가 있어요.</p>
+              <!-- <p class="txt">총 0개의 쌤후기가 있어요.</p> -->
             </div>
 
-            <div>
-              <div>
-                <!-- 리뷰 카드 -->
-                <div class="review-card type-02">
-                  <div class="card-top">
-                    <div class="user-item">
-                      <figure class="thumbnail type-circle">
-                        <img src="" alt="썸네일 이미지" class="thumbnail-img">
-                      </figure>
+            <div class="col-list-btn-wrap">
+              <div class="col-list-grp type-list-bd">
+                <div class="list">
+                  <!-- 리뷰 카드 -->
+                  <div class="review-card type-02">
+                    <div class="card-top">
+                      <div class="user-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
 
-                      <ul class="card-information">
-                        <li>
-                          <p class="sub-txt gray-txt">중학교 3학년 수학</p>
-                        </li>
-                        <li>
-                          <h3 class="card-name">김민지</h3>
-                        </li>
-                      </ul>
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt gray-txt">중학교 3학년 수학</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">김민지</h3>
+                          </li>
+                        </ul>
 
-                      <!-- <div class="btn-wrap">
-                        <button type="button" class="btn">
-                          <span class="txt-hidden">수정하기</span>
-                          <img src="" alt="수정 아이콘" class="ico ico-edit">
-                        </button>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">수정하기</span>
+                            <img src="assets/images/ico/ico-edit.svg" alt="수정 아이콘" class="ico ico-18 ico-edit">
+                          </button>
 
-                        <button type="button" class="btn">
-                          <span class="txt-hidden">삭제하기</span>
-                          <img src="" alt="삭제 아이콘" class="ico ico-x">
-                        </button>
-                      </div> -->
-                    </div>
-                  </div>
-
-                  <div class="card-bottom">
-                    <div class="txt-wrap">
-                      <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <img src="assets/images/ico/ico-x.svg" alt="삭제 아이콘" class="ico ico-18 ico-x">
+                          </button>
+                        </div>
+                      </div>
                     </div>
 
-                    <span class="sm-txt">23.00.00</span>
+                    <div class="card-bottom">
+                      <div class="txt-wrap">
+                        <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                      </div>
+
+                      <span class="sm-txt">23.00.00</span>
+                    </div>
                   </div>
+                  <!-- END 리뷰 카드 -->
                 </div>
-                <!-- END 리뷰 카드 -->
+
+                <div class="list">
+                  <!-- 리뷰 카드 -->
+                  <div class="review-card type-02">
+                    <div class="card-top">
+                      <div class="user-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/sample-user-thumbnail.png" alt="썸네일 이미지" class="thumbnail-img">
+                        </figure>
+
+                        <ul class="card-information">
+                          <li>
+                            <p class="sub-txt gray-txt">중학교 3학년 수학</p>
+                          </li>
+                          <li>
+                            <h3 class="card-name">김민지</h3>
+                          </li>
+                        </ul>
+
+                        <div class="btn-wrap">
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">수정하기</span>
+                            <img src="assets/images/ico/ico-edit.svg" alt="수정 아이콘" class="ico ico-18 ico-edit">
+                          </button>
+
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">삭제하기</span>
+                            <img src="assets/images/ico/ico-x.svg" alt="삭제 아이콘" class="ico ico-18 ico-x">
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-bottom">
+                      <div class="txt-wrap">
+                        <p class="txt">쌤 너무 잘 가르켜 주시는것 같아요. 수학은 과정이 중요한데, 꼼꼼하고 기억하기 쉽고 이해하기 쉽게 설명해 주세요. 감사합니다!</p>
+                      </div>
+
+                      <span class="sm-txt">23.00.00</span>
+                    </div>
+                  </div>
+                  <!-- END 리뷰 카드 -->
+                </div>
               </div>
+
+              <button type="button" class="gray-02-bd-btn btn-w100 more-btn">더보기</button>
             </div>
           </article>
         </div>

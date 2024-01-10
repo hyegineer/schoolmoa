@@ -2,28 +2,28 @@
 <include src="include/layout/header.html"></include>
 
 <!-- 페이지: 비밀번호 재설정 -->
-<div class="pwd-reset-page page-wrapper">
+<div class="auth-page page-wrapper">
   <div class="page-container">
-    <div>
-      <button type="button">
-        <img src="" alt="화살표 아이콘" class="ico ico-back-arrow">
-        <span>로그인으로 돌아가기</span>
+    <div class="find-box">
+      <button type="button" class="blue-back-btn">
+        <img src="assets/images/ico/ico-blue-arrow-back.svg" alt="화살표 아이콘" class="ico ico-18 ico-back-arrow">
+        <span class="txt">로그인으로 돌아가기</span>
       </button>
 
-      <div>
+      <div class="gray-bd-box">
         <div class="tabs">
-          <button type="button" class="tab">아이디 찾기</button>
-          <button type="button" class="tab active">비밀번호 찾기</button>
+          <button type="button" class="tab " onclick="location.href='find-id.html';">아이디 찾기</button>
+          <button type="button" class="tab active" onclick="location.href='find-pwd.html';">비밀번호 찾기</button>
         </div>
 
-        <div>
-          <div>
+        <div class="find-content">
+          <div class="id-box-desc-wrap">
             <div class="bg-skyblue-box id-box">he**@schoolmoa.com</div>
-            <p>개인정보 보호를 위해 일부 정보는 *로 표시합니다.</p>
+            <p class="guide-desc">개인정보 보호를 위해 일부 정보는 *로 표시합니다.</p>
           </div>
 
-          <div>
-            <h2>새 비밀번호를 입력해주세요.</h2>
+          <div class="guide-ment-box type-mb-narrow">
+            <h2 class="guide-ttl">새 비밀번호를 입력해주세요.</h2>
           </div>
 
           <!-- 정보입력 -->
@@ -31,42 +31,54 @@
             <div class="form-item">
               <label class="form-label">비밀번호</label>
               <div class="form-inp-wrap">
-                <div class="bd-inp-wrap">
-                  <input type="password" placeholder="비밀번호를 입력하세요">
+                <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
+                <div class="bd-inp-wrap type-square">
+                  <input type="password" placeholder="비밀번호를 입력하세요" autocomplete="new-password" class="inp">
                   <button type="button" class="btn toggle-btn">
                     <span class="txt-hidden">비밀번호 보기</span>
-                    <div class="ico-wrap">
-                      <img src="" alt="비밀번호 가리기" class="ico ico-off">
-                      <img src="" alt="비밀번호 보이기" class="ico ico-on">
-                    </div>
+
+                    <button type="button" class="btn toggle-btn toggle-eyes-btn">
+                      <span class="txt-hidden">비밀번호 보기</span>
+                      <div class="ico-wrap">
+                        <img src="assets/images/ico/ico-eyes-off.svg" alt="비밀번호 가리기" class="ico ico-off">
+                        <img src="assets/images/ico/ico-eyes-on.svg" alt="비밀번호 보이기" class="ico ico-on">
+                      </div>
+                    </button>
                   </button>
                 </div>
               </div>
-              <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+              <!-- <p class="form-validation-msg">안내텍스트</p> -->
+              <!-- TODO: 경고일 때는 type-warning 클래스가 붙습니다. -->
               <p class="form-validation-msg type-warning">안내텍스트</p>
             </div>
 
             <div class="form-item">
               <label class="form-label">비밀번호 확인</label>
               <div class="form-inp-wrap">
-                <div class="bd-inp-wrap">
-                  <input type="password" placeholder="비밀번호를 입력하세요">
+                <!-- TODO: 틀렸을 시 해당 요소에 inp-warning 클래스가 붙습니다 -->
+                <div class="bd-inp-wrap type-square">
+                  <input type="password" placeholder="비밀번호를 입력하세요" autocomplete="new-password" class="inp">
                   <button type="button" class="btn toggle-btn">
                     <span class="txt-hidden">비밀번호 보기</span>
-                    <div class="ico-wrap">
-                      <img src="" alt="비밀번호 가리기" class="ico ico-off">
-                      <img src="" alt="비밀번호 보이기" class="ico ico-on">
-                    </div>
+    
+                    <button type="button" class="btn toggle-btn toggle-eyes-btn">
+                      <span class="txt-hidden">비밀번호 보기</span>
+                      <div class="ico-wrap">
+                        <img src="assets/images/ico/ico-eyes-off.svg" alt="비밀번호 가리기" class="ico ico-off">
+                        <img src="assets/images/ico/ico-eyes-on.svg" alt="비밀번호 보이기" class="ico ico-on">
+                      </div>
+                    </button>
                   </button>
                 </div>
               </div>
-              <p class="form-validation-msg">영문/숫자/특수문자 조합 8자 이상</p>
+              <!-- <p class="form-validation-msg">안내텍스트</p> -->
+              <!-- TODO: 경고일 때는 type-warning 클래스가 붙습니다. -->
               <p class="form-validation-msg type-warning">안내텍스트</p>
             </div>
           </div>
           <!-- END 정보입력 -->
 
-          <button type="button" class="blue-solid-btn btn-lg">재설정 후 로그인하기</button>
+          <button type="button" class="blue-solid-btn btn-lg btn-w100">재설정 후 로그인하기</button>
         </div>
       </div>
     </div>

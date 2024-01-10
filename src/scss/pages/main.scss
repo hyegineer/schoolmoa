@@ -1,3 +1,177 @@
 .main-page {
-  background-color: red;
+  width: 100%;
+
+  .section {
+    width: 100%;
+    padding: 110px 0;
+  }
+
+  .main-section {
+    padding: 207px 0;
+  }
+}
+
+.main-section {
+  width: 100%;
+  background-image: url(../images/img-bg-top.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-title-wrap {
+    .sub-txt {
+      margin-bottom: 12px;
+    }
+
+    .dark-rounded-btn {
+      margin-top: 45px;
+    }
+  }
+
+  .img-figure {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 510px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -117px;
+  }
+}
+
+.mteacher-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  .bg-skyblue-box {
+    flex: 1;
+  }
+
+  .bg-skyblue-box.type-left {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 442px;
+  }
+
+  .profile-box {
+    max-width: 1218px;
+    flex-shrink: 0;
+  }
+
+  .bg-skyblue-box.type-right {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    height: 442px;
+  }
+}
+
+.mpoint-section {
+  background-color: #F1F4F9;
+
+  .main-title-wrap {
+    margin-bottom: 55px;
+  }
+
+  .card-grp {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+
+    .num-white-card {
+      flex: 1;
+    }
+  }
+
+  .img-ele {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .img-ele.type-01 {
+    top: -16px;
+    right: -141px;
+    left: auto;
+    width: 74px;
+  }
+
+  .img-ele.type-02 {
+    left: -190px;
+    top: -6px;
+    width: 96px;
+  }
+
+  .img-ele.type-03 {
+    left: auto;
+    bottom: -45px;
+    width: 86px;
+    top: auto;
+    right: -55px;
+  }
+}
+
+.mclass-section {
+  .main-title-wrap {
+    width: 90%;
+    max-width: 1218px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
+
+  .swiper-slide {
+    width: 1218px;
+  }
+
+  .card-grp {
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .custom-swiper-pagination {
+    margin-top: 55px;
+  }
+}
+
+.mreview-section {
+  background-color: #F1F4F9;
+
+  .section-title-wrap {
+    width: 90%;
+    max-width: 1218px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
+
+  .main-title-wrap {
+    margin-bottom: 42px;
+  }
+
+  .swiper-slide {
+    width: 1218px;
+  }
+
+  .card-grp {
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .custom-swiper-pagination {
+    margin-top: 55px;
+  }
 }
